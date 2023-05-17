@@ -5,16 +5,29 @@ const { tekst, variant } = Astro.props;
 <button data-variant={variant}><h4 class="button_tekst">{tekst}</h4></button>
 
 <style>
-    /*generelt for knapper */
+/*generelt for knapper */
 
+ /*tekst styleing */
+  button body {
+    color: var(gold-900);
+  }
+  button:hover body {
+    color: var(var(gold-500);)
+  }
     /* primary knap */
     [data-variant="primary"] {
-    background-color: var();
-    padding: var(--space-4xl);
-    padding-bottom: var(--space-xs);
-    padding-top: var(--space-xs);
-    border-radius: 3px;
-    border: var(--pink-dark) var(--border-l);
+    background-color: var(gold-500);
+    padding: var(20px);
+    padding-bottom: var(12px);
+    padding-top: var(12px);
   }
 
+  [data-variant="primary"]:hover {
+    background-color: var(knap);
+    padding: var(20px);
+    padding-bottom: var(12px);
+    padding-top: var(12px);
+    border-radius: var(--border-radius-default);
+    border: var(--pink-dark) var(--border-l);
+  }
 </style>
