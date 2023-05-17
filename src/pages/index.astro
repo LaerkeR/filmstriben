@@ -1,15 +1,29 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import MovieCard from "../components/Moviecard.astro";
+import filmdatabase from "../filmdatabase.json";
+
+const { title } = Astro.props;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h2>Hej</h2>
-	</body>
-</html>
+<Layout title="Filmstriben | Alle film">
+  <main>
+    <h2>Alle film</h2>
+
+    <section>
+      {
+        filmdatabase.map((film) => (
+          <MovieCard
+            varrighed={film.varrighed}
+            genre={film.genre}
+            aarstal={film.aarstal}
+            filmTitle={film.filmTitel}
+            imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
+          />
+        ))
+      }
+    </section>
+  </main>
+
+  <script></script>
+</Layout>
