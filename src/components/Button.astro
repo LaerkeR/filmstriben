@@ -1,0 +1,20 @@
+---
+const { tekst, variant } = Astro.props;
+---
+
+<button data-variant={variant}><h4 class="button_tekst">{tekst}</h4></button>
+
+<style>
+    /*generelt for knapper */
+
+    /* primary knap */
+    [data-variant="primary"] {
+    background-color: var();
+    padding: var(--space-4xl);
+    padding-bottom: var(--space-xs);
+    padding-top: var(--space-xs);
+    border-radius: 3px;
+    border: var(--pink-dark) var(--border-l);
+  }
+
+</style>
