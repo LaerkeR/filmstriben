@@ -1,0 +1,45 @@
+---
+const {
+  aarstal,
+  filmTitle,
+  varrighed,
+  genre,
+  genre2,
+  imgSrc,
+  beskrivelse,
+  indstruktør,
+} = Astro.props;
+---
+
+<article class="bg-blue-300 grid grid-cols-2 p-28">
+  <div>
+    <img
+      src="../img/oscar film/The lost daughter/imgPlakat.jpg"
+      alt="the lost daughter"
+    />
+  </div>
+
+  <div>
+    <h3 class="text-white text-xl">Månedens film | se for 0 point i Maj</h3>
+    <h2 class="text-2xl">The lost daughter{filmTitle}</h2>
+    <div class="infoBar flex gap-2 align-middle body-sm">
+      <p class="varrighed text-xs">1t 57min{varrighed}</p>|<p class="aarstal">
+        2020{aarstal}
+      </p>|<p class="genre">Thriller {genre}</p>
+      |<p class="genre">Drama{genre2}</p>
+    </div>
+    <p class="beskrivelse text-white text-lg">
+      Leda (Olivia Colman) er alene på ferie på en græsk ø, hvor hun bliver
+      besat af en ung mor og hendes datter, som hun observerer på stranden.
+      Noget ved mor-datter-forholdet får Ledas egne minder frem. En impulsiv
+      handling tvinger Leda til at konfrontere sig selv og de kontroversielle
+      valg, hun tog som ung mor. <br />
+      <br /> Filmen bygger på en roman af den populære forfatter Elena Ferrante.
+      {beskrivelse}
+    </p>
+    <p class="indstruktør text-md text-white">
+      Instruktør: Maggie Gyllenhaal {indstruktør}
+    </p>
+    <img src="" alt="ikoner" />
+  </div>
+</article>
