@@ -3,13 +3,13 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Button from "../components/Button.astro";
-import Moviecard from "../components/Moviecard.astro";
-import Plakatcard from "../components/Plakatcard.astro";
+import MovieCard from "../components/Moviecard.astro"
 ---
 
 <Layout title="komponent udviklings side">
   <Header />
+  <div class="flex  flex-row w-full justify-between gap-4 px-10">
+  <MovieCard></MovieCard> <MovieCard></MovieCard> <MovieCard></MovieCard></div>
   <Footer />
  <Button variant="primary" tekst="Mere info" />
- <Moviecard />
 </Layout>
