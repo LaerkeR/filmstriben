@@ -1,72 +1,88 @@
 ---
 import Header from "../components/Header.astro";
 import Button from "../components/Button.astro";
+import MovieCard from "../components/Moviecard.astro";
+import Footer from "../components/Footer.astro";
 
 const { varrighed, aarstal, type, genre, point, filmTitle } = Astro.props;
 ---
 
-<Header />
-<section>
-  <div class="splahbillede">
-    <img src="../img/love proof.webp" alt="love proof" />
-    <img src="" alt="play ikon" />
-  </div>
-
-  <div>
-    <h2 class="filmtitel text-2xl text-white">Love proof {filmTitle}</h2>
-    <Button variant="primary" tekst="Se forsmag" />
-    <div class="flex">
-      <p>Føj til favoritter <img src="" alt="hjerte ikon" /></p>
-      <p>Del <img src="" alt="Del ikon" /></p>
-    </div>
-  </div>
-</section>
-
-<section class="grid grid-cols-3 m-10">
-  <div>
-    <div class="infoBar flex gap-2 align-middle body-sm">
-      <p class="varrighed text-xs">1t 26min{varrighed}</p>|
-      <p class="varrighed text-xs">2022{aarstal}</p> |
-      <p class="varrighed text-xs">Spillefilm{type}</p>|
-      <p class="varrighed text-xs">Drama{genre}</p>|
-      <p class="varrighed text-xs">4 point{point}</p>
+<body class="bg-black">
+  <Header />
+  <section>
+    <div class="splahbillede">
+      <img class="relative" src="../img/love proof.webp" alt="love proof" />
+      <img src="" alt="play ikon" />
     </div>
 
+    <div class="absolute bottom-5 m-10">
+      <h2 class="mb-5 filmtitel text-2xl text-white">
+        Love proof {filmTitle}
+      </h2>
+      <Button variant="primary" tekst="Se forsmag" />
+      <div class="flex gap-10 mt-5">
+        <p class="text-white">Føj til favoritter</p>
+        <p class="text-white">Del</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid grid-cols-3 m-20 justify-items-center">
     <div>
-      <p class="resume mt-10">
-        Thomas og Marie skal skilles og mødes en sidste gang for at tømme og
-        sælge sommerhuset. Ingen af dem kender den andens sande hensigter. En
-        ung kvinde dukker pludselig op, drevet af jalousi og med sin egen
-        dagsorden. Det, der skulle have været en civiliseret afslutning på et
-        langt ægteskab, bliver minut for minut til en rystende weekend, der
-        vender hele deres liv på hovedet.
-      </p>
-    </div>
-  </div>
-  <div class="vl"></div>
-  <div>
-    <h3 class="text-xs">DETALJER OM FILMEN:</h3>
+      <div class="infoBar flex gap-2 align-middle body-sm">
+        <p class="text-white varrighed text-xs">1t 26min |{varrighed}</p>
+        <p class="text-white varrighed text-xs">2022 | {aarstal}</p>
+        <p class="text-white varrighed text-xs">Spillefilm |{type}</p>
+        <p class="text-white varrighed text-xs">Drama |{genre}</p>
+        <p class="text-white varrighed text-xs">4 point{point}</p>
+      </div>
 
-    <div class="detaljer om filmen grid grid-cols-2">
-      <p>Originaltitel:</p>
-      <a
-        class="rounded-md border-solid border border-yellow-500 text-center hover:bg-yellow-600 hover:text-white"
-        href="">Kärleksbevis</a
-      >
-      <p>Sprog:</p>
-      <a
-        class="rounded-md border-solid border border-yellow-500 text-center hover:bg-yellow-600 hover:text-white"
-        href="">Svensk</a
-      >
+      <div>
+        <p class="text-white resume mt-10">
+          Thomas og Marie skal skilles og mødes en sidste gang for at tømme og
+          sælge sommerhuset. Ingen af dem kender den andens sande hensigter. En
+          ung kvinde dukker pludselig op, drevet af jalousi og med sin egen
+          dagsorden. Det, der skulle have været en civiliseret afslutning på et
+          langt ægteskab, bliver minut for minut til en rystende weekend, der
+          vender hele deres liv på hovedet.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+    <div class="vl"></div>
+    <div class="">
+      <h3 class="text-xs text-white">DETALJER OM FILMEN:</h3>
+
+      <div class="text-white detaljer om filmen grid grid-cols-2">
+        <p>Originaltitel:</p>
+        <a
+          class="text-white m-2 rounded-md border-solid border border-yellow-500 text-center hover:bg-yellow-600 hover:text-white"
+          href="">Kärleksbevis</a
+        >
+        <p class="text-white">Sprog:</p>
+        <a
+          class="text-white m-2 rounded-md border-solid border border-yellow-500 text-center hover:bg-yellow-600 hover:text-white"
+          href="">Svensk</a
+        >
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="flex flex-row w-full justify-between gap-4 px-10">
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+    </div>
+  </section>
+
+  <section>
+    <Footer />
+  </section>
+</body>
 
 <style>
   .vl {
     border-left: 2px solid;
     height: 400px;
+    color: white;
   }
 </style>
-
-<div class="vl"></div>
