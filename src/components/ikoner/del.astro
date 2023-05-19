@@ -3,11 +3,11 @@ const { variant } = Astro.props;
 ---
 
 <button
-  id="sog"
+  id="del"
   data-variant={variant}
   class="text-white hover:text-yellow-600"
 >
-  <p class="lightIcon active:solidIcon">magnifying-glass</p></button
+  <p class="lightIcon active:solidIcon">share</p></button
 >
 
 <style>
@@ -18,21 +18,3 @@ const { variant } = Astro.props;
     width: 32px;
   }
 </style>
-
-<script>
-  const Button = document.getElementById("sog");
-  const textElement = document.querySelector("#sog p");
-
-  Button.addEventListener("click", colorOn);
-
-  function colorOn() {
-    textElement.classList = "solidIcon ";
-    textElement.style.color = "yellow";
-    Button.addEventListener("click", colorOff);
-  }
-  function colorOff() {
-    textElement.classList = "lightIcon ";
-    textElement.style.color = "white";
-    Button.addEventListener("click", colorOn);
-  }
-</script>
