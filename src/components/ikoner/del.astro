@@ -1,0 +1,20 @@
+---
+const { variant } = Astro.props;
+---
+
+<button
+  id="del"
+  data-variant={variant}
+  class="text-white hover:text-yellow-600"
+>
+  <p class="lightIcon active:solidIcon">share</p></button
+>
+
+<style>
+  [data-variant="small"] {
+    width: 28px;
+  }
+  [data-variant="medium"] {
+    width: 32px;
+  }
+</style>

@@ -3,33 +3,25 @@ const { variant } = Astro.props;
 ---
 
 <button
-  id="heart"
+  id="star"
   data-variant={variant}
-  class="text-white active:text-yellow-600"
+  class="text-gray-400 hover:text-yellow-600"
 >
-  <p class="hover:text-yellow-600 lightIcon active:solidIcon">heart</p></button
+  <p class="solidIcon active:solidIcon">star</p></button
 >
 
 <style>
   [data-variant="small"] {
-    width: 28px;
+    width: 20px;
   }
-  [data-variant="medium"] {
-    width: 32px;
-  }
-
   [data-variant="large"] {
-    width: 48px;
-  }
-
-  p :focus {
-    font-family: "fontAwesomeSolid";
+    width: 54px;
   }
 </style>
 
 <script>
-  const Button = document.getElementById("heart");
-  const textElement = document.querySelector("#heart p");
+  const Button = document.getElementById("star");
+  const textElement = document.querySelector("#star p");
 
   Button.addEventListener("click", colorOn);
 
