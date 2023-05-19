@@ -2,10 +2,21 @@
 const { tekst, variant } = Astro.props;
 ---
 
-<button data-variant={variant}
-  ><h4
-    class="button_tekst bg-yellow-500 hover:bg-slate-600 text-display px-8 py-3 rounded-md hover:text-yellow-600"
-  >
+<button data-variant={variant}>
+  <h4 
+    class="bg-yellow-500 text-yellow-900 py-3 px-5 rounded-md hover:stroke-green-800
+    hover:stroke-2 hover:bg-yellow-100 hover:text-yellow-500 ">
     {tekst}
-  </h4></button
->
+  </h4>
+</button>
+
+<style>
+[data-variant="primary"] {
+  background-color: var(--pink-dark);
+  padding: var(--space-4xl);
+  padding-bottom: var(--space-xs);
+  padding-top: var(--space-xs);
+  border-radius: 3px;
+  border: var(--pink-dark) var(--border-l);
+}
+</style>
