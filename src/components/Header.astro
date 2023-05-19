@@ -1,16 +1,23 @@
-<header class="bg-black flex justify-center px-20">
-  <div class="flex justify-between w-full">
-    <div>
+<header
+  class="sticky z-50 top-0 bg-black flex flex-col justify-center px-10 pb-4 pt-2"
+>
+  <div>
+    <p class="text-[8px] text-gray-400 float-right">
+      Hej Bruger | Du bydes velkommen af <strong>Københavns Biblioteker</strong>
+    </p>
+  </div>
+  <div class="flex justify-between items-center w-full">
+    <div class="flex">
       <div class="burgermenu">
         <p class="text-white">burger</p>
       </div>
       <div class="flex gap-2">
         <div class="navpunkt">
-          <p class="text-white">navpunkt</p>
+          <ul class="">Børn & Unge</ul>
         </div>
 
         <div class="navpunkt">
-          <p class="text-white">navpunkt</p>
+          <ul class="">Genre</ul>
         </div>
       </div>
     </div>
@@ -18,24 +25,18 @@
       <img class="logo w-28" src="../logo.svg" alt="logo" />
     </div>
 
-    <div class="flex flex-row">
+    <div class="flex flex-row gap-4">
       <div>
         <p class="lightIcon text-white">search</p>
       </div>
-      <div>
-        <p class="solidIcon text-red">heart</p>
+      <div class="text-white">
+        <p class="solidIcon">heart</p>
       </div>
       <div>
-        <p class="lightIcon text-white">user</p>
         <p class="solidIcon text-white">user</p>
       </div>
     </div>
   </div>
 </header>
 
-<style>
-  .fill {
-    width: 12px;
-    color: azure;
-  }
-</style>
+<style></style>
