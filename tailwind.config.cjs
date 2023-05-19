@@ -62,7 +62,11 @@ module.exports = {
         },
       ],
     },
-    extend: {},
+    extend: {
+      color: {
+        gold: "#CCB26F",
+      },
+    },
   },
   plugins: [],
 };
