@@ -1,5 +1,20 @@
 ---
-const { tekst, variant } = Astro.props;
+const { variant } = Astro.props;
 ---
 
-<p class="">heart</p>
+<button data-variant={variant} class="text-white hover:text-yellow-600">
+  <p class="lightIcon hover:solidIcon">heart</p></button
+>
+
+<style>
+  [data-variant="small"] {
+    width: 28px;
+  }
+  [data-variant="medium"] {
+    width: 32px;
+  }
+
+  [data-variant="large"] {
+    width: 48px;
+  }
+</style>
