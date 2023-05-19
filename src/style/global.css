@@ -7,12 +7,19 @@
     font-family: "fontAwesomeLight";
     src: url(/src/style/fonts/Font\ Awesome\ 6\ Pro-Light-300.otf);
   }
+  @font-face {
+    font-family: "fontAwesomeSolid";
+    src: url(/src/style/fonts/Font\ Awesome\ 6\ Duotone-Solid-900.otf);
+  }
   p {
     font-family: "Roboto", serif;
   }
 
   .lightIcon {
     font-family: "fontAwesomeLight", sans-serif;
+  }
+  .solidIcon {
+    font-family: "fontAwesomeSolid", sans-serif;
   }
 
   h2 {
