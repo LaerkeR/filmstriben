@@ -5,16 +5,16 @@ const { variant } = Astro.props;
 <button
   id="star"
   data-variant={variant}
-  class="text-gray-400 hover:text-yellow-600"
+  class="text-gray-500 hover:text-yellow-600"
 >
-  <p class="solidIcon active:solidIcon">star</p></button
+  <p class="hover:lightIcon hover:text-yellow-400 solidIcon">star</p></button
 >
 
 <style>
   [data-variant="small"] {
     width: 20px;
   }
-  [data-variant="large"] {<
+  [data-variant="large"] {
     width: 54px;
   }
 </style>
@@ -31,8 +31,8 @@ const { variant } = Astro.props;
     Button.addEventListener("click", colorOff);
   }
   function colorOff() {
-    textElement.classList = "lightIcon ";
-    textElement.style.color = "white";
+    textElement.classList = "solidIcon ";
+    textElement.style.color = "gray";
     Button.addEventListener("click", colorOn);
   }
 </script>
