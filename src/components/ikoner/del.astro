@@ -1,0 +1,38 @@
+---
+const { variant } = Astro.props;
+---
+
+<button
+  id="sog"
+  data-variant={variant}
+  class="text-white hover:text-yellow-600"
+>
+  <p class="lightIcon active:solidIcon">magnifying-glass</p></button
+>
+
+<style>
+  [data-variant="small"] {
+    width: 28px;
+  }
+  [data-variant="medium"] {
+    width: 32px;
+  }
+</style>
+
+<script>
+  const Button = document.getElementById("sog");
+  const textElement = document.querySelector("#sog p");
+
+  Button.addEventListener("click", colorOn);
+
+  function colorOn() {
+    textElement.classList = "solidIcon ";
+    textElement.style.color = "yellow";
+    Button.addEventListener("click", colorOff);
+  }
+  function colorOff() {
+    textElement.classList = "lightIcon ";
+    textElement.style.color = "white";
+    Button.addEventListener("click", colorOn);
+  }
+</script>
