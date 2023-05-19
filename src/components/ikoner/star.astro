@@ -1,0 +1,38 @@
+---
+const { variant } = Astro.props;
+---
+
+<button
+  id="star"
+  data-variant={variant}
+  class="text-white hover:text-yellow-600"
+>
+  <p class="lightIcon active:solidIcon">star</p></button
+>
+
+<style>
+  [data-variant="small"] {
+    width: 20px;
+  }
+  [data-variant="large"] {
+    width: 54px;
+  }
+</style>
+
+<script>
+  const Button = document.getElementById("star");
+  const textElement = document.querySelector("#star p");
+
+  Button.addEventListener("click", colorOn);
+
+  function colorOn() {
+    textElement.classList = "solidIcon ";
+    textElement.style.color = "yellow";
+    Button.addEventListener("click", colorOff);
+  }
+  function colorOff() {
+    textElement.classList = "lightIcon ";
+    textElement.style.color = "white";
+    Button.addEventListener("click", colorOn);
+  }
+</script>
