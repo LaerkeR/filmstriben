@@ -1,16 +1,14 @@
 ---
-import Header from "../components/Header.astro";
 import Button from "../components/Button.astro";
 import MovieCard from "../components/Moviecard.astro";
-import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
 
 const { varrighed, aarstal, type, genre, point, filmTitle } = Astro.props;
 ---
 
-<body class="bg-black">
-  <Header />
+<Layout title={filmTitle}>
   <section>
-    <div class="splahbillede">
+    <div class="splashbillede">
       <img class="relative" src="../img/love proof.webp" alt="love proof" />
       <img src="" alt="play ikon" />
     </div>
@@ -73,11 +71,7 @@ const { varrighed, aarstal, type, genre, point, filmTitle } = Astro.props;
       <MovieCard />
     </div>
   </section>
-
-  <section>
-    <Footer />
-  </section>
-</body>
+</Layout>
 
 <style>
   .vl {
