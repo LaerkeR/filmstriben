@@ -2,18 +2,42 @@
 const { tekst, variant, filtrering } = Astro.props;
 ---
 
-<button data-variant={variant}>
-  <h4 
-    class="bg-yellow-500 text-yellow-900 py-3 px-5 rounded-md border border-yellow-500
-           hover:bg-yellow-100 hover:text-yellow-500">
-    {tekst}
-  </h4>
+<button data-variant={variant} class="flex gap-2 py-3 px-5 rounded-md">
+  <h4>{tekst}
+  </h4> <div class="icon">
+  <p class="lightIcon text-yellow">Sliders</p>
+</div>
 </button>
 
-<button data-variant={filtrering}>
-  <h4 
-    class="bg-black text-yellow-500 py-3 px-5 rounded-md border border-yellow-500
-    hover:bg-yellow-500 hover:text-yellow-900">
-    {tekst}
-  </h4>
-</button>
+<style>
+  button {
+    background-color: currentColor;
+    color: #261F0D;
+  }
+
+  [data-variant="primary"] .icon {
+  display: none;
+  }
+
+  [data-variant="primary"]:hover {
+  background-color: #5E543A;
+  color: #CAAE68;
+  }
+
+  [data-variant="primary"] {
+  background-color: #CAAE68;
+  color: black;
+  border: 1px solid #CAAE68;
+}
+
+[data-variant="filtrering"] {
+  background-color: black;
+  color: #CAAE68;
+  border: 1px solid #CAAE68;
+}
+
+[data-variant="filtrering"]:hover {
+  background-color: #CAAE68;
+  color: black;
+  }
+</style>
