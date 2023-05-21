@@ -11,11 +11,19 @@
     font-family: "fontAwesomeSolid";
     src: url(/src/style/fonts/Font\ Awesome\ 6\ Pro-Solid-900.otf);
   }
+
+  @font-face {
+    font-family: "fontAwesomeBrand";
+    src: url(/src/style/fonts/Font\ Awesome\ 6\ Brands-Regular-400.otf);
+  }
   p {
     font-family: "Roboto", serif;
     color: white;
   }
 
+  .brandIcon {
+    font-family: "fontAwesomeBrand", sans-serif;
+  }
   .lightIcon {
     font-family: "fontAwesomeLight", sans-serif;
   }
