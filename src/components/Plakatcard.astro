@@ -1,0 +1,30 @@
+---
+const { aarstal, filmTitle, varrighed, genre, imgSrc, type } = Astro.props;
+import Play from "../components/ikoner/play.astro";
+import Heart from "../components/ikoner/heart.astro";
+---
+
+<article class="relative overflow-hidden hover:overflow-visible block">
+  <img
+    src="../img/oscar film/Everything everywhere all at once/imgPlakat.jpg"
+    alt=""
+  />
+
+  <div class="absolute bottom-0">
+    <div class="bg-black top-[40%] blurShadow blur-[10px]"></div>
+    <div class="bg-black z-10 flex flex-col gap-2 px-10 py-5">
+      <h2>Everything everywhere all at once{filmTitle}</h2>
+      <div class="infoBar flex gap-2 align-middle body-sm">
+        <p class="varrighed text-xs">2t 44min{varrighed}</p>|<p class="aarstal">
+          2020{aarstal}
+        </p>
+        |<p>Spillefilm {type}</p>
+        |<p class="genre">Drama{genre}</p>
+      </div>
+      <div class="ikoner gap-5">
+        <Play variant="medium" />
+        <Heart variant="medium" />
+      </div>
+    </div>
+  </div>
+</article>
