@@ -11,7 +11,19 @@ const { variant } = Astro.props;
 >
 
 <style>
-  [data-variant="small"] {
+  .small {
+    width: 28px;
+  }
+
+  .medium {
+    width: 32px;
+  }
+
+  .large {
+    width: 48px;
+  }
+
+  /* [data-variant="small"] {
     width: 28px;
   }
   [data-variant="medium"] {
@@ -20,7 +32,7 @@ const { variant } = Astro.props;
 
   [data-variant="large"] {
     width: 48px;
-  }
+  } */
 
   p :focus {
     font-family: "fontAwesomeSolid";
