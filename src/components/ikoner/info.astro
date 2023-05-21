@@ -1,0 +1,18 @@
+---
+const { variant } = Astro.props;
+---
+
+<button id="del" data-variant={variant} class="">
+  <p class="lightIcon active:solidIcon text-white hover:text-yellow-600">
+    circle-info
+  </p></button
+>
+
+<style>
+  [data-variant="small"] {
+    font-size: 28px;
+  }
+  [data-variant="medium"] {
+    font-size: 32px;
+  }
+</style>
