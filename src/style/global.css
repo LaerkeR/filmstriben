@@ -16,7 +16,8 @@
     font-family: "fontAwesomeBrand";
     src: url(/src/style/fonts/Font\ Awesome\ 6\ Brands-Regular-400.otf);
   }
-  p {
+  p,
+  li {
     font-family: "Roboto", serif;
     color: white;
   }
