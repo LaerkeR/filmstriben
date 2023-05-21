@@ -10,14 +10,16 @@ const { navpunkt } = Astro.props;
   <div class="absolute left-0 w-screen py-4 px-8 bg-black flex flex-col">
     <div class="flex w-full justify-end"><Kryds /></div>
     <div class="flex flex-row gap-8">
-      <ul class="kategori divider pr-8 py-4 grid grid-cols-2 grid-rows-3">
+      <ul
+        class="kategori divider pr-8 py-4 grid grid-cols-2 grid-rows-3 gap-x-4 gap-y-2"
+      >
         <li class="flex py-2 px-2 align-middle text-yellow-600 font-medium">
           <a href="allefilm">Alle film</a>
         </li>
         {
           filmkategoridatabase.map((filmkategori) => (
             <>
-              <li class="flex py-2 px-2 align-middle ">
+              <li class=" py-2 px-2 align-middle ">
                 <a href={filmkategori}>{filmkategori}</a>
               </li>
             </>
