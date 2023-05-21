@@ -26,12 +26,14 @@
     position: relative;
   }
 
-  a:hover {
+  a:hover,
+  .navpunkt:hover {
     color: goldenrod;
     /* border-bottom: 1px solid goldenrod; */
   }
 
-  a::after {
+  a::after,
+  .navpunkt::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -44,7 +46,8 @@
     transition: transform 0.25s ease-out;
   }
 
-  a:hover::after {
+  a:hover::after,
+  .navpunkt:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
