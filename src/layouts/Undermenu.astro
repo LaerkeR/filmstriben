@@ -3,12 +3,18 @@ import filmkategoridatabase from "../filmkategori.json";
 import Kryds from "../components/Kryds.astro";
 console.log(filmkategoridatabase);
 const { navpunkt } = Astro.props;
+const handleClick = () => {
+  console.log("clicked:)");
+};
 ---
 
-<ul class="">
-  <li>{navpunkt}</li>
-  <div class="absolute left-0 w-screen py-4 px-12 bg-black flex flex-col">
-    <div class="flex w-full justify-end"><Kryds /></div>
+<ul class="ulle">
+  <li class="genre cursor-pointer">{navpunkt}</li>
+
+  <div
+    class="undermenu absolute hidden left-0 w-screen py-4 px-12 bg-black flex flex-col"
+  >
+    <div class="luk flex w-full justify-end"><Kryds /></div>
     <div class="flex flex-row gap-8">
       <ul
         class="kategori divider pr-8 py-4 grid grid-cols-2 grid-rows-3 gap-x-4 gap-y-2"
@@ -32,6 +38,15 @@ const { navpunkt } = Astro.props;
   </div>
 </ul>
 
+<script>
+  document.querySelector(".luk").addEventListener("click", toggleMenu);
+  document.querySelector(".genre").addEventListener("click", toggleMenu);
+
+  function toggleMenu() {
+    document.querySelector(".undermenu").classList.toggle("hidden");
+  }
+</script>
+
 <style>
   .divider {
     border-right: 1px solid #ffffff;
@@ -39,4 +54,8 @@ const { navpunkt } = Astro.props;
   .kategori:first-child {
     color: goldenrod;
   }
+
+  /* .hej .undermenu {
+    display: block;
+  } */
 </style>
