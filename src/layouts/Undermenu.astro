@@ -1,0 +1,40 @@
+---
+import filmkategoridatabase from "../filmkategori.json";
+import Kryds from "../components/ikoner/Kryds.astro";
+console.log(filmkategoridatabase);
+const { navpunkt } = Astro.props;
+---
+
+<ul class="">
+  <li>{navpunkt}</li>
+  <div class="absolute left-0 w-screen py-4 px-8 bg-black flex flex-col">
+    <div class="flex w-full justify-end"><Kryds /></div>
+    <div class="flex flex-row gap-8">
+      <ul class="kategori divider pr-8 py-4 grid grid-cols-2 grid-rows-3">
+        <li class="flex py-2 px-2 align-middle text-yellow-600 font-medium">
+          <a href="allefilm">Alle film</a>
+        </li>
+        {
+          filmkategoridatabase.map((filmkategori) => (
+            <>
+              <li class="flex py-2 px-2 align-middle ">
+                <a href={filmkategori}>{filmkategori}</a>
+              </li>
+            </>
+          ))
+        }
+      </ul>
+
+      <slot />
+    </div>
+  </div>
+</ul>
+
+<style>
+  .divider {
+    border-right: 1px solid #ffffff;
+  }
+  .kategori:first-child {
+    color: goldenrod;
+  }
+</style>
