@@ -2,12 +2,10 @@
 const { variant } = Astro.props;
 ---
 
-<button
-  id="del"
-  data-variant={variant}
-  class="text-white hover:text-yellow-600"
->
-  <p class="lightIcon active:solidIcon">xmark</p></button
+<button id="del" data-variant={variant}>
+  <p data-variant={variant} class="text-white hover:text-yellow-600 solidIcon">
+    xmark
+  </p></button
 >
 
 <style>
