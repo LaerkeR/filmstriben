@@ -1,3 +1,13 @@
-<button class=""
-  ><p class="lightIcon hover:text-yellow-300 w-28">circle-play</p></button
+---
+const { variant } = Astro.props;
+---
+
+<button data-variant={variant} class=""
+  ><p class="lightIcon hover:text-yellow-300">circle-play</p></button
 >
+
+<style>
+  [data-variant="medium"] {
+    font-size: 28px;
+  }
+</style>
