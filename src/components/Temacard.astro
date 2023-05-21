@@ -1,0 +1,44 @@
+---
+const { aarstal, filmTitle, varrighed, genre, imgSrc, point, beskrivelse } =
+  Astro.props;
+import Play from "../components/ikoner/play.astro";
+import Heart from "../components/ikoner/heart.astro";
+import Info from "../components/ikoner/info.astro";
+---
+
+<article class="bg-green-800 grid grid-cols-2 m-20">
+  <div class="m-10">
+    <img src="../img/mongoliet/Le dernier loup/imgCard.webp" alt="" />
+  </div>
+
+  <div class="m-10">
+    <div class="z-10 flex flex-col gap-2 px-10 py-5">
+      <h2>Le dernier loup{filmTitle}</h2>
+      <div class="infoBar flex gap-2 align-middle body-sm">
+        <p class="varrighed text-xs">1t 58min{varrighed}</p>|<p class="aarstal">
+          2014{aarstal}
+        </p>
+        |<p>4 point {point}</p>
+        |<p class="genre">Drama{genre}</p>
+      </div>
+      <div>
+        <p>
+          I den anerkendte instruktør Jean-Jacques Annauds filmatisering af
+          bestselleren 'Wolf Totem' sendes en ung studerende fra Beijing ud for
+          at leve blandt nomade-kvægvogtere i det indre Mongoliet på grund af
+          Mao Zedongs Kulturrevolution. Nomaderne er fanget mellem
+          civilisationen fra syd og deres traditionelle fjender - de hærgende
+          ulve - fra nord. Både mennesker og dyr, fastboende og indtrængende
+          kæmper for at finde deres plads her i verden og bevare deres levevis.{
+            beskrivelse
+          }
+        </p>
+      </div>
+      <div class="ikoner">
+        <Play variant="medium" />
+        <Heart variant="medium" />
+        <Info variant="medium" />
+      </div>
+    </div>
+  </div>
+</article>
