@@ -1,5 +1,20 @@
 ---
 import Info from "../components/ikoner/info.astro";
+const { filmTitle, beskrivelse, medvikende } = Astro.props;
 ---
 
-<article><Info variant="medium" /></article>
+<article class="relative">
+  <Info variant="medium" />
+  <div class="bg-black absolute opacity-0 hover:opacity-100">
+    <div>
+      <h2>Det forbandede år 1{filmTitle}</h2>
+      <img src="" alt="" />
+      <p>{beskrivelse}</p>
+      <p>
+        Medvirkende: Sara Viktoria Bjerregaard, Jesper Christensen, Bodil
+        Jørgensen, Mads Reuther <a href="../pages/Singleview.astro">Læs mere</a
+        >{medvikende}
+      </p>
+    </div>
+  </div>
+</article>
