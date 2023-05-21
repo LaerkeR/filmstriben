@@ -4,13 +4,15 @@ import Play from "../components/ikoner/play.astro";
 import Heart from "../components/ikoner/heart.astro";
 ---
 
-<article class="relative overflow-hidden hover:overflow-visible block">
+<article class="relative">
   <img
     src="../img/oscar film/Everything everywhere all at once/imgPlakat.jpg"
     alt=""
   />
 
-  <div class="absolute bottom-0">
+  <div
+    class="absolute bottom-0 opacity-0 hover:opacity-100 transition duration-300"
+  >
     <div class="bg-black top-[40%] blurShadow blur-[10px]"></div>
     <div class="bg-black z-10 flex flex-col gap-2 px-10 py-5">
       <h2>Everything everywhere all at once{filmTitle}</h2>
