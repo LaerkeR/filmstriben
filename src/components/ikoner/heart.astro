@@ -2,23 +2,11 @@
 const { variant } = Astro.props;
 ---
 
-<button id="heart" data-variant={variant} class="">
+<button id="heart" data-variant={variant} class="hover:text-yellow-500">
   <p class="lightIcon">heart</p></button
 >
 
 <style>
-  /* .small {
-    width: 28px;
-  }
-
-  .medium {
-    width: 32px;
-  }
-
-  .large{
-    width: 48pc;
-  } */
-
   [data-variant="small"] p {
     font-size: 28px;
   }

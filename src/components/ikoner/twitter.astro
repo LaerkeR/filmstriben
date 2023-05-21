@@ -1,3 +1,13 @@
-<a href="https://www.instagram.com/filmstriben/">
-  <p class="lightIcon text-yellow-300 hover:text-white">square-twitter</p></a
+---
+const { variant } = Astro.props;
+---
+
+<a data-variant={variant} href="https://www.instagram.com/filmstriben/">
+  <p class="brandIcon text-yellow-300 hover:text-white text-2xl"></p></a
 >
+
+<style>
+  [data-variant="medium"] {
+    font-size: 28px;
+  }
+</style>

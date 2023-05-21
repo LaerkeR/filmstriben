@@ -1,0 +1,23 @@
+---
+const { variant } = Astro.props;
+---
+
+<div class="infoBar flex gap-2 align-middle body-sm">
+  <p class="varrighed text-xs">2t 44min{varrighed}</p>|<p class="aarstal">
+    2020{aarstal}
+  </p>|<p class="genre">Drama{genre}</p>
+</div>
+
+<section>
+  {
+    filmdatabase.map((film) => (
+      <MovieCard
+        varrighed={film.varrighed}
+        genre={film.genre}
+        aarstal={film.aarstal}
+        filmTitle={film.filmTitel}
+        imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
+      />
+    ))
+  }
+</section>
