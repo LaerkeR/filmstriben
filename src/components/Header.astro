@@ -1,6 +1,7 @@
 ---
 import Bornmenu from "./Bornmenu.astro";
 import Genremenu from "./Genremenu.astro";
+const { navpunkt, specialClass } = Astro.props;
 ---
 
 <header
@@ -18,10 +19,10 @@ import Genremenu from "./Genremenu.astro";
       </div>
       <div class="flex gap-2">
         <div class="">
-          <Bornmenu />
+          <Bornmenu specialClass="born" />
         </div>
         <div class="">
-          <Genremenu />
+          <Genremenu specialClass="genre" />
         </div>
       </div>
     </div>

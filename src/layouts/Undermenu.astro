@@ -2,14 +2,11 @@
 import filmkategoridatabase from "../filmkategori.json";
 import Kryds from "../components/Kryds.astro";
 console.log(filmkategoridatabase);
-const { navpunkt } = Astro.props;
-const handleClick = () => {
-  console.log("clicked:)");
-};
+const { navpunkt, specialClass } = Astro.props;
 ---
 
 <ul class="ulle">
-  <li class="navpunkt genre cursor-pointer">{navpunkt}</li>
+  <li class={`${specialClass} navpunkt cursor-pointer`}>{navpunkt}</li>
 
   <div
     class="undermenu absolute hidden left-0 w-screen py-4 px-12 bg-black flex flex-col"
@@ -39,12 +36,28 @@ const handleClick = () => {
 </ul>
 
 <script>
-  document.querySelector(".luk").addEventListener("click", toggleMenu);
-  document.querySelector(".genre").addEventListener("click", toggleMenu);
+  // const navpunkter = document.querySelectorAll(".navpunkt");
+  // const undermenu = document.querySelector(".undermenu");
+  // document.querySelector(".luk").addEventListener("click", toggleMenu);
+  // document.querySelector(".navpunkt").addEventListener("click", toggleMenu);
+  const uller = document.querySelectorAll(".ulle");
 
-  function toggleMenu() {
-    document.querySelector(".undermenu").classList.toggle("hidden");
-  }
+  uller.forEach((ul) => {
+    ul.addEventListener("click", () => {
+      uller.forEach((item) => {
+        if (item !== ul) {
+          item.classList.remove("active");
+        }
+      });
+
+      ul.classList.toggle("active");
+    });
+  });
+
+  // function toggleMenu() {
+  //   console.log("this is", this);
+  //   this.closest("ul").classList.toggle("active");
+  // }
 </script>
 
 <style>
@@ -55,7 +68,7 @@ const handleClick = () => {
     color: goldenrod;
   }
 
-  /* .hej .undermenu {
+  .active .undermenu {
     display: block;
-  } */
+  }
 </style>
