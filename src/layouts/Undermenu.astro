@@ -36,28 +36,22 @@ const { navpunkt, specialClass } = Astro.props;
 </ul>
 
 <script>
-  // const navpunkter = document.querySelectorAll(".navpunkt");
-  // const undermenu = document.querySelector(".undermenu");
-  // document.querySelector(".luk").addEventListener("click", toggleMenu);
-  // document.querySelector(".navpunkt").addEventListener("click", toggleMenu);
+  //Først starter vi med at vælge alle elementer i dokumentet, der har klassenavnet "ulle" ved hjælp af document.querySelectorAll(".ulle"). Resultatet gemmes i variablen uller
   const uller = document.querySelectorAll(".ulle");
-
+  //Derefter anvender vi en forEach-loop på uller-variablen. For hvert element tilføjer den en eventlisteneren til "click"-hændelsen ved hjælp af ul.addEventListener("click", () => { ... }).
   uller.forEach((ul) => {
+    //Inde i klik-aktiveret funktion anvender vi igen en forEach-loop på uller. Denne gang sammenligner den hvert element (item) med det aktuelle element, der blev klikket på (ul).
     ul.addEventListener("click", () => {
       uller.forEach((item) => {
+        //Hvis item ikke er det samme som ul, fjerner koden klassenavnet "active" fra item ved hjælp af item.classList.remove("active"). Dette trin fjerner "active"-klassen fra alle andre elementer, der ikke er blevet klikket på.
         if (item !== ul) {
           item.classList.remove("active");
         }
       });
-
+      //Efter at have afsluttet den første forEach-loop, anvender koden ul.classList.toggle("active") for at tilføje eller fjerne klassenavnet "active" fra det aktuelle element, der blev klikket på. Hvis elementet allerede har klassen "active", fjernes den, ellers tilføjes den.
       ul.classList.toggle("active");
     });
   });
-
-  // function toggleMenu() {
-  //   console.log("this is", this);
-  //   this.closest("ul").classList.toggle("active");
-  // }
 </script>
 
 <style>
