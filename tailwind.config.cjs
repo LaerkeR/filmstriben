@@ -57,8 +57,45 @@ module.exports = {
       xl: [
         "4rem",
         {
+          fontFamily: "din-condensed",
           lineHeight: "100%",
-          letterSpacing: "-0.02em",
+          letterSpacing: "0.04em",
+          fontWeight: "700",
+        },
+      ],
+      lg: [
+        "3rem",
+        {
+          fontFamily: "din-condensed",
+          lineHeight: "100%",
+          letterSpacing: "0.04em",
+          fontWeight: "700",
+        },
+      ],
+      md: [
+        "2.5rem",
+        {
+          fontFamily: "Roboto Condensed",
+          lineHeight: "100%",
+          letterSpacing: "0.04em",
+          fontWeight: "700",
+        },
+      ],
+      sm: [
+        "2.125rem",
+        {
+          fontFamily: "din-condensed",
+          lineHeight: "100%",
+          letterSpacing: "0.04em",
+          fontWeight: "700",
+        },
+      ],
+      xs: [
+        "1.75rem",
+        {
+          fontFamily: "din-condensed",
+          lineHeight: "100%",
+          letterSpacing: "0.04em",
           fontWeight: "700",
         },
       ],
