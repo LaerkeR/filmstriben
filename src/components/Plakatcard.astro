@@ -5,29 +5,33 @@ import Heart from "../components/ikoner/heart.astro";
 import Info from "../components/ikoner/info.astro";
 ---
 
-<article class="relative">
+<article class="relative w-fit h-fit">
   <img
     src="../img/oscar film/Everything everywhere all at once/imgPlakat.jpg"
     alt="Everything everywhere all at once"
   />
 
   <div
-    class="absolute bottom-0 opacity-0 hover:opacity-100 transition duration-300"
+    class="absolute h-full flex flex-col-reverse bottom-0 opacity-0 hover:opacity-100 transition duration-300"
   >
-    <div class="bg-black top-[40%] blurShadow blur-[10px]"></div>
-    <div class="bg-black z-10 flex flex-col gap-2 px-10 py-5">
-      <h2>Everything everywhere all at once{filmTitle}</h2>
-      <div class="infoBar flex gap-2 align-middle body-sm">
-        <p class="varrighed text-xs">2t 44min{varrighed}</p>|<p class="aarstal">
-          2020{aarstal}
-        </p>
-        |<p>Spillefilm {type}</p>
-        |<p class="genre">Drama{genre}</p>
-      </div>
-      <div class="ikoner">
-        <Play variant="medium" />
-        <Heart variant="medium" />
-        <Info variant="medium" />
+    <div>
+      <div class="bg-black blurShadow blur-[10px]"></div>
+      <div class="bg-black h-fit z-10 flex flex-col gap-2 px-10 py-5">
+        <h2>Everything everywhere all at once{filmTitle}</h2>
+        <div class="infoBar flex gap-2 align-middle body-sm">
+          <p class="varrighed text-xs">2t 44min{varrighed}</p>|<p
+            class="aarstal"
+          >
+            2020{aarstal}
+          </p>
+          |<p>Spillefilm {type}</p>
+          |<p class="genre">Drama{genre}</p>
+        </div>
+        <div class="ikoner">
+          <Play variant="medium" />
+          <Heart variant="medium" />
+          <Info variant="medium" />
+        </div>
       </div>
     </div>
   </div>

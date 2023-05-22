@@ -1,4 +1,5 @@
 ---
+import Bornmenu from "./Bornmenu.astro";
 import Genremenu from "./Genremenu.astro";
 ---
 
@@ -11,16 +12,15 @@ import Genremenu from "./Genremenu.astro";
     </p>
   </div>
   <div class="flex justify-between items-center w-full">
-    <div class="flex">
+    <div class="flex gap-4">
       <div class="burgermenu">
         <p class="text-white">burger</p>
       </div>
       <div class="flex gap-2">
-        <div class="navpunkt">
-          <ul class="">Børn & Unge</ul>
+        <div class="">
+          <Bornmenu />
         </div>
-
-        <div class="navpunkt">
+        <div class="">
           <Genremenu />
         </div>
       </div>
