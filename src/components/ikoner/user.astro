@@ -2,11 +2,7 @@
 const { variant } = Astro.props;
 ---
 
-<button
-  id="user"
-  data-variant={variant}
-  class="text-white hover:text-yellow-600"
->
+<button id="user" data-variant={variant} class="text-white hover:text-gold-500">
   <p class="hover:lightIcon solidIcon">user</p></button
 >
 
@@ -27,7 +23,7 @@ const { variant } = Astro.props;
 
   function colorOn() {
     textElement.classList = "solidIcon ";
-    textElement.style.color = "yellow";
+    textElement.style.color = "text-gold";
     Button.addEventListener("click", colorOff);
   }
   function colorOff() {
