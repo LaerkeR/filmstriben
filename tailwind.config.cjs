@@ -41,6 +41,8 @@ module.exports = {
     },
     fontFamily: {
       display: "din-condensed,Helvetica, Arial, sans-serif",
+      dinHeader: "din-condensed,Helvetica, Arial, sans-serif",
+      robotoHeader: "roboto condensed, Helvetica, Arial, sans-serif",
       body: "roboto, Helvetica, Arial, sans-serif",
     },
 
@@ -48,52 +50,46 @@ module.exports = {
       "2xl": [
         "6rem",
         {
-          fontFamily: "din-condensed",
           lineHeight: "100%",
           letterSpacing: "0.04em",
           fontWeight: "700",
         },
       ],
       xl: [
-        "4rem",
+        "3.75rem",
         {
-          fontFamily: "din-condensed",
           lineHeight: "100%",
           letterSpacing: "0.04em",
           fontWeight: "700",
         },
       ],
       lg: [
-        "3rem",
+        "2.75rem",
         {
-          fontFamily: "din-condensed",
           lineHeight: "100%",
           letterSpacing: "0.04em",
           fontWeight: "700",
         },
       ],
       md: [
-        "2.5rem",
+        "2.25rem",
         {
-          fontFamily: "Roboto Condensed",
           lineHeight: "100%",
           letterSpacing: "0.04em",
           fontWeight: "700",
         },
       ],
       sm: [
-        "2.125rem",
+        "2rem",
         {
-          fontFamily: "din-condensed",
           lineHeight: "100%",
           letterSpacing: "0.04em",
           fontWeight: "700",
         },
       ],
       xs: [
-        "1.75rem",
+        "1.50rem",
         {
-          fontFamily: "din-condensed",
           lineHeight: "100%",
           letterSpacing: "0.04em",
           fontWeight: "700",
