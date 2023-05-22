@@ -36,7 +36,8 @@
     "alder": "15",
     "tema": "Oscar-film | vindere og nominerede",
     "imgTema": "oscar film",
-    "imgTitel": "Everything everywhere all at once"
+    "imgTitel": "Everything everywhere all at once",
+    "alt": "Billede fra Everything everywhere all at once"
   },
   {
     "filmTitel": "To Leslie",
@@ -89,7 +90,8 @@
     "alder": "15",
     "tema": "Oscar-film | vindere og nominerede",
     "imgTema": "oscar film",
-    "imgTitel": "To Leslie"
+    "imgTitel": "To Leslie",
+    "alt": "billede fra To Leslie"
   },
   {
     "filmTitel": "Licorice pizza",
@@ -140,7 +142,8 @@
     "alder": "7",
     "tema": "Oscar-film | vindere og nominerede",
     "imgTema": "oscar film",
-    "imgTitel": "Licorice pizza"
+    "imgTitel": "Licorice pizza",
+    "alt": "billede fra Licorice pizza "
   },
   {
     "filmTitel": "Verdens værste menneske",
@@ -211,7 +214,8 @@
     "alder": "alle",
     "tema": "Oscar-film | vindere og nominerede",
     "imgTema": "oscar film",
-    "imgTitel": "Drive my car"
+    "imgTitel": "Drive my car",
+    "alt": "billede fra Drive my car "
   },
   {
     "filmTitel": "The lost daughter",
