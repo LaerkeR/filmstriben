@@ -1,5 +1,18 @@
+---
+import Button from "../components/Button.astro";
+---
+
 <article>
-  <h2 class="text:lg">Love proof</h2>
-  <p class="text:lg">Hver film du låner har du til rådighed i 48 timer.</p>
-  <img src="../img/hjul.svg" alt="" />
+  <div>
+    <h2 class="text-lg">Love proof</h2>
+    <p class="text-lg">Hver film du låner har du til rådighed i 48 timer.</p>
+    <img src="../hjul.svg" alt="" />
+    <p>Herefter har du 8 point tilbage denne måned</p>
+    <p>Læs mere om point <a href=""></a>her</p>
+    <Button variant="primary" tekst="Lån film" />
+  </div>
+  <div>
+    <p class="text-sm">Dit biblotek</p>
+    <p class="">Københavns biblioteker</p>
+  </div>
 </article>
