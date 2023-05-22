@@ -1,4 +1,40 @@
 ---
 import Plakatcard from "../components/Plakatcard.astro";
 ---
-<Plakatcard />
+<article>
+    <div>
+        <h2 class="bg-red-900">Plakat karrusel</h2>
+    </div>
+    <div class="carousel">
+      <ul class="flex justify-between overflow-hidden">
+        <li class="carousel-item">
+          <img src="../img/far tema/Gaven/imgCard.webp" alt="Slide 1" />
+        </li>
+        <li class="carousel-item">
+          <img src="../img/far tema/Gaven/imgCard.webp" alt="Slide 2" />
+        </li>
+        <li class="carousel-item">
+          <img src="../img/far tema/Gaven/imgCard.webp" alt="Slide 3" />
+        </li>
+      </ul>
+    </div>
+</article>
+  
+  <style>
+  .carousel {
+    width: 100%;
+  }
+  
+  .carousel-item {
+    width: 100%;
+    height: 400px;
+    position: relative;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  </style>
+  
