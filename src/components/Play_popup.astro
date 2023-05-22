@@ -1,18 +1,22 @@
 ---
 import Button from "../components/Button.astro";
+import Kryds from "../components/Kryds.astro";
 ---
 
 <article class="bg-grey-700 border border-gold-500 w-1/2 h-1/2 py-10">
-  <div class="grid justify-items-center">
+  <Kryds class="" variant="medium" />
+  <div class="grid justify-items-center gap-4">
     <h2 class="text-lg">Love proof</h2>
-    <p class="text-lg">Hver film du låner har du til rådighed i 48 timer.</p>
+    <p class="body-lg text-grey-200">
+      Hver film du låner har du til rådighed i 48 timer.
+    </p>
     <img src="../hjul.svg" alt="" />
     <p>Herefter har du 8 point tilbage denne måned</p>
-    <p>Læs mere om point <a href=""></a>her</p>
+    <p class="text-grey-200">Læs mere om point <a href=""></a>her</p>
     <Button variant="primary" tekst="Lån film" />
   </div>
-  <div>
-    <p class="text-sm">Dit biblotek</p>
-    <p class="">Københavns biblioteker</p>
+  <div class="ml-14">
+    <p class="body-sm">Dit biblotek</p>
+    <p class="font-bold">Københavns biblioteker</p>
   </div>
 </article>

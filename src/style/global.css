@@ -16,6 +16,7 @@
     font-family: "fontAwesomeBrand";
     src: url(/src/style/fonts/Font\ Awesome\ 6\ Brands-Regular-400.otf);
   }
+
   p,
   li {
     font-family: "Roboto", serif;
@@ -63,13 +64,38 @@
     fill: currentColor;
   }
 
-  h2 {
+  /* h2 {
     font-family: "din condensed", Courier, monospace;
     color: white;
     letter-spacing: 0.04em;
     font-size: 34px;
     line-height: 100%;
     font-weight: 700;
+  } */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  li {
+    color: white;
+  }
+
+  .body-lg {
+    font-family: "Roboto";
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  .body-md {
+    font-family: "Roboto";
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
   }
 
   .body-sm {
@@ -77,9 +103,14 @@
     color: white;
     font-size: 16px;
     font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: left;
+    line-height: 150%;
+  }
+  .body-xs {
+    font-family: "Roboto";
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
   }
   .blurShadow {
     content: "";
