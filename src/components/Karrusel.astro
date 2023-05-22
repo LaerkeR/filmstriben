@@ -2,4 +2,19 @@
 import Plakatcard from "../components/Plakatcard.astro";
 ---
 
-  
+<div class="karrusel">
+  <div class="inderste_karrusel flex place-content-center gap-10">
+    <div class="karrusel-item">
+      <Plakatcard />
+    </div>
+    <div class="karrusel-item2">
+      <Plakatcard />
+    </div>
+    <div class="karrusel-item3">
+      <Plakatcard />
+    </div>
+
+    <button class="tilbage absolute text-white left-0">Forrige</button>
+    <button class="næste absolute text-white right-0">Næste</button>
+  </div>
+</div>
