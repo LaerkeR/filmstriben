@@ -5,14 +5,14 @@ const {
   filmTitle,
   varrighed,
   genre,
-  genre2,
+  undergenre,
   imgSrc,
   beskrivelse,
   indstruktør,
 } = Astro.props;
 ---
 
-<article class="bg-blue-300 grid grid-cols-2 p-28 h-">
+<article class="bg-blue-200 grid grid-cols-2 p-28 h-">
   <div>
     <img
       src="../img/oscar film/The lost daughter/imgPlakat.jpg"
@@ -27,8 +27,9 @@ const {
       <p class="varrighed text-xs">1t 57min{varrighed}</p>|<p class="aarstal">
         2020{aarstal}
       </p>|
-      <p class="genre">Thriller {genre}</p>|
-      <p class="genre">Drama{genre2}</p>
+      <p class="genre">Thriller {genre}</p>|<p class="undergenre">
+        Drama {undergenre}
+      </p>
     </div>
     <p class="beskrivelse text-white text-lg mt-10">
       Leda (Olivia Colman) er alene på ferie på en græsk ø, hvor hun bliver
