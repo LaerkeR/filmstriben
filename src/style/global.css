@@ -53,6 +53,10 @@
     transform-origin: bottom left;
   }
 
+  .divider {
+    border-right: 1px solid #ffffff;
+  }
+
   .brandIcon {
     font-family: "fontAwesomeBrand", sans-serif;
   }

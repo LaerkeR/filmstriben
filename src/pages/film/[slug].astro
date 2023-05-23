@@ -4,6 +4,7 @@ import Button from "../../components/Button.astro";
 import filmdatabase from "../../filmdatabase.json";
 import Layout from "../../layouts/Layout.astro";
 import Play from "../../components/ikoner/play.astro";
+import Imdb from "../../components/Imdb.astro";
 
 export async function getStaticPaths() {
   return filmdatabase.map((show) => {
@@ -43,20 +44,21 @@ console.log(myData);
       </div>
     </div>
 
-    <section class="grid grid-cols-3 mt-8 justify-items-center">
-      <div>
-        <div class="infoBar text-white flex gap-2 align-middle body-sm">
-          <p class="text-white varrighed body-sm">{myData.varighed}</p>|
-          <p class="text-white varrighed body-sm">{myData.aarstal}</p>|
-          <p class="text-white varrighed body-sm">{myData.type}</p>|
-          <p class="text-white varrighed body-sm">{myData.genre}</p>|
-          <p class="text-white varrighed body-sm">{myData.point}</p>|
+    <section class="flex mt-8 justify-items-center">
+      <div class="divider flex flex-col h-full gap-16">
+        <div class="infoBar text-white flex gap-2 items-center body-lg">
+          <p class="text-white body-md">{myData.varighed}</p>|
+          <p class="text-white body-md">{myData.aarstal}</p>|
+          <p class="text-white body-md">{myData.type}</p>|
+          <p class="text-white body-md">{myData.genre}</p>|
+          <p class="text-white body-md">{myData.point} point</p>
         </div>
 
+        <p class="text-white resume max-w-prose body-md">
+          {myData.langResume}
+        </p>
         <div>
-          <p class="text-white resume">
-            {myData.langResume}
-          </p>
+          <Imdb tal={myData.ratingIMDb} />
         </div>
       </div>
 
