@@ -1,7 +1,7 @@
 [
   {
     "filmTitel": "Everything everywhere all at once",
-    "slug": "film/eeaao/",
+    "slug": "everything-everywhere-all-at-once",
     "originalTitel": "",
     "aarstal": "2021",
     "genre": "Action",
@@ -39,6 +39,7 @@
   },
   {
     "filmTitel": "To Leslie",
+    "slug": "to-leslie",
     "originalTitel": "",
     "aarstal": "2021",
     "genre": "Drama",
@@ -87,6 +88,7 @@
   },
   {
     "filmTitel": "Licorice pizza",
+    "slug": "licorice-pizza",
     "originalTitel": "",
     "aarstal": "2021",
     "genre": "Drama",
@@ -132,7 +134,8 @@
   },
   {
     "filmTitel": "Verdens værste menneske",
-    "originalTitel": "Verdens verste menneske",
+    "slug": "verdens-vaerste-menneske",
+    "originalTitel": "Verdens vaerste menneske",
     "aarstal": "2021",
     "genre": "Drama",
     "underGenre": "Komedie",
@@ -161,6 +164,7 @@
   },
   {
     "filmTitel": "Drive my car",
+    "slug": "drive-my-car",
     "originalTitel": "",
     "aarstal": "2021",
     "genre": "Drama",
@@ -200,6 +204,7 @@
   },
   {
     "filmTitel": "The lost daughter",
+    "slug": "the-lost-daughter",
     "originalTitel": "",
     "aarstal": "2020",
     "genre": "Thriller",
@@ -247,6 +252,7 @@
   },
   {
     "filmTitel": "The father",
+    "slug": "the-father",
     "originalTitel": "",
     "aarstal": "2020",
     "genre": "Drama",
@@ -291,6 +297,7 @@
   },
   {
     "filmTitel": "Quo vadis, Aida?",
+    "slug": "quo-vadis-Aida",
     "originalTitel": "",
     "aarstal": "2020",
     "genre": "Drama",
@@ -335,6 +342,7 @@
   },
   {
     "filmTitel": "Ørnejægerens søn",
+    "slug": "oernejaegerens-soen",
     "originalTitel": "Die Stimme des Adlers ",
     "aarstal": "2009",
     "genre": "Drama",
@@ -364,6 +372,7 @@
   },
   {
     "filmTitel": "Migas rejse",
+    "slug": "migas-rejse",
     "originalTitel": "",
     "aarstal": "2002",
     "genre": "Kortfilm",
@@ -394,6 +403,7 @@
   },
   {
     "filmTitel": "Den gyldne jord",
+    "slug": "den-gyldne-jord",
     "originalTitel": "Veins of the world",
     "aarstal": "2020",
     "genre": "Drama",
@@ -440,6 +450,7 @@
   },
   {
     "filmTitel": "Den Sidste Ulv",
+    "slug": "den-sidste-ulv",
     "originalTitel": "Le dernier loup",
     "aarstal": "2014",
     "genre": "Drama",
@@ -479,6 +490,7 @@
   },
   {
     "filmTitel": "Aligermaas eventyr",
+    "slug": "aligermaas-eventyr",
     "originalTitel": "",
     "aarstal": "1999",
     "genre": "Drama",
@@ -518,6 +530,7 @@
   },
   {
     "filmTitel": "Fædre & sønner",
+    "slug": "faedre-og-soenner",
     "originalTitel": "",
     "aarstal": "2018",
     "genre": "Historie",
@@ -563,6 +576,7 @@
 
   {
     "filmTitel": "Lulu",
+    "slug": "lulu",
     "originalTitel": "",
     "aarstal": "2014",
     "genre": "Drama",
@@ -592,12 +606,13 @@
     "point": "0",
     "alder": "11",
     "tema": "Far tema",
-    "imgTema": "Far tema",
+    "imgTema": "far tema",
     "imgTitel": "Lulu"
   },
 
   {
     "filmTitel": "Gensyn med Yorkshire",
+    "slug": "gensyn-med-yorkshire",
     "originalTitel": "And when did you last see your father?",
     "aarstal": "2007",
     "genre": "drama",
@@ -626,11 +641,12 @@
     "point": "4",
     "alder": "15",
     "tema": "Far tema",
-    "imgTema": "Far tema",
+    "imgTema": "far tema",
     "imgTitel": "Gensyn med Yorkshire"
   },
   {
     "filmTitel": "Paris of the North",
+    "slug": "paris-of-the-north",
     "originalTitel": "Paris Norðursins",
     "aarstal": "2014",
     "genre": "komedier",
@@ -661,11 +677,12 @@
     "point": "4",
     "alder": "15",
     "tema": "Far tema",
-    "imgTema": "Far tema",
+    "imgTema": "far tema",
     "imgTitel": "Paris of the North"
   },
   {
     "filmTitel": "Gaven",
+    "slug": "gaven",
     "originalTitel": "",
     "aarstal": "2008",
     "genre": "drama",
@@ -701,11 +718,12 @@
     "point": "4",
     "alder": "11",
     "tema": "Far tema",
-    "imgTema": "Far tema",
+    "imgTema": "far tema",
     "imgTitel": "Gaven"
   },
   {
     "filmTitel": "Omvejen",
+    "slug": "omvejen",
     "originalTitel": "",
     "aarstal": "2012",
     "genre": "drama",
@@ -734,11 +752,12 @@
     "point": "2",
     "alder": "A",
     "tema": "Far tema",
-    "imgTema": "Far tema",
+    "imgTema": "far tema",
     "imgTitel": "Omveje"
   },
   {
     "filmTitel": "Mesterkokken",
+    "slug": "mesterkokken",
     "originalTitel": "Toast",
     "aarstal": "2010",
     "genre": "drama",
@@ -773,11 +792,12 @@
     "point": "4",
     "alder": "15",
     "tema": "Far tema",
-    "imgTema": "Far tema",
+    "imgTema": "far tema",
     "imgTitel": "Mesterkokken"
   },
   {
     "filmTitel": "Min sommer i Provence",
+    "slug": "min-sommer-i-provence",
     "originalTitel": "Le temps des secrets",
     "aarstal": "2022",
     "genre": "Drama",
@@ -816,11 +836,12 @@
     "point": "4",
     "alder": "7",
     "tema": "Senest tilføjet",
-    "imgTema": "senest tilføjet",
+    "imgTema": "senest tilfoejet",
     "imgTitel": "Min sommer i Provence"
   },
   {
     "filmTitel": "Jeg elsker også dig",
+    "slug": "jeg-elsker-ogsaa-dig",
     "originalTitel": "Avec amour et acharnement",
     "aarstal": "2021",
     "genre": "Kærlighed",
@@ -856,11 +877,12 @@
     "point": "4",
     "alder": "11",
     "tema": "Senest tilføjet",
-    "imgTema": "senest tilføjet",
+    "imgTema": "senest tilfojet",
     "imgTitel": "Jeg elsker ogsaa dig"
   },
   {
     "filmTitel": "The super 8 years",
+    "slug": "the-super-8-years",
     "originalTitel": "Les années super-8",
     "aarstal": "2022",
     "genre": "Dokumentar",
@@ -891,11 +913,12 @@
     "point": "4",
     "alder": "11",
     "tema": "Senest tilføjet",
-    "imgTema": "senest tilføjet",
+    "imgTema": "senest tilfoejet",
     "imgTitel": "The super 8 years"
   },
   {
     "filmTitel": "Free Cjol Soo Lee",
+    "slug": "free-cjol-soo-lee",
     "originalTitel": "",
     "aarstal": "2022",
     "genre": "Dokumentar",
@@ -932,12 +955,13 @@
     "point": "4",
     "alder": "11",
     "tema": "Senest tilføjet",
-    "imgTema": "senest tilføjet",
+    "imgTema": "senest tilfoejet",
     "imgTitel": "Free Cjol Soo Lee"
   },
 
   {
     "filmTitel": "Songs my brothers taught me",
+    "slug": "songs-my-brothers-taught-me",
     "originalTitel": "",
     "aarstal": "2015",
     "genre": "drama",
@@ -986,11 +1010,12 @@
     "point": "4",
     "alder": "15",
     "tema": "Senest tilføjet",
-    "imgTema": "senest tilføjet",
+    "imgTema": "senest tilfoejet",
     "imgTitel": "Songs my brothers taught me"
   },
   {
     "filmTitel": "Nattens skov",
+    "slug": "nattens-skov",
     "originalTitel": "Nachtwald",
     "aarstal": "2021",
     "genre": "drama",
@@ -1035,11 +1060,12 @@
     "point": "4",
     "alder": "7",
     "tema": "Senest tilføjet",
-    "imgTema": "senest tilføjet",
+    "imgTema": "senest tilfoejet",
     "imgTitel": "Nattens skov"
   },
   {
     "filmTitel": "Spun",
+    "slug": "spun",
     "originalTitel": "",
     "aarstal": "2002",
     "genre": "Krimi",
@@ -1071,11 +1097,12 @@
     "point": "4",
     "alder": "15",
     "tema": "Senest tilføjet",
-    "imgTema": "senest tilføjet",
+    "imgTema": "senest tilfoejet",
     "imgTitel": "Spun"
   },
   {
     "filmTitel": "Hej verden!",
+    "slug": "hej-verden",
     "originalTitel": "Bonjour le Monde",
     "aarstal": "2018",
     "genre": "Animation",
@@ -1118,11 +1145,12 @@
     "point": "4",
     "alder": "A",
     "tema": "Senest tilføjet",
-    "imgTema": "senest tilføjet",
-    "imgTitel": "Hej verden!"
+    "imgTema": "senest tilfoejet",
+    "imgTitel": "Hej verden"
   },
   {
     "filmTitel": "Jeg elsker også dig",
+    "slug": "jeg-elsker-ogsaa-dig",
     "originalTitel": "Avec amour et acharnement",
     "aarstal": "2021",
     "genre": "Kærlighed",
@@ -1163,6 +1191,7 @@
   },
   {
     "filmTitel": "Ali & Ava",
+    "slug": "ali-og-ava",
     "originalTitel": "",
     "aarstal": "2020",
     "genre": "Kærlighed",
@@ -1198,6 +1227,7 @@
   },
   {
     "filmTitel": "Jeg hedder Ernesto",
+    "slug": "jeg-hedder-ernesto",
     "originalTitel": "Infancia clandestina",
     "aarstal": "2011",
     "genre": "drama",
@@ -1243,6 +1273,7 @@
   },
   {
     "filmTitel": "Peter von Kant",
+    "slug": "peter-von-kant",
     "originalTitel": "",
     "aarstal": "2022",
     "genre": "drama",
@@ -1287,6 +1318,7 @@
   },
   {
     "filmTitel": "Waiting for Bojangles",
+    "slug": "waiting-for-bojangles",
     "originalTitel": "En attendant Bojangles",
     "aarstal": "2021",
     "genre": "Kærlighed",
@@ -1328,6 +1360,7 @@
   },
   {
     "filmTitel": "Moderen og luderen",
+    "slug": "moderen-og-luderen",
     "originalTitel": "La maman et la putain",
     "aarstal": "1973",
     "genre": "Kærlighed",
@@ -1374,6 +1407,7 @@
   },
   {
     "filmTitel": "Barbara",
+    "slug": "barbara",
     "originalTitel": "",
     "aarstal": "1997",
     "genre": "kærlighed",
@@ -1407,6 +1441,7 @@
   },
   {
     "filmTitel": "Cyrano",
+    "slug": "cyrano",
     "originalTitel": "",
     "aarstal": "2021",
     "genre": "Kærlighed",
@@ -1454,6 +1489,7 @@
 
   {
     "filmTitel": "De fem år",
+    "slug": "de-fem-aar",
     "originalTitel": "De fem år",
     "aarstal": "1955",
     "genre": "Dokumentar",
