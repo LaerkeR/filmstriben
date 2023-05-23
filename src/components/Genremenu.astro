@@ -11,7 +11,9 @@ const { navpunkt } = Astro.props;
     {
       filmgenredatabase.map((genre) => (
         <li class=" py-1 px-1 align-middle">
-          <a href={genre}>{genre}</a>
+          <a class="Underline" href={genre}>
+            {genre}
+          </a>
         </li>
       ))
     }

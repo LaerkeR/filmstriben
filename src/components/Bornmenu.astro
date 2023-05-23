@@ -12,6 +12,7 @@ const { navpunkt } = Astro.props;
       bornUngedatabase.map((aldersKategori) => (
         <li class=" py-1 px-1 align-middle">
           <a
+            class="Underline"
             href={aldersKategori.kategori}
           >{`${aldersKategori.kategori} +${aldersKategori.alder} år`}</a>
         </li>

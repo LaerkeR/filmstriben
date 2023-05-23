@@ -51,7 +51,6 @@ module.exports = {
         "6rem",
         {
           lineHeight: "100%",
-          letterSpacing: "0.04em",
           fontWeight: "700",
         },
       ],

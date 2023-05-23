@@ -27,13 +27,13 @@
     position: relative;
   }
 
-  a:hover,
+  .Underline:hover,
   .navpunkt:hover {
-    color: #CAAE68;
+    color: #caae68;
     /* border-bottom: 1px solid goldenrod; */
   }
 
-  a::after,
+  .Underline::after,
   .navpunkt::after {
     content: "";
     position: absolute;
@@ -47,7 +47,7 @@
     transition: transform 0.25s ease-out;
   }
 
-  a:hover::after,
+  .Underline:hover::after,
   .navpunkt:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
