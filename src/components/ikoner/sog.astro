@@ -2,8 +2,8 @@
 const { variant } = Astro.props;
 ---
 
-<button id="sog" data-variant={variant} class="text-white hover:text-gold-500">
-  <p class="lightIcon active:solidIcon">magnifying-glass</p></button
+<button id="sog" data-variant={variant}>
+  <p class="lightIcon active:solidIcon hover:text-gold-500">magnifying-glass</p></button
 >
 
 <style>
@@ -15,7 +15,7 @@ const { variant } = Astro.props;
   }
 </style>
 
-<script>
+<!-- <script>
   const Button = document.getElementById("sog");
   const textElement = document.querySelector("#sog p");
 
@@ -23,7 +23,7 @@ const { variant } = Astro.props;
 
   function colorOn() {
     textElement.classList = "solidIcon ";
-    textElement.style.color = "yellow";
+    textElement.style.color = "#CAAE68";
     Button.addEventListener("click", colorOff);
   }
   function colorOff() {
@@ -31,4 +31,4 @@ const { variant } = Astro.props;
     textElement.style.color = "white";
     Button.addEventListener("click", colorOn);
   }
-</script>
+</script> -->
