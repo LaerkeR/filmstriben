@@ -3,7 +3,7 @@ const { aarstal, filmTitle, slug, varrighed, genre, imgSrc, undergenre } =
   Astro.props;
 ---
 
-<a href={slug}>
+<a href={`film/${slug}`}>
   <article class="relative card w-fit overflow-hidden">
     <img class="md:w-[100%]" src={imgSrc} alt="" />
     <div class="absolute w-full bottom-0 z-10">

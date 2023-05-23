@@ -1,0 +1,18 @@
+---
+import filmdatabase from "../../filmdatabase.json";
+
+export async function getStaticPaths() {
+  return filmdatabase.map((post) => {
+    return {
+      params: { slug: post.slug },
+      props: { post },
+    };
+  });
+}
+
+const { slug } = Astro.params;
+const { post } = Astro.props;
+console.log(post);
+---
+
+<h1>{post.filmTitel}</h1>
