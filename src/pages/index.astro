@@ -4,8 +4,6 @@ import MovieCard from "../components/Moviecard.astro";
 import filmdatabase from "../filmdatabase.json";
 import maanedensfilm from "../maanedensfilm.json";
 import Maanedscard from "../components/Maanedscard.astro";
-
-const { title } = Astro.props;
 ---
 
 <Layout title="Filmstriben | Alle film">
@@ -21,7 +19,7 @@ const { title } = Astro.props;
             aarstal={film.aarstal}
             filmTitle={film.filmTitel}
             imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
-            url={film.slug}
+            slug={film.slug}
           />
         ))
       }
