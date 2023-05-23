@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import DataCard from "../components/Moviecard.astro";
+import filmdatabase from "../filmdatabase.json";
+console.log(filmdatabase);
+---
+
+<Layout title="alle film">
+  <section class="grid grid-cols-3 w-full gap-4 px-10x">
+    {
+      filmdatabase.map((film) => (
+        <DataCard
+          data={film}
+          imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
+        />
+      ))
+    }
+  </section>
+</Layout>
