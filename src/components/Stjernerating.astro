@@ -4,15 +4,8 @@ import Star from "../components/ikoner/star.astro";
 const { antal } = Astro.props;
 ---
 
-<div class="rating">
-    <div class="stars flex">
-    <p class="hover:lightIcon hover:solid-gold-500 hover:text-gold-500 solidIcon">star</p>
-    <p class="hover:lightIcon hover:text-gold-500 solidIcon">star</p>
-    <p class="hover:lightIcon hover:text-gold-500 solidIcon">star</p>
-    <p class="hover:lightIcon hover:text-gold-500 solidIcon">star</p>
-    <p class="hover:lightIcon hover:text-gold-500 solidIcon">star</p>
-<div class="flex gap-2">
-  <div class="flex">
+<div class="rating flex">
+  <div class="">
     <Star variant="small" />
     <Star variant="small" />
     <Star variant="small" />
@@ -23,7 +16,6 @@ const { antal } = Astro.props;
     <p>(6){antal}</p>
   </div>
 </div>
-
 <!-- <div class="MoviePlayer-rating-item flex">
   <div>
     <button class="MoviePlayer-stars_f fa fa-star active before:text-gold-500">
