@@ -23,7 +23,9 @@ const { navpunkt, specialClass } = Astro.props;
           filmkategoridatabase.map((filmkategori) => (
             <>
               <li class=" py-1 px-1 align-middle ">
-                <a href={filmkategori}>{filmkategori}</a>
+                <a class="Underline" href={filmkategori}>
+                  {filmkategori}
+                </a>
               </li>
             </>
           ))
@@ -66,4 +68,23 @@ const { navpunkt, specialClass } = Astro.props;
   .active .undermenu {
     display: block;
   }
+
+  /* a::after,
+  .navpunkt::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: goldenrod;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  a:hover::after,
+  .navpunkt:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  } */
 </style>
