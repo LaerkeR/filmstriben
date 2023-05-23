@@ -1,22 +1,21 @@
 ---
 import Star from "../components/ikoner/star.astro";
 ---
-<div class="MoviePlayer-rating-item flex">
-    <div>
-        <button class="MoviePlayer-stars_f fa fa-star active">
-            <img class="star" src="public/icons/star.svg" alt="">
-        </button>
-    </div>
+
+<div class="rating">
+    <div class="stars flex">
+    <p class="hover:lightIcon hover:solid-gold-500 hover:text-gold-500 solidIcon">star</p>
+    <p class="hover:lightIcon hover:text-gold-500 solidIcon">star</p>
+    <p class="hover:lightIcon hover:text-gold-500 solidIcon">star</p>
+    <p class="hover:lightIcon hover:text-gold-500 solidIcon">star</p>
+    <p class="hover:lightIcon hover:text-gold-500 solidIcon">star</p>
 </div>
+  </div>
 
 <style>
-.MoviePlayer-rating-item {
-    display: inline-block;
-}
-
-.MoviePlayer-stars_f.active {
-    color: #ffd200;
+.hover\\:lightIcon:hover,
+.hover\\:lightIcon:hover ~ .hover\\:lightIcon {
+  fill: yellow !important;
 }
 </style>    
-    
   
