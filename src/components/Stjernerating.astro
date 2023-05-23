@@ -1,5 +1,7 @@
 ---
 import Star from "../components/ikoner/star.astro";
+
+const { antal } = Astro.props;
 ---
 
 <div class="rating">
@@ -9,6 +11,25 @@ import Star from "../components/ikoner/star.astro";
     <p class="hover:lightIcon hover:text-gold-500 solidIcon">star</p>
     <p class="hover:lightIcon hover:text-gold-500 solidIcon">star</p>
     <p class="hover:lightIcon hover:text-gold-500 solidIcon">star</p>
+<div class="flex gap-2">
+  <div class="flex">
+    <Star variant="small" />
+    <Star variant="small" />
+    <Star variant="small" />
+    <Star variant="small" />
+    <Star variant="small" />
+  </div>
+  <div>
+    <p>(6){antal}</p>
+  </div>
+</div>
+
+<!-- <div class="MoviePlayer-rating-item flex">
+  <div>
+    <button class="MoviePlayer-stars_f fa fa-star active before:text-gold-500">
+      <img class="star" src="public/icons/star.svg" alt="" />
+    </button>
+  </div>
 </div>
   </div>
 
@@ -19,3 +40,13 @@ import Star from "../components/ikoner/star.astro";
 }
 </style>    
   
+  .MoviePlayer-rating-item {
+    display: inline-block;
+  }
+
+  .MoviePlayer-stars_f.active {
+    color: #ffd200;
+  }
+</style>
+
+-->
