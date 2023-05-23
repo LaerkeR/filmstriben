@@ -1,18 +1,86 @@
 ---
+import Moviecard from "../../components/Moviecard.astro";
+import Button from "../../components/Button.astro";
 import filmdatabase from "../../filmdatabase.json";
+import Layout from "../../layouts/Layout.astro";
+import Play from "../../components/ikoner/play.astro";
 
 export async function getStaticPaths() {
-  return filmdatabase.map((post) => {
+  return filmdatabase.map((show) => {
     return {
-      params: { slug: post.slug },
-      props: { post },
+      params: { slug: show.slug },
+      props: { myData: show },
     };
   });
 }
 
 const { slug } = Astro.params;
-const { post } = Astro.props;
-console.log(post);
+const { myData } = Astro.props;
+console.log(myData);
 ---
 
-<h1>{post.filmTitel}</h1>
+<Layout title={myData.filmTitel}>
+  <section>
+    <div class="splash w-full h-[60vw] lg:h-[46vw] overflow-hidden">
+      <div
+        class="bg-no-repeat bg-cover bg-center w-full h-full flex flex-col justify-end"
+        style={`background-image: url("../../../img/${myData.imgTema}/${myData.imgTitel}/imgSingleview.webp")`}
+      >
+        <div class="self-center">
+          <Play />
+        </div>
+
+        <div class="bottom-5 m-10 w-full">
+          <h1 class="text-2xl font-display">{myData.filmTitel}</h1>
+          <Button variant="primary" tekst="Se forsmag" />
+          <div class="flex gap-10 mt-5">
+            <p class="text-white">Føj til favoritter</p>
+            <p class="text-white">Del</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="grid grid-cols-3 m-20 justify-items-center">
+      <div>
+        <div class="infoBar text-white flex gap-2 align-middle body-sm">
+          <p class="text-white varrighed body-sm">{myData.varighed}</p>|
+          <p class="text-white varrighed body-sm">{myData.aarstal}</p>|
+          <p class="text-white varrighed body-sm">{myData.type}</p>|
+          <p class="text-white varrighed body-sm">{myData.genre}</p>|
+          <p class="text-white varrighed body-sm">{myData.point}</p>|
+        </div>
+
+        <div>
+          <p class="text-white resume">
+            {myData.langResume}
+          </p>
+        </div>
+      </div>
+
+      <div class="">
+        <h3 class="text-xs text-white">DETALJER:</h3>
+
+        <div class="text-white detaljer om filmen grid grid-cols-2">
+          <p>Originaltitel:</p>
+          <a
+            class="text-white m-2 rounded-md border-solid border border-yellow-500 text-center hover:bg-yellow-600 hover:text-white"
+            href="">Kärleksbevis</a
+          >
+          <p class="text-white">Sprog:</p>
+          <a
+            class="text-white m-2 rounded-md border-solid border border-yellow-500 text-center hover:bg-yellow-600 hover:text-white"
+            href="">Svensk</a
+          >
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="flex flex-row w-full justify-between gap-4 px-10">
+        <Moviecard />
+        <Moviecard />
+        <Moviecard />
+      </div>
+    </section>
+  </section>
+</Layout>
