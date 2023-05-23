@@ -25,18 +25,14 @@ const {
         Månedens film | se for 0 point i Maj
       </h3>
       <h2 class="text-xl font-dinHeader uppercase mt-2">
-        The lost daughter{filmTitle}
+        {filmTitle}
       </h2>
       <div class="infoBar mt-2 flex gap-2 items-center body-md">
-        <p class="varrighed body-xs">1t 57min{varighed}</p>|<p
-          class="aarstal body-xs"
-        >
-          2020{aarstal}
+        <p class="varrighed body-xs">{varighed}</p>|<p class="aarstal body-xs">
+          {aarstal}
         </p>|
-        <p class="genre body-xs">Thriller {genre}</p>|<p
-          class="undergenre body-xs"
-        >
-          Drama {undergenre}
+        <p class="genre body-xs">{genre}</p>|<p class="undergenre body-xs">
+          {undergenre}
         </p>
       </div>
       <p class="beskrivelse body-md mt-12 max-w-prose">
@@ -51,7 +47,7 @@ const {
       <div class="indstruktør mt-8 flex flex-row gap-1">
         <p class="indstruktør body-sm text-grey-100">Instruktør:</p>
         <p class="body-sm">
-          Maggie Gyllenhaal {indstruktør}
+          {indstruktør}
         </p>
       </div>
     </div>

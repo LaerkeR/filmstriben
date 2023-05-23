@@ -21,10 +21,26 @@ const { title } = Astro.props;
             aarstal={film.aarstal}
             filmTitle={film.filmTitel}
             imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
+            url={film.slug}
           />
         ))
       }
     </section>
+
+    <!-- <section class="grid grid-cols-3 w-full gap-4 px-10x">
+      {
+        filmdatabase.map((film) => (
+          <MovieCard
+            varighed={film.varighed}
+            genre={film.genre}
+            aarstal={film.aarstal}
+            filmTitle={film.filmTitel}
+            imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
+            url={film.slug}
+          />
+        ))
+      }
+    </section> -->
     <section>
       {
         maanedensfilm.map((film) => (
@@ -33,6 +49,8 @@ const { title } = Astro.props;
             genre={film.genre}
             aarstal={film.aarstal}
             filmTitle={film.filmTitel}
+            beskrivelse={film.kortResume}
+            instrukor={film.instruktor}
             imgSrc={`../img/${film.imgTema}/imgPlakat.webp`}
           />
         ))
