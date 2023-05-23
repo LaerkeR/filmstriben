@@ -17,39 +17,45 @@ import Plakatcard from "../components/Plakatcard.astro";
 
   <div>
     <div class="relative px-8 h-fit overflow-hidden">
-      <div class="absolute flex h-full w-fit justify-end right-0 z-40">
+      <div
+        class="next-button absolute flex h-full w-fit justify-end right-0 z-40"
+      >
         <button class="bg-black opacity-80 w-40"
           ><p class="lightIcon">angle-right</p>
         </button>
       </div>
-      <div class="absolute flex h-full w-fit justify-end left-0 z-40">
+      <div
+        class="prev-button absolute flex h-full w-fit justify-end left-0 z-40"
+      >
         <button class="bg-black opacity-80 w-40"
           ><p class="lightIcon">angle-left</p>
         </button>
       </div>
-      <div class="relative w-full flex gap-16 snap-x snap-mandatory">
+      <div
+        class="carousel relative w-full flex gap-16 snap-x snap-mandatory overflow-x-auto"
+      >
         <div class="snap-start scroll-mx-6 shrink-0">
           <div class="shrink-0 w-0"></div>
         </div>
-        <div class="snap-start scroll-mx-6 shrink-0">
+        <div class="card snap-start scroll-mx-6 shrink-0">
           <Plakatcard />
         </div>
-        <div class="snap-start scroll-mx-6 shrink-0">
+        <div class="card snap-start scroll-mx-6 shrink-0">
           <Plakatcard />
         </div>
-        <div class="snap-start scroll-mx-6 shrink-0">
+        <div class="card snap-start scroll-mx-6 shrink-0">
           <Plakatcard />
         </div>
-        <div class="snap-start scroll-mx-6 shrink-0">
+        <div class="card snap-start scroll-mx-6 shrink-0">
           <Plakatcard />
         </div>
-        <div class="snap-start scroll-mx-6 shrink-0">
+        <div class="card snap-start scroll-mx-6 shrink-0">
           <Plakatcard />
         </div>
-        <div class="snap-start scroll-mx-6 shrink-0">
+        <div class="card snap-start scroll-mx-6 shrink-0">
           <Plakatcard />
         </div>
-        <div class="snap-start scroll-mx-6 shrink-0">
+        <div class="card snap-start scroll-mx-6 shrink-0">
           <Plakatcard />
         </div>
         <div class="snap-start scroll-mx-6 shrink-0">
@@ -59,3 +65,35 @@ import Plakatcard from "../components/Plakatcard.astro";
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector(".carousel");
+    const prevButton = document.querySelector(".prev-button");
+    const nextButton = document.querySelector(".next-button");
+
+    const cardWidth = 300; // Bredden af hvert kort i pixels
+    let currentPosition = 0; // Den aktuelle position i karrusellen
+
+    // Opdater karrusellen baseret på den aktuelle position
+    function updateCarousel() {
+      carousel.style.transform = `translateX(${currentPosition}px)`;
+    }
+
+    // Flyt karrusellen til venstre
+    function slideNext() {
+      currentPosition -= cardWidth;
+      updateCarousel();
+    }
+
+    // Flyt karrusellen til højre
+    function slidePrev() {
+      currentPosition += cardWidth;
+      updateCarousel();
+    }
+
+    // Lyt efter klik på knapperne
+    nextButton.addEventListener("click", slideNext);
+    prevButton.addEventListener("click", slidePrev);
+  });
+</script>
