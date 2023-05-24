@@ -1,11 +1,11 @@
 ---
-import Moviecard from "../../components/Moviecard.astro";
-import Button from "../../components/Button.astro";
-import filmdatabase from "../../filmdatabase.json";
-import Layout from "../../layouts/Layout.astro";
-import Play from "../../components/ikoner/play.astro";
-import Imdb from "../../components/Imdb.astro";
-import Detaljertags from "../../components/Detaljertags.astro";
+import Moviecard from "../components/Moviecard.astro";
+import Button from "../components/Button.astro";
+import filmdatabase from "../filmdatabase.json";
+import Layout from "../layouts/Layout.astro";
+import Play from "../components/ikoner/play.astro";
+import Imdb from "../components/Imdb.astro";
+import Detaljertags from "../components/Detaljertags.astro";
 
 export async function getStaticPaths() {
   return filmdatabase.map((film) => {

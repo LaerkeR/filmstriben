@@ -1,0 +1,44 @@
+---
+import filmkategori from "../filmkategori.json";
+import filmdatabase from "../filmdatabase.json";
+import MovieCard from "../components/Moviecard.astro";
+import Layout from "../layouts/Layout.astro";
+import UndersideLayout from "../layouts/UndersideLayout.astro";
+
+// const genre = filmdatabase.filter((film) => film.genre === {genre});
+
+export async function getStaticPaths() {
+  return filmkategori.map((kategori) => {
+    return {
+      params: { kategori: kategori },
+      props: { kategoriData: kategori },
+    };
+  });
+}
+
+const { kategori } = Astro.params;
+const { kategoriData } = Astro.props;
+
+const filtretGenre = filmdatabase.filter(
+  (film) => film.type === kategoriData || film.genre.includes(kategoriData)
+);
+console.log(filmdatabase.length);
+---
+
+<Layout title={kategoriData}>
+  <UndersideLayout undersideTitel={kategoriData}>
+    {
+      filtretGenre.map((film) => (
+        <MovieCard
+          varighed={film.varighed}
+          genre={film.genre}
+          aarstal={film.aarstal}
+          filmTitle={film.filmTitel}
+          imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
+          slug={film.slug}
+          point={film.point}
+        />
+      ))
+    }
+  </UndersideLayout>
+</Layout>

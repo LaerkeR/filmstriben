@@ -10,7 +10,9 @@ import Maanedscard from "../components/Maanedscard.astro";
   <main>
     <h2>Alle film</h2>
 
-    <section class="grid grid-cols-3 w-full gap-4 px-10x">
+    <section
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 lg:gap-4 px-10"
+    >
       {
         filmdatabase.map((film) => (
           <MovieCard

@@ -1,29 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import DataCard from "../components/Moviecard.astro";
+import MovieCard from "../components/Moviecard.astro";
 import filmdatabase from "../filmdatabase.json";
-
-const newArr = filmdatabase.map((item) => {
-  console.log(item.genre);
-  return {
-    genre: item.genre,
-    agalder: item.alder,
-  };
-});
-
-const genre = filmdatabase.filter((film) => film.genre === clickedGenre);
-console.log("********************", genre);
+import UndersideLayout from "../layouts/UndersideLayout.astro";
 ---
 
-<Layout title="alle film">
-  <section class="grid grid-cols-3 w-full gap-4 px-10x">
+<Layout title="Alle film">
+  <UndersideLayout undersideTitel="Alle film">
     {
       filmdatabase.map((film) => (
-        <DataCard
-          data={film}
+        <MovieCard
+          varighed={film.varighed}
+          genre={film.genre}
+          aarstal={film.aarstal}
+          filmTitle={film.filmTitel}
           imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
+          slug={film.slug}
+          point={film.point}
         />
       ))
     }
-  </section>
+  </UndersideLayout>
 </Layout>
