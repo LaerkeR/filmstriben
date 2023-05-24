@@ -2,7 +2,7 @@
 const { variant } = Astro.props;
 ---
 
-<button id="user" data-variant={variant}>
+<button id="heart" data-variant={variant}>
   <p class="lightIcon hover:text-gold-500">heart</p></button
 >
 
@@ -18,3 +18,23 @@ const { variant } = Astro.props;
     font-size: 48px;
   }
 </style>
+
+<script>
+  console.log("ready");
+  const Button = document.querySelector("#heart");
+  const textElement = document.querySelector("#heart p");
+
+  //console.log(Button);
+
+  Button.addEventListener("click", changeColor);
+
+  function changeColor() {
+    if (textElement.classList.contains("lightIcon")) {
+      console.log("lightIcon");
+      textElement.classList.replace("lightIcon", "solidIcon");
+    } else {
+      console.log("not lightIcon");
+      textElement.classList.replace("solidIcon", "lightIcon");
+    }
+  }
+</script>
