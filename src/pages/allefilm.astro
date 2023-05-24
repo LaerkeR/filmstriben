@@ -2,7 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 import DataCard from "../components/Moviecard.astro";
 import filmdatabase from "../filmdatabase.json";
-console.log(filmdatabase);
+
+const newArr = filmdatabase.map((item) => {
+  console.log(item.genre);
+  return {
+    genre: item.genre,
+    agalder: item.alder,
+  };
+});
+
+const genre = filmdatabase.filter((film) => film.genre === clickedGenre);
+console.log("********************", genre);
 ---
 
 <Layout title="alle film">

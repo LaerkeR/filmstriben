@@ -46,8 +46,8 @@
     "underGenre": "",
     "type": "Spillefilm",
     "varighed": "1 t 55 min",
-    "instruktor": "Michael Morris",
-    "manusforfatter": "Ryan Binaco",
+    "instruktor": ["Michael Morris"],
+    "manusforfatter": ["Ryan Binaco"],
     "medvirkende": [
       "Andrea Riseborough",
       "Andre Royo",
@@ -62,7 +62,7 @@
     "sporg": "Engelsk",
     "land": "USA",
     "undertekst": "Dansk",
-    "filmfotograf": "Larkin Seiple",
+    "filmfotograf": ["Larkin Seiple"],
     "produktionselskab": [
       "Jason Shuman Productions",
       "Eduardo Cisneros Productions",
@@ -878,7 +878,7 @@
     "point": "4",
     "alder": "11",
     "tema": "Senest tilføjet",
-    "imgTema": "senest tilfojet",
+    "imgTema": "senest tilfoejet",
     "imgTitel": "jeg elsker ogsaa dig"
   },
   {
