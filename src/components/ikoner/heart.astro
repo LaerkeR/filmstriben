@@ -18,23 +18,3 @@ const { variant } = Astro.props;
     font-size: 48px;
   }
 </style>
-
-<script>
-  console.log("ready");
-  const Button = document.querySelector("#user");
-  const textElement = document.querySelector("#user p");
-
-  //console.log(Button);
-
-  Button.addEventListener("click", changeColor);
-
-  function changeColor() {
-    if (textElement.classList.contains("lightIcon")) {
-      console.log("lightIcon");
-      textElement.classList.replace("lightIcon", "solidIcon");
-    } else {
-      console.log("not lightIcon");
-      textElement.classList.replace("solidIcon", "lightIcon");
-    }
-  }
-</script>

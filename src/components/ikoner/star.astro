@@ -14,21 +14,3 @@ const { variant } = Astro.props;
     font-size: 54px;
   }
 </style>
-
-<script>
-  const Button = document.getElementById("star");
-  const textElement = document.querySelector("#star p");
-
-  Button.addEventListener("click", colorOn);
-
-  function colorOn() {
-    textElement.classList = "solidIcon ";
-    textElement.style.color = "yellow";
-    Button.addEventListener("click", colorOff);
-  }
-  function colorOff() {
-    textElement.classList = "solidIcon ";
-    textElement.style.color = "gray";
-    Button.addEventListener("click", colorOn);
-  }
-</script>
