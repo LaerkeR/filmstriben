@@ -2,9 +2,9 @@
 const { variant } = Astro.props;
 ---
 
-<button id="heartIcon" data-variant={variant}>
-  <p class="lightIcon hover:text-gold-500">heart</p>
-</button>
+<button id="heart" data-variant={variant}>
+  <p class="lightIcon hover:text-gold-500">heart</p></button
+>
 
 <style>
   [data-variant="small"] p {
@@ -17,26 +17,24 @@ const { variant } = Astro.props;
   [data-variant="large"] p {
     font-size: 48px;
   }
-
-  p :focus {
-    font-family: "fontAwesomeSolid";
-  }
 </style>
 
-<!-- <script>
-  const Button = document.getElementById("heart");
+<script>
+  console.log("ready");
+  const Button = document.querySelector("#heart");
   const textElement = document.querySelector("#heart p");
 
-  Button.addEventListener("click", colorOn);
+  //console.log(Button);
 
-  function colorOn() {
-    textElement.classList = "solidIcon";
-    textElement.style.color = "text-gold";
-    Button.addEventListener("click", colorOff);
+  Button.addEventListener("click", changeColor);
+
+  function changeColor() {
+    if (textElement.classList.contains("lightIcon")) {
+      console.log("lightIcon");
+      textElement.classList.replace("lightIcon", "solidIcon");
+    } else {
+      console.log("not lightIcon");
+      textElement.classList.replace("solidIcon", "lightIcon");
+    }
   }
-  function colorOff() {
-    textElement.classList = "lightIcon ";
-    textElement.style.color = "white";
-    Button.addEventListener("click", colorOn);
-  }
-</script> -->
+</script>

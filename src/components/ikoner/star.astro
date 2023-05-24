@@ -16,19 +16,21 @@ const { variant } = Astro.props;
 </style>
 
 <script>
-  const Button = document.getElementById("star");
+  console.log("ready");
+  const Button = document.querySelector("#star");
   const textElement = document.querySelector("#star p");
 
-  Button.addEventListener("click", colorOn);
+  //console.log(Button);
 
-  function colorOn() {
-    textElement.classList = "solidIcon ";
-    textElement.style.color = "yellow";
-    Button.addEventListener("click", colorOff);
-  }
-  function colorOff() {
-    textElement.classList = "solidIcon ";
-    textElement.style.color = "gray";
-    Button.addEventListener("click", colorOn);
+  Button.addEventListener("click", changeColor);
+
+  function changeColor() {
+    if (textElement.classList.contains("lightIcon")) {
+      console.log("lightIcon");
+      textElement.classList.replace("lightIcon", "solidIcon");
+    } else {
+      console.log("not lightIcon");
+      textElement.classList.replace("solidIcon", "lightIcon");
+    }
   }
 </script>
