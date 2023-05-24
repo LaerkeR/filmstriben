@@ -3,7 +3,7 @@ const { aarstal, filmTitle, slug, varighed, genre, imgSrc, undergenre, point } =
   Astro.props;
 ---
 
-<a href={`film/${slug}`}>
+<a href={`${slug}`}>
   <article
     class="relative w-full h-[60vw] md:h-[40vw] lg:h-[20vw] overflow-hidden bg-no-repeat bg-cover bg-top"
     style={`background-image: url("${imgSrc}")`}

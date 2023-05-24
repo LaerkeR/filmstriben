@@ -3,6 +3,7 @@ import filmgenre from "../filmgenre.json";
 import filmdatabase from "../filmdatabase.json";
 import MovieCard from "../components/Moviecard.astro";
 import Layout from "../layouts/Layout.astro";
+import UndersideLayout from "../layouts/UndersideLayout.astro";
 
 // const genre = filmdatabase.filter((film) => film.genre === {genre});
 
@@ -17,16 +18,14 @@ export async function getStaticPaths() {
 
 const { genre } = Astro.params;
 const { genreData } = Astro.props;
-console.log(filmdatabase.length);
+console.log(genreData.length);
 const filtretGenre = filmdatabase.filter(
   (film) => film.genre === genreData || film.underGenre.includes(genreData)
 );
 ---
 
 <Layout title={genreData}>
-  <h1>{genreData}</h1>
-
-  <section class="grid grid-cols-3 w-full gap-4 px-10x">
+  <UndersideLayout undersideTitel={genreData}>
     {
       filtretGenre.map(
         (film) => (
@@ -45,5 +44,5 @@ const filtretGenre = filmdatabase.filter(
         )
       )
     }
-  </section>
+  </UndersideLayout>
 </Layout>
