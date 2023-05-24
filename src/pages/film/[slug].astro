@@ -5,12 +5,13 @@ import filmdatabase from "../../filmdatabase.json";
 import Layout from "../../layouts/Layout.astro";
 import Play from "../../components/ikoner/play.astro";
 import Imdb from "../../components/Imdb.astro";
+import Detaljertags from "../../components/Detaljertags.astro";
 
 export async function getStaticPaths() {
-  return filmdatabase.map((show) => {
+  return filmdatabase.map((film) => {
     return {
-      params: { slug: show.slug },
-      props: { myData: show },
+      params: { slug: film.slug },
+      props: { myData: film },
     };
   });
 }
@@ -22,7 +23,7 @@ console.log(myData);
 
 <Layout title={myData.filmTitel}>
   <section>
-    <div class="splash w-full h-[60vw] lg:h-[38vw] overflow-hidden">
+    <div class="splash w-full h-[60vw] md:h-[40vw] overflow-hidden">
       <div
         class="bg-no-repeat bg-cover bg-center w-full h-full flex flex-col justify-end"
         style={`background-image: url("../../../img/${myData.imgTema}/${myData.imgTitel}/imgSingleview.webp")`}
@@ -34,7 +35,9 @@ console.log(myData);
         <div class="bottom-5 m-10 w-full">
           <h1 class="text-2xl font-display uppercase">{myData.filmTitel}</h1>
           <div class="flex">
-            <Button variant="primary" tekst="Se forsmag" />
+            <Button variant="primary" tekst="Lån filmen" />
+            <Button variant="secondary" tekst="Se forsmag" />
+
             <div class="flex gap-10 mt-5">
               <p class="text-white">Føj til favoritter</p>
               <p class="text-white">Del</p>
@@ -44,8 +47,8 @@ console.log(myData);
       </div>
     </div>
 
-    <section class="flex mt-8 justify-items-center">
-      <div class="divider flex flex-col h-full gap-16">
+    <section class="grid grid-cols-2 mt-8 px-10 gap-16">
+      <div class="flex flex-col h-full gap-16 pt-4">
         <div class="infoBar text-white flex gap-2 items-center body-lg">
           <p class="text-white body-md">{myData.varighed}</p>|
           <p class="text-white body-md">{myData.aarstal}</p>|
@@ -62,20 +65,75 @@ console.log(myData);
         </div>
       </div>
 
-      <div class="">
-        <h3 class="text-xs text-white">DETALJER:</h3>
+      <div class="dividerLeft py-4 pl-16">
+        <h3 class="text-xs text-white mb-8">DETALJER:</h3>
 
-        <div class="text-white detaljer om filmen grid grid-cols-2">
-          <p>Originaltitel:</p>
-          <a
-            class="text-white m-2 rounded-md border-solid border border-yellow-500 text-center hover:bg-yellow-600 hover:text-white"
-            href="">Kärleksbevis</a
-          >
+        <div
+          class="text-white grid grid-cols-[auto_minmax(0px,_1fr)] gap-y-4 gap-x-20"
+        >
           <p class="text-white">Sprog:</p>
-          <a
-            class="text-white m-2 rounded-md border-solid border border-yellow-500 text-center hover:bg-yellow-600 hover:text-white"
-            href="">Svensk</a
-          >
+          <Detaljertags tekst={myData.sporg} />
+          <p class="text-white">Land:</p>
+          <Detaljertags tekst={myData.land} />
+          <p>Undergenre:</p>
+          <div class="flex flex-wrap gap-3">
+            {
+              myData.underGenre.map((underGenre) => (
+                <Detaljertags tekst={underGenre} />
+              ))
+            }
+          </div>
+          <p>Instruktør:</p>
+          <div class="flex flex-wrap gap-3">
+            {
+              myData.instruktor.map((instruktor) => (
+                <Detaljertags tekst={instruktor} />
+              ))
+            }
+          </div>
+
+          <p>Medvirkende:</p>
+          <div class="flex flex-wrap gap-3">
+            {
+              myData.medvirkende.map((medvirkende) => (
+                <Detaljertags tekst={medvirkende} />
+              ))
+            }
+          </div>
+          <p>Manuskriptforfatter:</p>
+          <Detaljertags tekst={myData.manusforfatter} />
+          <p>Filmfotografer:</p>
+          <div class="flex flex-wrap gap-3">
+            {
+              myData.filmfotograf.map((filmfotograf) => (
+                <Detaljertags tekst={filmfotograf} />
+              ))
+            }
+          </div>
+
+          <p>Produktionsselskab:</p>
+          <div class="flex flex-wrap gap-3">
+            <Detaljertags tekst={myData.produktionselskab} />
+          </div>
+
+          <p>Emneord:</p>
+          <div class="flex flex-wrap gap-3">
+            {myData.emneord.map((emneord) => <Detaljertags tekst={emneord} />)}
+            {
+              myData.medvirkende.forEach((mv) => {
+                if (Array.isArray(mv)) {
+                  myData.medvirkende.map(
+                    (mennesker) => (
+                      console.log("hurrruaaaa"),
+                      (<Detaljertags tekst={mennesker} />)
+                    )
+                  );
+                } else {
+                  <Detaljertags tekst={mv} />;
+                }
+              })
+            }
+          </div>
         </div>
       </div>
     </section>
@@ -88,3 +146,5 @@ console.log(myData);
     </section>
   </section>
 </Layout>
+
+<script></script>

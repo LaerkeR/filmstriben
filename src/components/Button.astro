@@ -14,39 +14,42 @@ const { tekst, variant, filtrering } = Astro.props;
 <style>
   button {
     background-color: currentColor;
-    color: #261F0D;
+    color: #261f0d;
   }
 
   /* Primærknap */
-  
+
   [data-variant="primary"] {
     background-color: #caae68;
     border: 1px solid #caae68;
-    color: #261F0D;
+    color: #261f0d;
   }
 
   [data-variant="primary"]:hover {
-    background-color: #5E543A;
+    background-color: #5e543a;
     color: #caae68;
   }
 
-  [data-variant="primary"] .icon {
+  [data-variant="primary"] .icon,
+  [data-variant="secondary"] .icon {
     display: none;
   }
 
-
   /* Filtreringsknap */
 
+  [data-variant="secondary"],
   [data-variant="filtrering"] {
     background-color: #141414;
-    color: #CAAE68;
-    border: 1px solid #CAAE68;
+    color: #caae68;
+    border: 1px solid #caae68;
   }
 
+  [data-variant="secondary"],
   [data-variant="filtrering"]:hover {
     background-color: #caae68;
     color: black;
   }
+  [data-variant="secondary"],
   [data-variant="filtrering"]:hover p {
     color: #141414;
   }

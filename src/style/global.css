@@ -57,6 +57,10 @@
     border-right: 1px solid #ffffff;
   }
 
+  .dividerLeft {
+    border-left: 1px solid #ffffff;
+  }
+
   .brandIcon {
     font-family: "fontAwesomeBrand", sans-serif;
   }

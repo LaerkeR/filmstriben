@@ -2,7 +2,15 @@
 const { tal } = Astro.props;
 ---
 
-<div class="flex gap-2">
-  <img src="../imdb.svg" alt="imdb logo" />
-  <p class="text-l">{tal}/10</p>
+<div class="flex gap-2 items-baseline">
+  <img class="" src="../imdb.svg" alt="imdb logo" />
+  <p class="body-sm text-grey-400 align-baseline">
+    <strong class="text-white body-lg">{tal}</strong> /10
+  </p>
 </div>
+
+<style>
+  p .body-sm {
+    line-height: 80%;
+  }
+</style>
