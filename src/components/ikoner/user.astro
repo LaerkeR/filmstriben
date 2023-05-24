@@ -3,7 +3,7 @@ const { variant } = Astro.props;
 ---
 
 <button id="user" data-variant={variant}>
-  <p class="hover:lightIcon solidIcon hover:text-gold-500">user</p></button
+  <p class="lightIcon hover:text-gold-500">user</p></button
 >
 
 <style>
@@ -15,20 +15,22 @@ const { variant } = Astro.props;
   }
 </style>
 
-<!-- <script>
-  const Button = document.getElementById("user");
+<script>
+  console.log("ready");
+  const Button = document.querySelector("#user");
   const textElement = document.querySelector("#user p");
 
-  Button.addEventListener("click", colorOn);
+  //console.log(Button);
 
-  function colorOn() {
-    textElement.classList = "solidIcon ";
-    textElement.style.color = "text-gold";
-    Button.addEventListener("click", colorOff);
+  Button.addEventListener("click", changeColor);
+
+  function changeColor() {
+    if (textElement.classList.contains("lightIcon")) {
+      console.log("lightIcon");
+      textElement.classList.replace("lightIcon", "solidIcon");
+    } else {
+      console.log("not lightIcon");
+      textElement.classList.replace("solidIcon", "lightIcon");
+    }
   }
-  function colorOff() {
-    textElement.classList = "lightIcon ";
-    textElement.style.color = "white";
-    Button.addEventListener("click", colorOn);
-  }
-</script> -->
+</script>
