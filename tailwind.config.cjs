@@ -90,7 +90,7 @@ module.exports = {
         "1.50rem",
         {
           lineHeight: "100%",
-          letterSpacing: "0.04em",
+
           fontWeight: "700",
         },
       ],

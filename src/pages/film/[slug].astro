@@ -28,10 +28,6 @@ console.log(myData);
         class="bg-no-repeat bg-cover bg-center w-full h-full flex flex-col justify-end"
         style={`background-image: url("../../../img/${myData.imgTema}/${myData.imgTitel}/imgSingleview.webp")`}
       >
-        <div class="self-center">
-          <Play />
-        </div>
-
         <div class="bottom-5 m-10 w-full">
           <h1 class="text-2xl font-display uppercase">{myData.filmTitel}</h1>
           <div class="flex">
@@ -78,17 +74,19 @@ console.log(myData);
           <p>Undergenre:</p>
           <div class="flex flex-wrap gap-3">
             {
-              myData.underGenre.map((underGenre) => (
-                <Detaljertags tekst={underGenre} />
-              ))
+              myData.underGenre &&
+                myData.underGenre.map((underGenre) => (
+                  <Detaljertags tekst={underGenre} />
+                ))
             }
           </div>
           <p>Instruktør:</p>
           <div class="flex flex-wrap gap-3">
             {
-              myData.instruktor.map((instruktor) => (
-                <Detaljertags tekst={instruktor} />
-              ))
+              myData.instruktor &&
+                myData.instruktor.map((instruktor) => (
+                  <Detaljertags tekst={instruktor} />
+                ))
             }
           </div>
 
