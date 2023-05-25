@@ -11,24 +11,31 @@ import UndersideLayout from "../layouts/UndersideLayout.astro";
 export async function getStaticPaths() {
   return bornunge.map((ting) => {
     return {
-      params: { alder: ting.alder, kategorien: ting.kategori },
-      props: { valgtAlder: ting.alder, kategorien: ting.kategori },
+      params: { alder: ting.kategori },
+      props: { valgtGruppe: ting },
     };
   });
 }
 
-const { alder } = Astro.params;
-const { valgtAlder, kategorien } = Astro.props;
-console.log(valgtAlder.length);
-const filtretFilm = filmdatabase.filter((film) => film.alder === valgtAlder);
+const { aldersGruppe } = Astro.params;
+const { valgtGruppe } = Astro.props;
+console.log(valgtGruppe.kategori);
+const filtretFilm = filmdatabase.filter(
+  (film) =>
+    film.alder === valgtGruppe.aldersGruppe ||
+    valgtGruppe.aldersgruppe.includes(film.alder)
+);
 ---
 
-<Layout title={kategorien}>
-  <UndersideLayout undersideTitel={kategorien}>
+<Layout title={valgtGruppe.kategori}>
+  <UndersideLayout
+    undersideTitel={valgtGruppe.kategori}
+    antaltTitler={filtretFilm.length}
+  >
     {
       filtretFilm.map(
         (film) => (
-          console.log(film),
+          console.log(filtretFilm.length),
           (
             <MovieCard
               varighed={film.varighed}

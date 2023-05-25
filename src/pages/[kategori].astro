@@ -26,7 +26,10 @@ console.log(filmdatabase.length);
 ---
 
 <Layout title={kategoriData}>
-  <UndersideLayout undersideTitel={kategoriData}>
+  <UndersideLayout
+    undersideTitel={kategoriData}
+    antaltTitler={filtretGenre.length}
+  >
     {
       filtretGenre.map((film) => (
         <MovieCard

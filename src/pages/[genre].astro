@@ -25,7 +25,10 @@ const filtretGenre = filmdatabase.filter(
 ---
 
 <Layout title={genreData}>
-  <UndersideLayout undersideTitel={genreData}>
+  <UndersideLayout
+    undersideTitel={genreData}
+    antaltTitler={filtretGenre.length}
+  >
     {
       filtretGenre.map(
         (film) => (

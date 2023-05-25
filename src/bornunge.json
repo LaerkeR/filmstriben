@@ -1,5 +1,9 @@
 [
-  { "kategori": "Små børn", "alder": "0" },
-  { "kategori": "Større børn", "alder": "7" },
-  { "kategori": "Unge", "alder": "11" }
+  { "kategori": "Små børn", "alderMenu": "0", "aldersgruppe": ["a"] },
+  { "kategori": "Større børn", "alderMenu": "7", "aldersgruppe": ["a", "7"] },
+  {
+    "kategori": "Unge",
+    "alderMenu": "11",
+    "aldersgruppe": ["a", "7", "11", "15"]
+  }
 ]
