@@ -24,7 +24,7 @@ const { myData } = Astro.props;
 console.log(myData);
 ---
 
-<Layout title={myData.filmTitel}>
+<Layout title={`Filmstriben | ${myData.filmTitel}`}>
   <div class="splash w-full h-[60vw] md:h-[40vw] overflow-hidden">
     <div
       class="bg-no-repeat bg-cover bg-top w-full h-full flex flex-col justify-end aspect-ratio"
@@ -57,118 +57,119 @@ console.log(myData);
       </div>
     </div>
   </div>
+  <main>
+    <section class="grid grid-cols-2 mt-8 px-10 gap-16">
+      <div class="flex flex-col h-full gap-16 pt-4">
+        <div class="infoBar text-white flex gap-2 items-center body-lg">
+          <p class="text-white body-md">{myData.varighed}</p>|
+          <p class="text-white body-md">{myData.aarstal}</p>|
+          <p class="text-white body-md">{myData.type}</p>|
+          <p class="text-white body-md">{myData.genre}</p>|
+          <p class="text-white body-md">{myData.point} point</p>
+        </div>
 
-  <section class="grid grid-cols-2 mt-8 px-10 gap-16">
-    <div class="flex flex-col h-full gap-16 pt-4">
-      <div class="infoBar text-white flex gap-2 items-center body-lg">
-        <p class="text-white body-md">{myData.varighed}</p>|
-        <p class="text-white body-md">{myData.aarstal}</p>|
-        <p class="text-white body-md">{myData.type}</p>|
-        <p class="text-white body-md">{myData.genre}</p>|
-        <p class="text-white body-md">{myData.point} point</p>
+        <p class="text-white resume max-w-prose body-md">
+          {myData.langResume}
+        </p>
+        <div>
+          <Stjernerating antal={myData.ratingAntal} />
+          <Imdb tal={myData.ratingIMDb} />
+        </div>
       </div>
 
-      <p class="text-white resume max-w-prose body-md">
-        {myData.langResume}
-      </p>
-      <div>
-        <Stjernerating />
-        <Imdb tal={myData.ratingIMDb} />
-      </div>
-    </div>
+      <div class="dividerLeft py-4 pl-16">
+        <h3 class="text-xs text-white mb-8">DETALJER:</h3>
 
-    <div class="dividerLeft py-4 pl-16">
-      <h3 class="text-xs text-white mb-8">DETALJER:</h3>
+        <div
+          class="text-white grid grid-cols-[auto_minmax(0px,_1fr)] gap-y-4 gap-x-20"
+        >
+          <p class="text-white">Sprog:</p>
+          <div class="tagWrapper">
+            {
+              myData.sprog &&
+                myData.sprog.map((sprog) => <Detaljertags tekst={sprog} />)
+            }
+          </div>
+          <p class="text-white">Land:</p>
+          <div class="tagWrapper">
+            {
+              myData.land &&
+                myData.land.map((land) => <Detaljertags tekst={land} />)
+            }
+          </div>
 
-      <div
-        class="text-white grid grid-cols-[auto_minmax(0px,_1fr)] gap-y-4 gap-x-20"
-      >
-        <p class="text-white">Sprog:</p>
-        <div class="tagWrapper">
-          {
-            myData.sprog &&
-              myData.sprog.map((sprog) => <Detaljertags tekst={sprog} />)
-          }
-        </div>
-        <p class="text-white">Land:</p>
-        <div class="tagWrapper">
-          {
-            myData.land &&
-              myData.land.map((land) => <Detaljertags tekst={land} />)
-          }
-        </div>
+          <p>Undergenre:</p>
+          <div class="tagWrapper">
+            {
+              myData.underGenre &&
+                myData.underGenre.map((underGenre) => (
+                  <Detaljertags tekst={underGenre} />
+                ))
+            }
+          </div>
+          <p>Instruktør:</p>
+          <div class="tagWrapper">
+            {
+              myData.instruktor &&
+                myData.instruktor.map((instruktor) => (
+                  <Detaljertags tekst={instruktor} />
+                ))
+            }
+          </div>
 
-        <p>Undergenre:</p>
-        <div class="tagWrapper">
-          {
-            myData.underGenre &&
-              myData.underGenre.map((underGenre) => (
-                <Detaljertags tekst={underGenre} />
-              ))
-          }
-        </div>
-        <p>Instruktør:</p>
-        <div class="tagWrapper">
-          {
-            myData.instruktor &&
-              myData.instruktor.map((instruktor) => (
-                <Detaljertags tekst={instruktor} />
-              ))
-          }
-        </div>
+          <p>Medvirkende:</p>
+          <div class="tagWrapper">
+            {
+              myData.medvirkende &&
+                myData.medvirkende.map((medvirkende) => (
+                  <Detaljertags tekst={medvirkende} />
+                ))
+            }
+          </div>
+          <p>Manuskriptforfatter:</p>
+          <div class="tagWrapper">
+            {
+              myData.manusforfatter &&
+                myData.manusforfatter.map((manusforfatter) => (
+                  <Detaljertags tekst={manusforfatter} />
+                ))
+            }
+          </div>
+          <p>Filmfotografer:</p>
+          <div class="tagWrapper">
+            {
+              myData.filmfotograf &&
+                myData.filmfotograf.map((filmfotograf) => (
+                  <Detaljertags tekst={filmfotograf} />
+                ))
+            }
+          </div>
 
-        <p>Medvirkende:</p>
-        <div class="tagWrapper">
-          {
-            myData.medvirkende &&
-              myData.medvirkende.map((medvirkende) => (
-                <Detaljertags tekst={medvirkende} />
-              ))
-          }
-        </div>
-        <p>Manuskriptforfatter:</p>
-        <div class="tagWrapper">
-          {
-            myData.manusforfatter &&
-              myData.manusforfatter.map((manusforfatter) => (
-                <Detaljertags tekst={manusforfatter} />
-              ))
-          }
-        </div>
-        <p>Filmfotografer:</p>
-        <div class="tagWrapper">
-          {
-            myData.filmfotograf &&
-              myData.filmfotograf.map((filmfotograf) => (
-                <Detaljertags tekst={filmfotograf} />
-              ))
-          }
-        </div>
+          <p>Produktionsselskab:</p>
+          <div class="tagWrapper">
+            {
+              myData.produktionsselskab &&
+                myData.produktionsselskab.map((produktionsselskab) => (
+                  <Detaljertags tekst={produktionsselskab} />
+                ))
+            }
+          </div>
 
-        <p>Produktionsselskab:</p>
-        <div class="tagWrapper">
-          {
-            myData.produktionsselskab &&
-              myData.produktionsselskab.map((produktionsselskab) => (
-                <Detaljertags tekst={produktionsselskab} />
-              ))
-          }
-        </div>
-
-        <p>Emneord:</p>
-        <div class="tagWrapper">
-          {myData.emneord.map((emneord) => <Detaljertags tekst={emneord} />)}
+          <p>Emneord:</p>
+          <div class="tagWrapper">
+            {myData.emneord.map((emneord) => <Detaljertags tekst={emneord} />)}
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section>
-    <div class="flex flex-row w-full justify-between gap-4 px-10">
-      <Moviecard />
-      <Moviecard />
-      <Moviecard />
-    </div>
-  </section>
+    </section>
+    <section>
+      <div class="flex flex-row w-full justify-between gap-4 px-10">
+        <Moviecard />
+        <Moviecard />
+        <Moviecard />
+      </div>
+    </section>
+  </main>
 </Layout>
 
 <style>
