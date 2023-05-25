@@ -1,0 +1,101 @@
+---
+import filmkategoridatabase from "../filmkategori.json";
+import Kryds from "../components/ikoner/Kryds.astro";
+const { navpunkt } = Astro.props;
+---
+
+<ul class="">
+  <li class="cursor-pointer lightIcon hover:text-gold-400">bars</li>
+
+  <div
+    class="undermenu absolute left-0 mt-4 h-screen py-4 pb-28 px-8 bg-black flex flex-col gap-4 overflow-scroll scrollbar-hide"
+  >
+    <div class="luk flex w-full justify-end"><Kryds /></div>
+    <ul class="flex flex-col pb-4 gap-6">
+      <li class="w-full pb-2 border-b-[1px] font-display text-sm uppercase">
+        Point
+      </li>
+      <a href="#"> <img class="w-1/2" src="../pointCirkel.svg" alt="" /></a>
+      <p>
+        Du har 8 point tilbage denne måned. <br /> bibliotek tilbyder dig 12 point
+        i alt hver måned. <br /><a class="underline text-white" href="#"
+          >Læs mere her</a
+        >
+      </p>
+    </ul>
+
+    <ul class="flex flex-col pb-4">
+      <li class="w-full pb-2 border-b-[1px] font-display text-sm uppercase">
+        Nyheder
+      </li>
+      <ul class="underpunkter w-full flex flex-col gap-3 pt-3 pr-8">
+        <li class="flex text-grey-200">
+          <a class="Underline pr-8" href="#">Nyeste film og TV-serier</a>
+        </li>
+
+        <li class="text-grey-200">
+          <a class="Underline" href="#">Kommende film</a>
+        </li>
+        <li class="text-grey-200">
+          <a class="Underline" href="#">Nyhedsarkiv</a>
+        </li>
+        <li class="text-grey-200">
+          <a class="Underline" href="#">Alle film</a>
+        </li>
+      </ul>
+    </ul>
+    <ul class="flex flex-col">
+      <li class="w-full pb-2 border-b-[1px] font-display text-sm uppercase">
+        Information
+      </li>
+      <ul class="underpunkter flex flex-col gap-3 pt-3">
+        <li class="flex text-grey-200">
+          <a class="Underline" href="#">Hvordan ser jeg film</a>
+        </li>
+
+        <li class="text-grey-200">
+          <a class="Underline" href="#">Om filmstriben</a>
+        </li>
+        <li class="text-grey-200">
+          <a class="Underline" href="#">Om pointsystem</a>
+        </li>
+        <li class="text-grey-200">
+          <a class="Underline" href="#">Kontakt kundeservice</a>
+        </li>
+        <li class="text-grey-200">
+          <a class="Underline" href="#">Se film på biblioteket</a>
+        </li>
+        <li class="text-grey-200">
+          <a class="Underline" href="#">Tilmeld nyhedsbrev</a>
+        </li>
+      </ul>
+    </ul>
+  </div>
+</ul>
+<script></script>
+
+<!-- <script>
+  //Først starter vi med at vælge alle elementer i dokumentet, der har klassenavnet "ulle" ved hjælp af document.querySelectorAll(".ulle"). Resultatet gemmes i variablen uller
+  const uller = document.querySelectorAll(".ulle");
+  //Derefter anvender vi en forEach-loop på uller-variablen. For hvert element tilføjer den en eventlisteneren til "click"-hændelsen ved hjælp af ul.addEventListener("click", () => { ... }).
+  uller.forEach((ul) => {
+    //Inde i klik-aktiveret funktion anvender vi igen en forEach-loop på uller. Denne gang sammenligner den hvert element (item) med det aktuelle element, der blev klikket på (ul).
+    ul.addEventListener("click", () => {
+      uller.forEach((item) => {
+        //Hvis item ikke er det samme som ul, fjerner koden klassenavnet "active" fra item ved hjælp af item.classList.remove("active"). Dette trin fjerner "active"-klassen fra alle andre elementer, der ikke er blevet klikket på.
+        if (item !== ul) {
+          item.classList.remove("active");
+        }
+      });
+      //Efter at have afsluttet den første forEach-loop, anvender koden ul.classList.toggle("active") for at tilføje eller fjerne klassenavnet "active" fra det aktuelle element, der blev klikket på. Hvis elementet allerede har klassen "active", fjernes den, ellers tilføjes den.
+      ul.classList.toggle("active");
+    });
+  });
+</script> -->
+
+<style>
+  /*Det er denne class der går at undermenuerne i naven bliver vist*/
+  .active .undermenu {
+    display: block;
+  }
+</style>

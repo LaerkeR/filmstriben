@@ -1,11 +1,11 @@
 ---
 import filmkategoridatabase from "../filmkategori.json";
 import Kryds from "../components/ikoner/Kryds.astro";
-const { navpunkt, specialClass } = Astro.props;
+const { navpunkt } = Astro.props;
 ---
 
 <ul class="ulle">
-  <li class={`${specialClass} navpunkt cursor-pointer`}>{navpunkt}</li>
+  <li class="navpunkt cursor-pointer">{navpunkt}</li>
 
   <div
     class="undermenu absolute hidden left-0 mt-4 w-screen py-4 px-12 bg-black flex flex-col"

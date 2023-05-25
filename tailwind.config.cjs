@@ -58,7 +58,7 @@ module.exports = {
         "3.75rem",
         {
           lineHeight: "100%",
-          letterSpacing: "0.04em",
+
           fontWeight: "700",
         },
       ],
@@ -66,7 +66,7 @@ module.exports = {
         "2.75rem",
         {
           lineHeight: "100%",
-          letterSpacing: "0.04em",
+
           fontWeight: "700",
         },
       ],
@@ -74,7 +74,7 @@ module.exports = {
         "2.25rem",
         {
           lineHeight: "100%",
-          letterSpacing: "0.04em",
+
           fontWeight: "700",
         },
       ],
@@ -82,7 +82,7 @@ module.exports = {
         "2rem",
         {
           lineHeight: "100%",
-          letterSpacing: "0.04em",
+
           fontWeight: "700",
         },
       ],
