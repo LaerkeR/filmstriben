@@ -1,0 +1,47 @@
+---
+import filmdatabase from "../filmdatabase.json";
+import bornunge from "../bornunge.json";
+
+import MovieCard from "../components/Moviecard.astro";
+import Layout from "../layouts/Layout.astro";
+import UndersideLayout from "../layouts/UndersideLayout.astro";
+
+// const genre = filmdatabase.filter((film) => film.genre === {genre});
+
+export async function getStaticPaths() {
+  return bornunge.map((ting) => {
+    return {
+      params: { alder: ting.alder, kategorien: ting.kategori },
+      props: { valgtAlder: ting.alder, kategorien: ting.kategori },
+    };
+  });
+}
+
+const { alder } = Astro.params;
+const { valgtAlder, kategorien } = Astro.props;
+console.log(valgtAlder.length);
+const filtretFilm = filmdatabase.filter((film) => film.alder === valgtAlder);
+---
+
+<Layout title={kategorien}>
+  <UndersideLayout undersideTitel={kategorien}>
+    {
+      filtretFilm.map(
+        (film) => (
+          console.log(film),
+          (
+            <MovieCard
+              varighed={film.varighed}
+              genre={film.genre}
+              aarstal={film.aarstal}
+              filmTitle={film.filmTitel}
+              imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
+              slug={film.slug}
+              point={film.point}
+            />
+          )
+        )
+      )
+    }
+  </UndersideLayout>
+</Layout>
