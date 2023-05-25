@@ -5,10 +5,9 @@ import filmdatabase from "../filmdatabase.json";
 import maanedensfilm from "../maanedensfilm.json";
 import Maanedscard from "../components/Maanedscard.astro";
 import TemaSection from "../components/TemaSection.astro";
-import Button from "../components/Button.astro"
-import Heart from "../components/ikoner/heart.astro"
-import Del from "../components/ikoner/del.astro"
-
+import Button from "../components/Button.astro";
+import Heart from "../components/ikoner/heart.astro";
+import Del from "../components/ikoner/del.astro";
 
 const { tema } = Astro.props;
 
@@ -23,9 +22,7 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === "Kærlighed");
     >
       <div class="bottom-5 px-10 py-6 w-full justify-between flex items-end">
         <div>
-          <h1 class="text-2xl font-display uppercase mb-2">
-            {.filmTitel}
-          </h1>
+          <h1 class="text-2xl font-display uppercase mb-2">Love Proof</h1>
           <div class="flex items-center gap-4">
             <Button
               variant="primary"
@@ -42,7 +39,6 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === "Kærlighed");
             </div>
           </div>
         </div>
-       
       </div>
     </div>
   </div>
