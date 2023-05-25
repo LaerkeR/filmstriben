@@ -9,8 +9,10 @@ const { navpunkt, specialClass } = Astro.props;
   class="sticky z-50 top-0 bg-black flex flex-col justify-center px-10 pb-4 pt-2"
 >
   <div>
-    <p class="text-[8px] text-gray-400 float-right">
-      Hej Bruger | Du bydes velkommen af <strong>Københavns Biblioteker</strong>
+    <p class="text-[10px] text-grey-400 float-right">
+      Hej Bruger | Du bydes velkommen af <strong class="text-grey-300"
+        >Københavns Biblioteker</strong
+      >
     </p>
   </div>
   <div class="flex justify-between items-center w-full">
@@ -24,19 +26,19 @@ const { navpunkt, specialClass } = Astro.props;
           <Genremenu specialClass="genre" />
         </div>
       </div>
+    </div>
 
-      <a href="/"> <img class="logo w-20" src="../logo.svg" alt="logo" /></a>
+    <a href="/"> <img class="logo w-20" src="../logo.svg" alt="logo" /></a>
 
-      <div class="flex flex-row gap-4">
-        <div>
-          <p class="lightIcon text-white">search</p>
-        </div>
-        <div class="text-white">
-          <p class="solidIcon">heart</p>
-        </div>
-        <div>
-          <p class="solidIcon text-white">user</p>
-        </div>
+    <div class="flex flex-row gap-4 pl-[92px]">
+      <div>
+        <p class="lightIcon text-white">search</p>
+      </div>
+      <div class="text-white">
+        <p class="solidIcon">heart</p>
+      </div>
+      <div>
+        <p class="solidIcon text-white">user</p>
       </div>
     </div>
   </div>
