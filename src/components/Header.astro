@@ -1,5 +1,6 @@
 ---
 import Bornmenu from "./Bornmenu.astro";
+import Burgermenu from "./Burgermenu.astro";
 import Genremenu from "./Genremenu.astro";
 const { navpunkt, specialClass } = Astro.props;
 ---
@@ -14,9 +15,7 @@ const { navpunkt, specialClass } = Astro.props;
   </div>
   <div class="flex justify-between items-center w-full">
     <div class="flex gap-4">
-      <div class="burgermenu">
-        <p class="lightIcon text-white">bars</p>
-      </div>
+      <Burgermenu />
       <div class="flex gap-2">
         <div class="">
           <Bornmenu specialClass="born" />
@@ -25,22 +24,22 @@ const { navpunkt, specialClass } = Astro.props;
           <Genremenu specialClass="genre" />
         </div>
       </div>
-    </div>
 
-    <a href="/"> <img class="logo w-20" src="../logo.svg" alt="logo" /></a>
+      <a href="/"> <img class="logo w-20" src="../logo.svg" alt="logo" /></a>
 
-    <div class="flex flex-row gap-4">
-      <div>
-        <p class="lightIcon text-white">search</p>
-      </div>
-      <div class="text-white">
-        <p class="solidIcon">heart</p>
-      </div>
-      <div>
-        <p class="solidIcon text-white">user</p>
+      <div class="flex flex-row gap-4">
+        <div>
+          <p class="lightIcon text-white">search</p>
+        </div>
+        <div class="text-white">
+          <p class="solidIcon">heart</p>
+        </div>
+        <div>
+          <p class="solidIcon text-white">user</p>
+        </div>
       </div>
     </div>
   </div>
-</header>
 
-<style></style>
+  <style></style>
+</header>
