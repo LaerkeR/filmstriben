@@ -7,18 +7,18 @@ import Maanedscard from "../components/Maanedscard.astro";
 import TemaSection from "../components/TemaSection.astro";
 import Button from "../components/Button.astro";
 import Heart from "../components/ikoner/heart.astro";
-import Del from "../components/ikoner/del.astro";
+import Info from "../components/ikoner/info.astro";
 
 const { tema } = Astro.props;
 
 const temaFiltret = filmdatabase.filter((film) => film.tema === "Kærlighed");
 ---
 
-<Layout title="Filmstriben">
+<Layout title="Filmstriben | Forside">
   <div class="splash w-full h-[60vw] md:h-[40vw] overflow-hidden">
     <div
       class="bg-no-repeat bg-cover bg-top w-full h-full flex flex-col justify-end aspect-ratio"
-      style="background-image: url(../img/loveproof.webp)"
+      style="background-image: url('../img/love proof.webp')"
     >
       <div class="bottom-5 px-10 py-6 w-full justify-between flex items-end">
         <div>
@@ -27,76 +27,28 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === "Kærlighed");
             <Button
               variant="primary"
               typeIcon="circle-play"
-              tekst="Lån filmen"
+              tekst="Mere info"
             />
-            <Button variant="secondary-uden-icon" tekst="Se forsmag" />
 
             <div class="flex gap-4">
-              <p class="text-white">Føj til favoritter <Heart /></p>
-              <div class="flex gap-2">
-                <p class="text-white">Del</p><Del />
-              </div>
+              <Heart variant="medium" />
+
+              <Info variant="medium" />
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <main>
+  <main class="flex flex-col gap-10">
+    <TemaSection temaTitel="Senest tilføjet" />
     <TemaSection temaTitel="Kærlighed" />
-    <!-- <section
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 lg:gap-4 px-10"
-    >
-      {
-        temaFiltret.map((film) => (
-          <MovieCard
-            varighed={film.varighed}
-            genre={film.genre}
-            aarstal={film.aarstal}
-            filmTitle={film.filmTitel}
-            imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
-            slug={film.slug}
-            point={film.point}
-          />
-        ))
-      }
-    </section> -->
+    <TemaSection temaTitel="Far tema" />
 
-    <section
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 lg:gap-4 px-10"
-    >
-      {
-        filmdatabase.map((film) => (
-          <MovieCard
-            varighed={film.varighed}
-            genre={film.genre}
-            aarstal={film.aarstal}
-            filmTitle={film.filmTitel}
-            imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
-            slug={film.slug}
-            point={film.point}
-          />
-        ))
-      }
-    </section>
-
-    <!-- <section class="grid grid-cols-3 w-full gap-4 px-10x">
-      {
-        filmdatabase.map((film) => (
-          <MovieCard
-            varighed={film.varighed}
-            genre={film.genre}
-            aarstal={film.aarstal}
-            filmTitle={film.filmTitel}
-            imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
-            url={film.slug}
-          />
-        ))
-      }
-    </section> -->
     <section>
       <Maanedscard />
     </section>
+    <TemaSection temaTitel="Far tema" />
   </main>
 
   <script></script>
