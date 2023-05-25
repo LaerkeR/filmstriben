@@ -42,6 +42,42 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === "Kærlighed");
   </div>
   <main class="flex flex-col gap-10">
     <TemaSection temaTitel="Senest tilføjet" />
+
+    <section class="grid grid-cols-4 gap-20 m-10">
+      <div class="grid justify-items-center">
+        <p class="lightIcon">ticket</p>
+        <h3 class="text-sm">Point</h3>
+        <p>
+          Du skal bruge point for at se film på Filmstriben. Point uddeles
+          automatisk af biblioteket i din bopælskommune. <a href="">Læs mere</a>
+        </p>
+      </div>
+      <div class="grid justify-items-center">
+        <p class="lightIcon">camera-movie</p>
+        <h3 class="text-sm">Om Filmstriben</h3>
+        <p>
+          Filmstriben indeholder en bred vifte af spillefilm, kort- og
+          dokumentarfilm for børn, unge og voksne.
+        </p>
+      </div>
+      <div class="grid justify-items-center">
+        <p class="lightIcon">film</p>
+        <h3 class="text-sm">Låneperiode</h3>
+        <p>
+          Du låner filmen i 48 timer. Når låneperioden er afsluttet, skal du
+          ikke foretage dig yderligere
+        </p>
+      </div>
+      <div class="grid justify-items-center">
+        <p class="lightIcon text-2xl">popcorn</p>
+        <h3 class="text-sm">Hjemmebio</h3>
+        <p>
+          På Filmstriben kan du se film, når det passer dig. På din computer,
+          tablet, smartphone eller Apple TV - og via Chromecast eller Airplay.
+        </p>
+      </div>
+    </section>
+
     <TemaSection temaTitel="Kærlighed" />
     <TemaSection temaTitel="Far tema" />
 
