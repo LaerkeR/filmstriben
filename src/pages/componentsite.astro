@@ -30,58 +30,60 @@ import filmdatabase from "../filmdatabase.json";
 ---
 
 <Layout title="komponent udviklings side">
-  <div class="flex flex-row w-full justify-between gap-4 px-10">
-    <MovieCard />
-    <MovieCard />
-    <MovieCard />
-  </div>
+  <main>
+    <div class="flex flex-row w-full justify-between gap-4 px-10">
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+    </div>
 
-  <section
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 lg:gap-4 px-10"
-  >
-    {
-      filmdatabase.map((film) => (
-        <MovieCard
-          varighed={film.varighed}
-          genre={film.genre}
-          aarstal={film.aarstal}
-          filmTitle={film.filmTitel}
-          imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
-          slug={film.slug}
-          point={film.point}
-        />
-      ))
-    }
-  </section>
+    <section
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 lg:gap-4 px-10"
+    >
+      {
+        filmdatabase.map((film) => (
+          <MovieCard
+            varighed={film.varighed}
+            genre={film.genre}
+            aarstal={film.aarstal}
+            filmTitle={film.filmTitel}
+            imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
+            slug={film.slug}
+            point={film.point}
+          />
+        ))
+      }
+    </section>
 
-  <Button variant="primary" tekst="primary" typeIcon="play" />
-  <Button
-    variant="primary-uden-icon"
-    tekst="primary-uden-icon"
-    typeIcon="play"
-  />
-  <Button variant="secondary" tekst="secondary" typeIcon="sliders" />
-  <Button variant="secondary-uden-icon" tekst="secondary-uden-icon" />
+    <Button variant="primary" tekst="primary" typeIcon="play" />
+    <Button
+      variant="primary-uden-icon"
+      tekst="primary-uden-icon"
+      typeIcon="play"
+    />
+    <Button variant="secondary" tekst="secondary" typeIcon="sliders" />
+    <Button variant="secondary-uden-icon" tekst="secondary-uden-icon" />
 
-  <Tilbageknap tekst="Tilbage" />
-  <Plakatcard />
-  <Maanedscard />
-  <Heart variant="medium" />
-  <Sog variant="medium" />
-  <User variant="medium" />
-  <Del variant="medium" />
-  <Star variant="large" />
-  <Facebook variant="medium" />
-  <Instagram variant="medium" />
-  <Twitter variant="medium" />
-  <Play variant="medium" />
-  <Kryds variant="medium" />
-  <Info variant="medium" />
-  <Detaljertags tekst="Dansk" />
-  <Temacard />
-  <Play_popup />
-  <Karrusel />
-  <Stjernerating />
-  <IMDB />
-  <Stortplay />
+    <Tilbageknap tekst="Tilbage" />
+    <Plakatcard />
+    <Maanedscard />
+    <Heart variant="medium" />
+    <Sog variant="medium" />
+    <User variant="medium" />
+    <Del variant="medium" />
+    <Star variant="large" />
+    <Facebook variant="medium" />
+    <Instagram variant="medium" />
+    <Twitter variant="medium" />
+    <Play variant="medium" />
+    <Kryds variant="medium" />
+    <Info variant="medium" />
+    <Detaljertags tekst="Dansk" />
+    <Temacard />
+    <Play_popup />
+    <Karrusel />
+    <Stjernerating />
+    <IMDB />
+    <Stortplay />
+  </main>
 </Layout>
