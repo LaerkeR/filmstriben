@@ -1,5 +1,5 @@
 ---
-const { tekst, variant, filtrering } = Astro.props;
+const { tekst, variant, typeIcon } = Astro.props;
 ---
 
 <button data-variant={variant} class="flex gap-2 py-3 px-5 rounded-md">
@@ -7,7 +7,7 @@ const { tekst, variant, filtrering } = Astro.props;
     {tekst}
   </div>
   <div class="icon lightIcon">
-    <p class="lightIcon text-gold-500">Sliders</p>
+    <p class="lightIcon text-gold-500">{typeIcon}</p>
   </div>
 </button>
 
@@ -19,38 +19,40 @@ const { tekst, variant, filtrering } = Astro.props;
 
   /* Primærknap */
 
-  [data-variant="primary"] {
+  [data-variant="primary"],
+  [data-variant="primary-uden-icon"] {
     background-color: #caae68;
     border: 1px solid #caae68;
     color: #261f0d;
   }
 
-  [data-variant="primary"]:hover {
+  [data-variant="primary"],
+  [data-variant="primary-uden-icon"]:hover {
     background-color: #5e543a;
     color: #caae68;
   }
 
-  [data-variant="primary"] .icon,
-  [data-variant="secondary"] .icon {
+  [data-variant="primary-uden-icon"] .icon,
+  [data-variant="secondary-uden-icon"] .icon {
     display: none;
   }
 
   /* Filtreringsknap */
 
   [data-variant="secondary"],
-  [data-variant="filtrering"] {
+  [data-variant="secondary-uden-icon"] {
     background-color: #141414;
     color: #caae68;
     border: 1px solid #caae68;
   }
 
   [data-variant="secondary"],
-  [data-variant="filtrering"]:hover {
+  [data-variant="secondary-uden-icon"]:hover {
     background-color: #caae68;
     color: black;
   }
   [data-variant="secondary"],
-  [data-variant="filtrering"]:hover p {
+  [data-variant="secondary-uden-icon"]:hover p {
     color: #141414;
   }
 </style>
