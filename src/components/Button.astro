@@ -7,7 +7,7 @@ const { tekst, variant, typeIcon } = Astro.props;
     {tekst}
   </div>
   <div class="icon lightIcon">
-    <p class="lightIcon text-gold-500">{typeIcon}</p>
+    <p class="lightIcon">{typeIcon}</p>
   </div>
 </button>
 
@@ -26,9 +26,16 @@ const { tekst, variant, typeIcon } = Astro.props;
     color: #261f0d;
   }
 
-  [data-variant="primary"],
+  [data-variant="primary"]:hover,
   [data-variant="primary-uden-icon"]:hover {
     background-color: #5e543a;
+    color: #caae68;
+  }
+
+  [data-variant="primary"] p {
+    color: #261f0d;
+  }
+  [data-variant="primary"]:hover p {
     color: #caae68;
   }
 
@@ -46,12 +53,16 @@ const { tekst, variant, typeIcon } = Astro.props;
     border: 1px solid #caae68;
   }
 
-  [data-variant="secondary"],
+  [data-variant="secondary"]:hover,
   [data-variant="secondary-uden-icon"]:hover {
     background-color: #caae68;
     color: black;
   }
-  [data-variant="secondary"],
+  [data-variant="secondary"] p {
+    color: #caae68;
+  }
+
+  [data-variant="secondary"]:hover p,
   [data-variant="secondary-uden-icon"]:hover p {
     color: #141414;
   }
