@@ -4,11 +4,33 @@ import MovieCard from "../components/Moviecard.astro";
 import filmdatabase from "../filmdatabase.json";
 import maanedensfilm from "../maanedensfilm.json";
 import Maanedscard from "../components/Maanedscard.astro";
+import TemaSection from "../components/TemaSection.astro";
+
+const { tema } = Astro.props;
+
+const temaFiltret = filmdatabase.filter((film) => film.tema === "Kærlighed");
 ---
 
 <Layout title="Filmstriben | Alle film">
   <main>
-    <h2>Alle film</h2>
+    <TemaSection temaTitel="Kærlighed" />
+    <!-- <section
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 lg:gap-4 px-10"
+    >
+      {
+        temaFiltret.map((film) => (
+          <MovieCard
+            varighed={film.varighed}
+            genre={film.genre}
+            aarstal={film.aarstal}
+            filmTitle={film.filmTitel}
+            imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
+            slug={film.slug}
+            point={film.point}
+          />
+        ))
+      }
+    </section> -->
 
     <section
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 lg:gap-4 px-10"
@@ -43,19 +65,7 @@ import Maanedscard from "../components/Maanedscard.astro";
       }
     </section> -->
     <section>
-      {
-        maanedensfilm.map((film) => (
-          <Maanedscard
-            varighed={film.varighed}
-            genre={film.genre}
-            aarstal={film.aarstal}
-            filmTitle={film.filmTitel}
-            beskrivelse={film.kortResume}
-            instrukor={film.instruktor}
-            imgSrc={`../img/${film.imgTema}/imgPlakat.jpg`}
-          />
-        ))
-      }
+      <Maanedscard />
     </section>
   </main>
 

@@ -1,61 +1,61 @@
 ---
+import maanedensfilm from "../maanedensfilm.json";
+
 import Heart from "../components/ikoner/heart.astro";
-const {
-  aarstal,
-  filmTitle,
-  varighed,
-  genre,
-  undergenre,
-  imgSrc,
-  beskrivelse,
-  indstruktør,
-} = Astro.props;
+import Imdb from "./Imdb.astro";
 ---
 
-<article class="bg-blueSky flex flex-row py-24 px-32 justify-start gap-16">
-  <img
-    class=""
-    src="/img/maanedens film/imgPlakat.jpg"
-    alt="Film plakat for Lulu"
-  />
+{
+  maanedensfilm.map((filmData) => (
+    <article class="bg-blueSky flex flex-row py-24 px-32 justify-start gap-16">
+      <a href={filmData.slug} class="w-2/5">
+        <img
+          class="aspect-auto w-fit h-fit bg-cover bg-no-repeat bg-center"
+          src={`././img/${filmData.imgTema}/imgPlakat.jpg`}
+          alt="Film plakat for Lulu"
+        />
+      </a>
 
-  <div class="flex flex-col justify-between">
-    <div>
-      <h3 class="text-xs font-dinHeader text-grey-100">
-        Månedens film | se for 0 point i Maj
-      </h3>
-      <h2 class="text-xl font-dinHeader uppercase mt-2">
-        {filmTitle}
-      </h2>
-      <div class="infoBar mt-2 flex gap-2 items-center body-md">
-        <p class="varrighed body-xs">{varighed}</p>|<p class="aarstal body-xs">
-          {aarstal}
-        </p>|
-        <p class="genre body-xs">{genre}</p>|<p class="undergenre body-xs">
-          {undergenre}
-        </p>
+      <div class="flex flex-col justify-between">
+        <div>
+          <h3 class="text-xs font-dinHeader text-grey-100">
+            Månedens film | se for 0 point i Maj
+          </h3>
+
+          <a href={filmData.slug}>
+            <h2 class="text-xl font-dinHeader uppercase mt-2 mb-4">
+              {filmData.filmTitel}
+            </h2>
+          </a>
+          <div class="infoBar text-white flex gap-2 items-center body-lg">
+            <p class="text-white body-md">{filmData.varighed}</p>|
+            <p class="text-white body-md">{filmData.aarstal}</p>|
+            <p class="text-white body-md">{filmData.genre}</p>|
+            <p class="text-white body-md">{filmData.type}</p>|
+            <p class="text-white body-md">{filmData.point} point</p>
+          </div>
+          <p class="beskrivelse body-md mt-12 max-w-prose">
+            Leda (Olivia Colman) er alene på ferie på en græsk ø, hvor hun
+            bliver besat af en ung mor og hendes datter, som hun observerer på
+            stranden. Noget ved mor-datter-forholdet får Ledas egne minder frem.
+            En impulsiv handling tvinger Leda til at konfrontere sig selv og de
+            kontroversielle valg, hun tog som ung mor. <br />
+            <br /> Filmen bygger på en roman af den populære forfatter Elena
+            Ferrante.
+            {filmData.kortResume}
+          </p>
+          <div class="indstruktør mt-8 flex flex-row gap-1">
+            <p class="indstruktør body-sm text-grey-100">Instruktør:</p>
+            <p class="body-sm">{filmData.instruktor}</p>
+          </div>
+        </div>
+        <div class="">
+          <div class="flex items-end gap-8">
+            <Heart variant="medium" />
+            <Imdb tal={filmData.ratingIMDb} />
+          </div>
+        </div>
       </div>
-      <p class="beskrivelse body-md mt-12 max-w-prose">
-        Leda (Olivia Colman) er alene på ferie på en græsk ø, hvor hun bliver
-        besat af en ung mor og hendes datter, som hun observerer på stranden.
-        Noget ved mor-datter-forholdet får Ledas egne minder frem. En impulsiv
-        handling tvinger Leda til at konfrontere sig selv og de kontroversielle
-        valg, hun tog som ung mor. <br />
-        <br /> Filmen bygger på en roman af den populære forfatter Elena Ferrante.
-        {beskrivelse}
-      </p>
-      <div class="indstruktør mt-8 flex flex-row gap-1">
-        <p class="indstruktør body-sm text-grey-100">Instruktør:</p>
-        <p class="body-sm">
-          {indstruktør}
-        </p>
-      </div>
-    </div>
-    <div class="">
-      <div class="flex">
-        <Heart variant="medium" />
-        <p class="text-IMDb">mangler imdb</p>
-      </div>
-    </div>
-  </div>
-</article>
+    </article>
+  ))
+}
