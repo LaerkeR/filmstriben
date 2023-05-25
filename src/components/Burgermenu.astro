@@ -6,7 +6,7 @@ import Kryds from "../components/ikoner/Kryds.astro";
   <li class="burger cursor-pointer lightIcon hover:text-gold-400">bars</li>
 
   <div
-    class="undermenuBurger absolute left-0 mt-4 h-screen py-4 pb-28 px-8 bg-black flex flex-col gap-4 overflow-scroll scrollbar-hide"
+    class="undermenuBurger hidden absolute left-0 mt-4 h-screen py-4 pb-28 px-8 bg-black flex-col gap-4 overflow-scroll scrollbar-hide"
   >
     <div class="lukBurger flex w-full justify-end"><Kryds /></div>
     <ul class="flex flex-col pb-4 gap-6">
@@ -82,3 +82,9 @@ import Kryds from "../components/ikoner/Kryds.astro";
     undermenu.classList.toggle("hidden");
   });
 </script>
+
+<style>
+  .undermenuBurger {
+    display: flex;
+  }
+</style>
