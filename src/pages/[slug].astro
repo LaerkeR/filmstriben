@@ -6,6 +6,8 @@ import Layout from "../layouts/Layout.astro";
 import Play from "../components/ikoner/play.astro";
 import Imdb from "../components/Imdb.astro";
 import Detaljertags from "../components/Detaljertags.astro";
+import Heart from "../components/ikoner/heart.astro";
+import Del from "../components/ikoner/del.astro";
 
 export async function getStaticPaths() {
   return filmdatabase.map((film) => {
@@ -30,13 +32,19 @@ console.log(myData);
       >
         <div class="bottom-5 m-10 w-full">
           <h1 class="text-2xl font-display uppercase">{myData.filmTitel}</h1>
-          <div class="flex">
-            <Button variant="primary" tekst="Lån filmen" />
-            <Button variant="secondary" tekst="Se forsmag" />
+          <div class="flex items-center">
+            <Button
+              variant="primary"
+              typeIcon="circle-play"
+              tekst="Lån filmen"
+            />
+            <Button variant="secondary-uden-icon" tekst="Se forsmag" />
 
-            <div class="flex gap-10 mt-5">
-              <p class="text-white">Føj til favoritter</p>
-              <p class="text-white">Del</p>
+            <div class="flex gap-4">
+              <p class="text-white">Føj til favoritter <Heart /></p>
+              <div class="flex gap-2">
+                <p class="text-white">Del</p><Del />
+              </div>
             </div>
           </div>
         </div>
@@ -68,11 +76,22 @@ console.log(myData);
           class="text-white grid grid-cols-[auto_minmax(0px,_1fr)] gap-y-4 gap-x-20"
         >
           <p class="text-white">Sprog:</p>
-          <Detaljertags tekst={myData.sporg} />
+          <div class="tagWrapper">
+            {
+              myData.sprog &&
+                myData.sprog.map((sprog) => <Detaljertags tekst={sprog} />)
+            }
+          </div>
           <p class="text-white">Land:</p>
-          <Detaljertags tekst={myData.land} />
+          <div class="tagWrapper">
+            {
+              myData.land &&
+                myData.land.map((land) => <Detaljertags tekst={land} />)
+            }
+          </div>
+
           <p>Undergenre:</p>
-          <div class="flex flex-wrap gap-3">
+          <div class="tagWrapper">
             {
               myData.underGenre &&
                 myData.underGenre.map((underGenre) => (
@@ -81,7 +100,7 @@ console.log(myData);
             }
           </div>
           <p>Instruktør:</p>
-          <div class="flex flex-wrap gap-3">
+          <div class="tagWrapper">
             {
               myData.instruktor &&
                 myData.instruktor.map((instruktor) => (
@@ -91,46 +110,46 @@ console.log(myData);
           </div>
 
           <p>Medvirkende:</p>
-          <div class="flex flex-wrap gap-3">
+          <div class="tagWrapper">
             {
-              myData.medvirkende.map((medvirkende) => (
-                <Detaljertags tekst={medvirkende} />
-              ))
+              myData.medvirkende &&
+                myData.medvirkende.map((medvirkende) => (
+                  <Detaljertags tekst={medvirkende} />
+                ))
             }
           </div>
           <p>Manuskriptforfatter:</p>
-          <Detaljertags tekst={myData.manusforfatter} />
-          <p>Filmfotografer:</p>
-          <div class="flex flex-wrap gap-3">
+          <div class="tagWrapper">
             {
-              myData.filmfotograf.map((filmfotograf) => (
-                <Detaljertags tekst={filmfotograf} />
-              ))
+              myData.manusforfatter &&
+                myData.manusforfatter.map((manusforfatter) => (
+                  <Detaljertags tekst={manusforfatter} />
+                ))
+            }
+          </div>
+          <p>Filmfotografer:</p>
+          <div class="tagWrapper">
+            {
+              myData.filmfotograf &&
+                myData.filmfotograf.map((filmfotograf) => (
+                  <Detaljertags tekst={filmfotograf} />
+                ))
             }
           </div>
 
           <p>Produktionsselskab:</p>
-          <div class="flex flex-wrap gap-3">
-            <Detaljertags tekst={myData.produktionselskab} />
+          <div class="tagWrapper">
+            {
+              myData.produktionsselskab &&
+                myData.produktionsselskab.map((produktionsselskab) => (
+                  <Detaljertags tekst={produktionsselskab} />
+                ))
+            }
           </div>
 
           <p>Emneord:</p>
-          <div class="flex flex-wrap gap-3">
+          <div class="tagWrapper">
             {myData.emneord.map((emneord) => <Detaljertags tekst={emneord} />)}
-            {
-              myData.medvirkende.forEach((mv) => {
-                if (Array.isArray(mv)) {
-                  myData.medvirkende.map(
-                    (mennesker) => (
-                      console.log("hurrruaaaa"),
-                      (<Detaljertags tekst={mennesker} />)
-                    )
-                  );
-                } else {
-                  <Detaljertags tekst={mv} />;
-                }
-              })
-            }
           </div>
         </div>
       </div>
@@ -145,4 +164,10 @@ console.log(myData);
   </section>
 </Layout>
 
-<script></script>
+<style>
+  .tagWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+</style>
