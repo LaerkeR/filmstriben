@@ -1,16 +1,14 @@
 ---
-import filmkategoridatabase from "../filmkategori.json";
 import Kryds from "../components/ikoner/Kryds.astro";
-const { navpunkt } = Astro.props;
 ---
 
-<ul class="">
-  <li class="cursor-pointer lightIcon hover:text-gold-400">bars</li>
+<ul>
+  <li class="burger cursor-pointer lightIcon hover:text-gold-400">bars</li>
 
   <div
-    class="undermenu absolute left-0 mt-4 h-screen py-4 pb-28 px-8 bg-black flex flex-col gap-4 overflow-scroll scrollbar-hide"
+    class="undermenuBurger absolute left-0 mt-4 h-screen py-4 pb-28 px-8 bg-black flex flex-col gap-4 overflow-scroll scrollbar-hide"
   >
-    <div class="luk flex w-full justify-end"><Kryds /></div>
+    <div class="lukBurger flex w-full justify-end"><Kryds /></div>
     <ul class="flex flex-col pb-4 gap-6">
       <li class="w-full pb-2 border-b-[1px] font-display text-sm uppercase">
         Point
@@ -72,7 +70,18 @@ const { navpunkt } = Astro.props;
     </ul>
   </div>
 </ul>
-<script></script>
+<script>
+  const burgermenu = document.querySelector(".burger");
+  const undermenu = document.querySelector(".undermenuBurger");
+  const luk = document.querySelector(".lukBurger");
+
+  burgermenu.addEventListener("click", () => {
+    undermenu.classList.toggle("hidden");
+  });
+  luk.addEventListener("click", () => {
+    undermenu.classList.toggle("hidden");
+  });
+</script>
 
 <!-- <script>
   //Først starter vi med at vælge alle elementer i dokumentet, der har klassenavnet "ulle" ved hjælp af document.querySelectorAll(".ulle"). Resultatet gemmes i variablen uller
@@ -95,7 +104,7 @@ const { navpunkt } = Astro.props;
 
 <style>
   /*Det er denne class der går at undermenuerne i naven bliver vist*/
-  .active .undermenu {
+  .active .undermenuBurger {
     display: block;
   }
 </style>
