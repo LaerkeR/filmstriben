@@ -120,6 +120,10 @@
 }
 
 @layer utilities {
+  .aspect-ratio {
+    aspect-ratio: 16 / 9;
+  }
+  ,
   .content-auto {
     content-visibility: auto;
   }

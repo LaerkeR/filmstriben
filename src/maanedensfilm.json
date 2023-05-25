@@ -1,5 +1,6 @@
 [
   {
+    "slug": "lulu",
     "filmTitel": "Lulu",
     "originalTitel": "",
     "aarstal": "2014",
@@ -34,6 +35,6 @@
     "point": "0",
     "alder": "11",
     "tema": "månedens film",
-    "imgTema": "maanendens film"
+    "imgTema": "maanedens film"
   }
 ]
