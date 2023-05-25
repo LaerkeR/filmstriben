@@ -198,7 +198,7 @@
     "ratingAntal": "53",
     "ratingIMDb": "7.6",
     "point": "4",
-    "alder": "alle",
+    "alder": "a",
     "tema": "Oscar-film | vindere og nominerede",
     "imgTema": "oscar film",
     "imgTitel": "Drive my car",
@@ -368,7 +368,7 @@
     "ratingAntal": "25",
     "ratingIMDb": "6.4",
     "point": "4",
-    "alder": "alle",
+    "alder": "a",
     "tema": "Film om Mongoliet",
     "imgTema": "mongoliet",
     "imgTitel": "Oernejaegerens soen"
@@ -526,7 +526,7 @@
     "ratingAntal": "4",
     "ratingIMDb": "5.3",
     "point": "3",
-    "alder": "alle",
+    "alder": "a",
     "tema": "Film om Mongoliet",
     "imgTema": "mongoliet",
     "imgTitel": "Aligermaas eventyr"
@@ -753,7 +753,7 @@
     "ratingAntal": "9",
     "ratingIMDb": "",
     "point": "2",
-    "alder": "A",
+    "alder": "a",
     "tema": "Far tema",
     "imgTema": "far tema",
     "imgTitel": "Omveje"
@@ -1146,7 +1146,7 @@
     "ratingAntal": "1",
     "ratingIMDb": "7.0",
     "point": "4",
-    "alder": "A",
+    "alder": "a",
     "tema": "Senest tilføjet",
     "imgTema": "senest tilfoejet",
     "imgTitel": "hej verden"
