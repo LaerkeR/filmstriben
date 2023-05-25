@@ -4,7 +4,7 @@ import Star from "../components/ikoner/star.astro";
 const { antal } = Astro.props;
 ---
 
-<div class="rating flex">
+<div class="rating flex items-baseline gap-2">
   <div class="">
     <Star variant="small" />
     <Star variant="small" />
@@ -13,9 +13,12 @@ const { antal } = Astro.props;
     <Star variant="small" />
   </div>
   <div>
-    <p>(6){antal}</p>
+    <p class="body-sm text-grey-400">
+      <strong class="text-white body-lg">{antal}</strong>(6)
+    </p>
   </div>
 </div>
+
 <!-- <div class="MoviePlayer-rating-item flex">
   <div>
     <button class="MoviePlayer-stars_f fa fa-star active before:text-gold-500">

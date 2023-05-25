@@ -1,14 +1,20 @@
 ---
 import Button from "../components/Button.astro";
 import Kryds from "../components/ikoner/Kryds.astro";
+import Button from "../components/Button.astro";
 ---
 
-<article class="bg-grey-700 border border-gold-500 w-1/2 h-1/2 py-12 px-12">
-  <div class="luk flex w-full justify-end">
-    <Kryds class="" variant="medium" />
+<div id="myButton"><Button variant="primary" tekst="Se film" /></div>
+
+<article
+  id="popupContainer"
+  class="bg-grey-700 border border-gold-500 w-1/2 h-1/2 py-12 px-12"
+>
+  <div id="closeButton" class="luk flex w-full justify-end">
+    <Kryds variant="medium" />
   </div>
   <div class="grid justify-items-center gap-4">
-    <h2 class="text-lg">Love proof</h2>
+    <h2 class="text-lg font-display">Love proof</h2>
     <p class="body-lg text-grey-200">
       Hver film du låner har du til rådighed i 48 timer.
     </p>
@@ -22,3 +28,15 @@ import Kryds from "../components/ikoner/Kryds.astro";
     <p class="font-bold">Københavns biblioteker</p>
   </div>
 </article>
+
+<script>
+  document.getElementById("myButton").addEventListener("click", function () {
+    var popup = document.getElementById("popupContainer");
+    popup.style.display = "block";
+  });
+
+  document.getElementById("closeButton").addEventListener("click", function () {
+    var popup = document.getElementById("popupContainer");
+    popup.style.display = "none";
+  });
+</script>

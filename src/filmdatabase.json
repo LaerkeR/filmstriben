@@ -161,7 +161,8 @@
     "alder": "11",
     "tema": "Oscar-film | vindere og nominerede",
     "imgTema": "oscar film",
-    "imgTitel": "Verdens verste menneske"
+    "imgTitel": "Verdens verste menneske",
+    "alt": "billede fra Verdens verste menneske"
   },
   {
     "filmTitel": "Drive my car",
@@ -249,7 +250,8 @@
     "alder": "7",
     "tema": "Oscar-film | vindere og nominerede",
     "imgTema": "oscar film",
-    "imgTitel": "The lost daughter"
+    "imgTitel": "The lost daughter",
+    "alt": "billede fra The lost daughter"
   },
   {
     "filmTitel": "The father",
