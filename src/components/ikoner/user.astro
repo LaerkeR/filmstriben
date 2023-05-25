@@ -3,7 +3,7 @@ const { variant } = Astro.props;
 ---
 
 <button id="user" data-variant={variant}>
-  <p class="lightIcon hover:text-gold-500">user</p></button
+  <p class="lightIcon text-white hover:text-gold-400">user</p></button
 >
 
 <style>
@@ -28,9 +28,11 @@ const { variant } = Astro.props;
     if (textElement.classList.contains("lightIcon")) {
       console.log("lightIcon");
       textElement.classList.replace("lightIcon", "solidIcon");
+      textElement.classList.replace("text-white", "text-gold-500");
     } else {
       console.log("not lightIcon");
       textElement.classList.replace("solidIcon", "lightIcon");
+      textElement.classList.replace("text-gold-500", "text-white");
     }
   }
 </script>
