@@ -40,9 +40,9 @@ module.exports = {
       prettyBlue: "#8EA5BF",
     },
     fontFamily: {
-      display: "din-condensed,Helvetica, Arial, sans-serif",
-      dinHeader: "din-condensed,Helvetica, Arial, sans-serif",
-      robotoHeader: "roboto condensed, Helvetica, Arial, sans-serif",
+      display: "din-condensed, Helvetica, Arial, sans-serif",
+      dinHeader: "din-condensed, Helvetica, Arial, sans-serif",
+      robotoHeader: "Roboto Condensed, sans-serif",
       body: "roboto, Helvetica, Arial, sans-serif",
     },
 
@@ -51,47 +51,36 @@ module.exports = {
         "6rem",
         {
           lineHeight: "100%",
-          fontWeight: "700",
         },
       ],
       xl: [
         "3.75rem",
         {
           lineHeight: "100%",
-
-          fontWeight: "700",
         },
       ],
       lg: [
         "2.75rem",
         {
           lineHeight: "100%",
-
-          fontWeight: "700",
         },
       ],
       md: [
         "2.25rem",
         {
           lineHeight: "100%",
-
-          fontWeight: "700",
         },
       ],
       sm: [
         "2rem",
         {
           lineHeight: "100%",
-
-          fontWeight: "700",
         },
       ],
       xs: [
         "1.50rem",
         {
           lineHeight: "100%",
-
-          fontWeight: "700",
         },
       ],
     },

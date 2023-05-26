@@ -8,11 +8,11 @@ const { aarstal, filmTitle, slug, varighed, genre, imgSrc, undergenre, point } =
     class="aspect-ratio relative w-full flex flex-col-reverse h-[60vw] md:h-[40vw] lg:h-[20vw] overflow-hidden bg-no-repeat bg-cover bg-top"
     style={`background-image: url("${imgSrc}")`}
   >
-    <div class="w-full bottom-0">
-      <!-- <div class="bg-black top-[40%] blurShadow blur-[10px]"></div> -->
-      <div class="bg-black bg-opacity-75 flex flex-col gap-2 px-5 pb-5">
+    <div class="w-full bottom-0 relative h-full flex flex-col-reverse">
+      <div class="bg-black info"><span></span></div>
+      <div class="bg-black w-full absolute z-[1] flex flex-col gap-2 px-5 pb-3">
         <p class="font-display text-xs">{filmTitle}</p>
-        <div class="infoBar text-white flex gap-2 items-center body-sm">
+        <div class="infoBar text-grey-100 flex gap-2 items-center body-sm">
           <p class="varrighed body-xs">{varighed}</p>|<p
             class="aarstal body-xs"
           >
@@ -31,3 +31,18 @@ const { aarstal, filmTitle, slug, varighed, genre, imgSrc, undergenre, point } =
     props: ["film"],
   };
 </script>
+
+<style>
+  .infoBar p {
+    color: #ccc;
+  }
+  .info {
+    content: "";
+    filter: blur(20px);
+    height: 40%;
+    left: -50px;
+    position: absolute;
+    width: 150%;
+    z-index: 0;
+  }
+</style>

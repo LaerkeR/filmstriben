@@ -84,38 +84,24 @@
   .body-lg {
     font-family: "Roboto";
     font-size: 20px;
-    font-weight: 400;
     line-height: 150%;
   }
 
   .body-md {
     font-family: "Roboto";
     font-size: 16px;
-    font-weight: 400;
     line-height: 150%;
   }
 
   .body-sm {
     font-family: "Roboto";
     font-size: 14px;
-    font-weight: 400;
     line-height: 150%;
   }
   .body-xs {
     font-family: "Roboto";
     font-size: 12px;
-    font-weight: 400;
     line-height: 150%;
-  }
-  .blurShadow {
-    content: "";
-    display: block;
-    width: 200%;
-    height: 40px;
-
-    z-index: -1;
-    position: relative;
-    left: -50%;
   }
 }
 
@@ -127,7 +113,7 @@
   .content-auto {
     content-visibility: auto;
   }
-  .noBreak{
+  .noBreak {
     white-space: nowrap;
   }
 }

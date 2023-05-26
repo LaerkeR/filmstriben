@@ -43,37 +43,37 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === "Kærlighed");
   <main class="flex flex-col gap-10">
     <TemaSection temaTitel="Senest tilføjet" />
 
-    <section class="grid grid-cols-4 gap-20 m-10 text-center">
-      <div class="grid justify-items-center gap-2">
+    <section class="flex flex-row p-20 justify-between text-center">
+      <div class="flex flex-col justify-items-center gap-5">
         <p class="lightIcon text-lg text-gold-500">ticket</p>
         <h3 class="text-sm font-display uppercase">Point</h3>
-        <p>
+        <p class="max-w-[25ch] body-md text-grey-200">
           Du skal bruge point for at se film på Filmstriben. Point uddeles
           automatisk af biblioteket i din bopælskommune. <a href="">Læs mere</a>
         </p>
       </div>
-      <div class="grid justify-items-center gap-2">
+      <div class="flex flex-col justify-items-center gap-5">
         <p class="lightIcon font-extralight text-lg text-gold-500">
           camera-movie
         </p>
         <h3 class="text-sm font-display uppercase">Om Filmstriben</h3>
-        <p>
+        <p class="max-w-[25ch] body-md text-grey-200">
           Filmstriben indeholder en bred vifte af spillefilm, kort- og
           dokumentarfilm for børn, unge og voksne.
         </p>
       </div>
-      <div class="grid justify-items-center gap-2">
+      <div class="flex flex-col justify-items-center gap-5">
         <p class="lightIcon text-lg text-gold-500">film</p>
         <h3 class="text-sm font-display uppercase">Låneperiode</h3>
-        <p>
-          Du låner filmen i 48 timer. Når låneperioden er afsluttet, skal du
-          ikke foretage dig yderligere
+        <p class="max-w-[25ch] body-md text-grey-200">
+          Du låner filmen i 48 timer. <br /> Når låneperioden er afsluttet, skal
+          du ikke foretage dig yderligere
         </p>
       </div>
-      <div class="grid justify-items-center gap-2">
+      <div class="flex flex-col justify-items-center gap-5">
         <p class="lightIcon text-lg text-gold-500">popcorn</p>
         <h3 class="text-sm font-display uppercase">Hjemmebio</h3>
-        <p>
+        <p class="max-w-[25ch] body-md text-grey-200">
           På Filmstriben kan du se film, når det passer dig. På din computer,
           tablet, smartphone eller Apple TV - og via Chromecast eller Airplay.
         </p>
