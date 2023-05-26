@@ -7,10 +7,10 @@ import Imdb from "./Imdb.astro";
 
 {
   maanedensfilm.map((filmData) => (
-    <article class="bg-blueSky flex flex-row py-24 px-32 justify-start gap-16">
-      <a href={filmData.slug} class="w-2/5">
+    <article class="bg-blueSky flex flex-row py-16 px-36 justify-start gap-16">
+      <a href={filmData.slug} class=" w-1/3 ">
         <img
-          class="aspect-auto w-fit h-fit bg-cover bg-no-repeat bg-center"
+          class="aspect-auto w-fit h-fit bg-cover bg-no-repeat bg-center  "
           src={`././img/${filmData.imgTema}/imgPlakat.jpg`}
           alt="Film plakat for Lulu"
         />
@@ -44,6 +44,7 @@ import Imdb from "./Imdb.astro";
             Ferrante.
             {filmData.kortResume}
           </p>
+
           <div class="indstruktør mt-8 flex flex-row gap-1">
             <p class="indstruktør body-sm text-grey-100">Instruktør:</p>
             <p class="body-sm">{filmData.instruktor}</p>
