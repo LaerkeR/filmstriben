@@ -1,19 +1,27 @@
 ---
 import Info from "../components/ikoner/info.astro";
+
 const { filmTitle, beskrivelse, medvikende } = Astro.props;
 ---
 
 <article class="relative">
   <Info variant="medium" />
-  <div class="bg-black absolute opacity-0 hover:opacity-100">
-    <div>
-      <h2>Det forbandede år 1{filmTitle}</h2>
-      <img src="" alt="" />
-      <p>{beskrivelse}</p>
-      <p>
-        Medvirkende: Sara Viktoria Bjerregaard, Jesper Christensen, Bodil
-        Jørgensen, Mads Reuther <a href="../pages/Singleview.astro">Læs mere</a
-        >{medvikende}
+  <div class="bg-black absolute">
+    <div class="bg-black w-96 p-10">
+      <h2 class="font-display text-sm mb-2">Mulig titel{filmTitle}</h2>
+      <div class="w-12"><img src="../alder/a.webp" alt="" /></div>
+      <p class="mt-2">
+        Karl Skov er den succesfulde ejer af en stor elektronikfabrik, han er
+        gift med Eva og har fem børn. De lever det gode, privilegerede
+        overklasseliv på Strandvejen nord for København, da nazisterne besætter
+        Danmark i april 1940. {beskrivelse}
+      </p>
+
+      <p class="text-grey-200 mt-4">
+        <span class="text-white">Medvirkende:</span>
+        Mulige medvirkedene, Jesper Christensen, Bodil Jørgensen, Mads Reuther <a
+          href="../pages/Singleview.astro">Læs mere {medvikende}</a
+        >
       </p>
     </div>
   </div>
