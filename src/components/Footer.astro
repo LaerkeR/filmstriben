@@ -13,42 +13,37 @@ import Twitter from "../components/ikoner/twitter.astro";
     </div>
 
     <div class="mx-8 flex flex-col gap-1">
-      <a class="text-xs text-gold-500 mb-4" href="">Infomation</a>
+      <a class="text-xs text-gold-500 mb-1" href="">Information</a>
       <a class="body-sm text-grey-200" href="">Om Filmstriben</a>
       <a class="body-sm text-grey-200" href="">Persondata</a>
       <a class="body-sm text-grey-200" href="">Tilgængelighedserklæring</a>
     </div>
 
     <div class="mx-8 flex flex-col gap-1">
-      <a class="text-xs text-gold-500 mb-4">Til brugerne</a>
+      <a class="text-xs text-gold-500 mb-1">Til brugerne</a>
       <a class="body-sm text-grey-200" href="">Om pointsystem</a>
       <a class="body-sm text-grey-200" href="">Hvordan ser jeg film</a>
       <a class="body-sm text-grey-200" href="">Se film på biblioteket</a>
       <a class="body-sm text-grey-200" href="">Kontakt kundeservice</a>
     </div>
 
-    <div class="mx-8 flex flex-col gap-1">
-      <img class="mb-4 w-1/2" src="../dbc_logo.svg" alt="dbc_logo" />
+    <div class="mx-8 flex flex-col gap-4">
+      <img class="w-1/2" src="../dbc_logo.svg" alt="dbc_logo" />
       <p class="body-sm text-grey-200">Tempovej 7-11 2750 Ballerup</p>
       <p class="body-sm text-grey-200">+45 44 86 77 77</p>
     </div>
 
-    <div class="mx-8 flex flex-col">
+    <div class="flex flex-col">
       <div class="flex gap-3">
-        <label class="">
-          <input
-            type="email"
-            name="email"
-            class="mt-1 body-sm px-2 py-1 border-bottom focus:outline-none rounded-md"
-            placeholder="Email"
-          />
-        </label>
-
-        <Button variant="secondary-uden-icon" tekst="Tilmeld nyhedsbrev" />
+        <div>
+        <p class="body-sm text-grey-200">Email</p>
+        <hr class="text-white w-32">
+      </div>
+        <Button variant ="secondary-uden-icon" tekst="Tilmeld nyhedsbrev" />
       </div>
 
       <div class="flex gap-3">
-        <h5 class="text-white body-sm">Følg os:</h5>
+        <h5 class="text-white body-sm noBreak items-center flex">Følg os:</h5>
         <Facebook variant="medium" />
         <Instagram variant="medium" />
         <Twitter variant="medium" />
