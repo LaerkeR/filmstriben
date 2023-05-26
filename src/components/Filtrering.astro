@@ -1,0 +1,89 @@
+---
+import filmgenredata from "../filmgenre.json";
+import filmkategoridata from "../filmkategori.json";
+
+import Kryds from "../components/ikoner/Kryds.astro";
+import Button from "./Button.astro";
+---
+
+<Button
+  btnClass="filtreringsKnap"
+  variant="secondary"
+  tekst="Filtrering"
+  typeIcon="sliders"
+/>
+<!-- <div class="w-screen h-screen bg-black bg-opacity-30"></div> -->
+<div
+  class="filtreringsMenu hidden absolute bg-black px-8 w-1/3 h-screen right-0 top-0 z-50 overflow-scroll py-4 pb-28 scrollbar-hide"
+>
+  <div class="lukFiltrering flex w-full justify-end"><Kryds /></div>
+  <form class="flex flex-col gap-8" action="">
+    <fieldset class="genre">
+      <legend
+        class="pb-2 mb-2 border-b-[1px] w-full text-white font-display text-sm flex gap-4"
+        >Genre <p class="lightIcon text-[16px]">chevron-down</p>
+      </legend>
+      <div class="filtreringsListe">
+        {
+          filmgenredata.map((genre) => (
+            <div class="flex justify-between my-1">
+              <label for={genre}>{genre}</label>
+              <input
+                class="text-gold-400 focus:ring-gold-400"
+                type="checkbox"
+                id={genre}
+                name={genre}
+              />
+            </div>
+          ))
+        }
+      </div>
+    </fieldset>
+    <fieldset class="kategori">
+      <legend
+        class="pb-2 mb-2 border-b-[1px] w-full text-white font-display text-sm flex gap-2"
+        >Kategori <p class="lightIcon text-[16px]">chevron-down</p>
+      </legend>
+      <div class="filtreringsListe">
+        {
+          filmkategoridata.map((kategori) => (
+            <div class="flex justify-between my-1">
+              <label for={kategori}>{kategori}</label>
+              <input
+                class="text-gold-400 focus:ring-gold-400"
+                type="checkbox"
+                id={kategori}
+                name={kategori}
+              />
+            </div>
+          ))
+        }
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+<style>
+  label {
+    color: #ccc;
+  }
+  label:checked {
+    color: white;
+  }
+
+  input[type="checkbox"]:target {
+    color: red;
+  }
+</style>
+<script>
+  const knap = document.querySelector(".filtreringsKnap");
+  const filtreringsMenu = document.querySelector(".filtreringsMenu");
+  const luk = document.querySelector(".lukFiltrering");
+
+  knap.addEventListener("click", () => {
+    filtreringsMenu.classList.toggle("hidden");
+  });
+  luk.addEventListener("click", () => {
+    filtreringsMenu.classList.toggle("hidden");
+  });
+</script>

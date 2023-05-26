@@ -20,13 +20,11 @@ const { navpunkt } = Astro.props;
         </li>
         {
           filmkategoridatabase.map((filmkategori) => (
-            <>
-              <li class=" py-1 px-1 align-middle ">
-                <a class="Underline" href={filmkategori}>
-                  {filmkategori}
-                </a>
-              </li>
-            </>
+            <li class=" py-1 px-1 align-middle ">
+              <a class="Underline" href={filmkategori}>
+                {filmkategori}
+              </a>
+            </li>
           ))
         }
       </ul>

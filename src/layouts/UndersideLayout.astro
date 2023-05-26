@@ -1,17 +1,21 @@
 ---
+import Filtrering from "../components/Filtrering.astro";
 const { undersideTitel, antaltTitler } = Astro.props;
 ---
 
 <main>
-  <div class="flex gap-2 items-baseline p-10">
-    <h1 class="text-gold-400 font-display text-lg">
-      {undersideTitel}
-    </h1><p class="text-grey-500 font-display text-md">
-      {antaltTitler} titler
-    </p>
+  <div class="flex w-full justify-between items-center py-4 sticky">
+    <div class="flex gap-2 items-baseline pl-20">
+      <h1 class="text-gold-400 font-display text-lg">
+        {undersideTitel}
+      </h1><p class="text-grey-500 font-display text-md">
+        {antaltTitler} titler
+      </p>
+    </div>
+    <Filtrering />
   </div>
   <section
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 lg:gap-4 px-10"
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 lg:gap-4 px-20"
   >
     <slot />
   </section>

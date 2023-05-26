@@ -117,10 +117,6 @@
     position: relative;
     left: -50%;
   }
-
-  main {
-    padding: 0 2.5rem;
-  }
 }
 
 @layer utilities {

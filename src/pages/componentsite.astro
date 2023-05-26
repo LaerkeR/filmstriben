@@ -27,10 +27,12 @@ import Stjernerating from "../components/Stjernerating.astro";
 import IMDB from "../components/Imdb.astro";
 import Stortplay from "../components/ikoner/Stortplay.astro";
 import filmdatabase from "../filmdatabase.json";
+import Filtrering from "../components/Filtrering.astro";
 ---
 
 <Layout title="komponent udviklings side">
   <main>
+    <Filtrering />
     <div class="flex flex-row w-full justify-between gap-4 px-10">
       <MovieCard />
       <MovieCard />
