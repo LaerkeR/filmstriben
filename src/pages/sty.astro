@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App Henvisning Prototype</title>
+    <style>
+      #openAppBanner {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background-color: #f1f1f1;
+        text-align: center;
+      }
+
+      #openAppBanner button {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Din Hjemmeside</h1>
+
+    <iframe id="appDetect" src="appname://"></iframe>
+
+    <div id="openAppBanner">
+      <button onclick="openApp()">Åbn appen</button>
+      <div>
+        Du har ikke appen installeret. Vil du downloade den?
+        <a href="https://appstorelink">App Store</a> / <a
+          href="https://playstorelink">Google Play</a
+        >
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        var appDetect = document.getElementById("appDetect");
+        if (appDetect && appDetect.style.display !== "none") {
+          document.getElementById("openAppBanner").style.display = "block";
+        }
+      };
+
+      function openApp() {
+        window.location.href = "appname://";
+      }
+    </script>
+  </body>
+</html>
