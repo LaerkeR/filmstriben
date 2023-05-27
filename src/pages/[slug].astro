@@ -3,7 +3,6 @@ import Moviecard from "../components/Moviecard.astro";
 import Button from "../components/Button.astro";
 import filmdatabase from "../filmdatabase.json";
 import Layout from "../layouts/Layout.astro";
-import Kryds from "../components/ikoner/Kryds.astro";
 import Imdb from "../components/Imdb.astro";
 import Detaljertags from "../components/Detaljertags.astro";
 import Heart from "../components/ikoner/heart.astro";
@@ -21,7 +20,7 @@ export async function getStaticPaths() {
   });
 }
 
-const { slug } = Astro.params;
+// const { slug } = Astro.params;
 const { myData } = Astro.props;
 console.log(myData);
 ---
@@ -35,6 +34,7 @@ console.log(myData);
   </aside>
   <div class="splash w-full h-[60vw] md:h-[40vw] overflow-hidden">
     <div
+      id="splashPic"
       class="bg-no-repeat bg-cover bg-top w-full h-full flex flex-col justify-end aspect-ratio"
       style={`background-image: url("../../../img/${myData.imgTema}/${myData.imgTitel}/imgSingleview.webp")`}
     >
@@ -53,7 +53,9 @@ console.log(myData);
             <Button variant="secondary-uden-icon" tekst="Se forsmag" />
 
             <div class="flex gap-4">
-              <p class="text-white hover:text-gold-500">Føj til favoritter <Heart /></p>
+              <p class="text-white hover:text-gold-500">
+                Føj til favoritter <Heart />
+              </p>
               <div class="flex gap-2">
                 <p class="text-white hover:text-gold-500">Del</p><Del />
               </div>
@@ -198,3 +200,25 @@ console.log(myData);
     display: none;
   }
 </style>
+
+<script>
+  window.addEventListener("load", (event) => {
+    console.log("page is fully loaded");
+    setTimeout(changeImage(), 5000);
+  });
+
+  function changeImage() {
+    document.getElementById(
+      "splashPic"
+    ).style = `'background-image: url("../../../img/${myData.imgTema}/${myData.imgTitel}/imgSingleview.webp")`;
+    console.log("hehehehe");
+    setTimeout(changeImageBack(), 5000);
+  }
+
+  function changeImageBack() {
+    console.log("hohoho");
+    document.getElementById("splashPic").style =
+      "background-image: url('../../../img/${myData.imgTema}/${myData.imgTitel}/imgSingleview.webp')";
+    // setTimeout(changeImage(), 5000);
+  }
+</script>
