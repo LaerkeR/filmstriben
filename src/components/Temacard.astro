@@ -1,21 +1,25 @@
 ---
-const { aarstal, filmTitle, varighed, genre, imgSrc, point, kortResume } =
+const { aarstal, filmTitle, varighed, genre, imgSrc, point, kortResume, slug } =
   Astro.props;
 import Play from "../components/ikoner/play.astro";
 import Heart from "../components/ikoner/heart.astro";
 import Info from "../components/ikoner/info.astro";
 ---
 
-<article class="bg-ashyGreen grid grid-cols-2 m-20 w-1/4 h-2/3">
-  <div class="m-10">
+<article class="bg-ashyGreen flex flex-row px-8 py-8 w-fit h-fit">
+  <a href={slug} class="relative w-1/5">
     <img
-      src="../img/mongoliet/Le dernier loup/imgCard.webp"
-      alt="Le dernier loup"
+      class="aspect-auto w-fit h-fit bg-cover bg-no-repeat bg-center"
+      src={imgSrc}
+      alt=""
     />
-    {imgSrc}
-  </div>
+    <div
+      class="absolute top-0 bottom-0 left-0 right-0 w-full h-full hover:bg-black hover:opacity-20"
+    >
+    </div>
+  </a>
 
-  <div class="m-10">
+  <div class="">
     <div class="z-10 flex flex-col gap-2 px-10 py-5">
       <h2 class="text-lg">{filmTitle}</h2>
       <div class="infoBar text-white flex gap-2 align-middle body-sm">
@@ -26,7 +30,7 @@ import Info from "../components/ikoner/info.astro";
         |<p class="genre">{genre}</p>
       </div>
       <div>
-        <p class="kortResume">
+        <p class="kortResume max-w-[50ch]">
           {kortResume}
         </p>
       </div>
