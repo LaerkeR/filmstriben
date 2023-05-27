@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "filmTitel": "Lulu",
     "slug": "lulu",
     "originalTitel": "",
@@ -35,10 +36,11 @@
     "point": "0",
     "alder": "11",
     "tema": "Far tema",
-    "imgTema": "far tema",
+    "imgTema": "splash",
     "imgTitel": "Lulu"
   },
   {
+    "id": 0,
     "filmTitel": "Love Proof",
     "slug": "Love proof",
     "originalTitel": "Kärleksbevis",
@@ -69,6 +71,7 @@
   },
 
   {
+    "id": 2,
     "filmTitel": "De fem år",
     "slug": "de-fem-aar",
     "originalTitel": "De fem år",
@@ -100,7 +103,8 @@
     "ratingIMDb": "6.6",
     "point": "3",
     "alder": "15",
-    "tema": "månedens dokumentar",
-    "imgTema": "maanendens dokumentar"
+    "tema": "splash",
+    "imgTema": "splash",
+    "imgTitel": "maanedens dokumantar"
   }
 ]
