@@ -8,6 +8,8 @@ import TemaSection from "../components/TemaSection.astro";
 import Button from "../components/Button.astro";
 import Heart from "../components/ikoner/heart.astro";
 import Info from "../components/ikoner/info.astro";
+import Tema_karrusel from "../components/Tema_karrusel.astro";
+import Plakat_karrusel from "../components/Plakat_karrusel.astro";
 
 const { tema } = Astro.props;
 
@@ -79,13 +81,15 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === "Kærlighed");
         </p>
       </div>
     </section>
+    <Plakat_karrusel temaTitel="Oscar-film | vindere og nominerede" />
 
-    <TemaSection temaTitel="Kærlighed" />
-    <TemaSection temaTitel="Far tema" />
-
+    <TemaSection temaTitel="Senest tilføjet" />
     <section>
       <Maanedscard />
     </section>
+    <TemaSection temaTitel="Kærlighed" />
+    <Tema_karrusel temaTitel="Film om Mongoliet" />
+
     <TemaSection temaTitel="Far tema" />
   </main>
 
