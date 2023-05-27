@@ -4,11 +4,10 @@ import Kryds from "../components/ikoner/Kryds.astro";
 import Button from "../components/Button.astro";
 ---
 
-<div id="myButton"><Button variant="primary" tekst="Se film" /></div>
-
+<!-- <div id="myButton"><Button variant="primary" tekst="Se film" /></div> -->
 <article
   id="popupContainer"
-  class="bg-grey-700 border border-gold-500 w-1/2 h-1/2 py-12 px-12"
+  class="bg-black bg-opacity-90 border border-gold-500 w-fit h-fit py-6 px-32"
 >
   <div id="closeButton" class="luk flex w-full justify-end">
     <Kryds variant="medium" />
@@ -29,7 +28,7 @@ import Button from "../components/Button.astro";
   </div>
 </article>
 
-<script>
+<!-- <script>
   document.getElementById("myButton").addEventListener("click", function () {
     var popup = document.getElementById("popupContainer");
     popup.style.display = "block";
@@ -39,4 +38,4 @@ import Button from "../components/Button.astro";
     var popup = document.getElementById("popupContainer");
     popup.style.display = "none";
   });
-</script>
+</script> -->
