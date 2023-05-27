@@ -1,2 +1,26 @@
+---
+import Button from "../components/Button.astro";
+import Heart from "../components/ikoner/heart.astro";
+import Info from "../components/ikoner/info.astro";
+---
 
+<div class="splash w-full h-[60vw] md:h-[40vw] overflow-hidden">
+  <div
+    class="bg-no-repeat bg-cover bg-top w-full h-full flex flex-col justify-end aspect-ratio"
+    style="background-image: url('../img/love proof.webp')"
+  >
+    <div class="bottom-5 px-10 py-6 w-full justify-between flex items-end">
+      <div>
+        <h1 class="text-2xl font-display uppercase mb-2">Love Proof</h1>
+        <div class="flex items-center gap-4">
+          <Button variant="primary" typeIcon="circle-play" tekst="Mere info" />
 
+          <div class="flex gap-4">
+            <Heart variant="medium" />
+            <Info variant="medium" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

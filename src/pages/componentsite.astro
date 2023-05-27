@@ -1,7 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import Button from "../components/Button.astro";
 import MovieCard from "../components/Moviecard.astro";
 import Plakatcard from "../components/Plakatcard.astro";
@@ -30,12 +28,15 @@ import filmdatabase from "../filmdatabase.json";
 import Filtrering from "../components/Filtrering.astro";
 import Hero from "../components/Hero.astro";
 import Tema_karrusel from "../components/Tema_karrusel.astro";
+import Plakat_karrusel from "../components/Plakat_karrusel.astro";
 ---
 
 <Layout title="komponent udviklings side">
+  <Hero />
   <main>
+    <Plakat_karrusel />
     <Tema_karrusel temaTitel="Film om Mongoliet" />
-    <Hero />
+
     <Filtrering />
     <div class="flex flex-row w-full justify-between gap-4 px-10">
       <MovieCard />
