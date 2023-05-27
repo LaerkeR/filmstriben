@@ -4,8 +4,9 @@ import Info from "../components/ikoner/info.astro";
 const { filmTitle, beskrivelse, medvikende } = Astro.props;
 ---
 
-<article class="relative">
-  <Info variant="medium" />
+<div id="ikon"><Info variant="medium" /></div>
+
+<article id="info" class="absolute hidden left-9">
   <div class="bg-black absolute">
     <div class="bg-black w-96 p-10">
       <h2 class="font-display text-sm mb-2">Mulig titel{filmTitle}</h2>
@@ -17,12 +18,20 @@ const { filmTitle, beskrivelse, medvikende } = Astro.props;
         Danmark i april 1940. {beskrivelse}
       </p>
 
-      <p class="text-grey-200 mt-4">
+      <p class="text-grey-200 mt-4 body-sm">
         <span class="text-white">Medvirkende:</span>
-        Mulige medvirkedene, Jesper Christensen, Bodil Jørgensen, Mads Reuther <a
-          href="../pages/Singleview.astro">Læs mere {medvikende}</a
-        >
+        Mulige medvirkedene, Jesper Christensen, Bodil Jørgensen, Mads Reuther
+        <a href="../pages/Singleview.astro">Læs mere {medvikende}</a>
       </p>
     </div>
   </div>
 </article>
+
+<script>
+  const sog = document.querySelector("#ikon");
+  const bar = document.querySelector("#info");
+
+  sog.addEventListener("click", () => {
+    bar.classList.toggle("hidden");
+  });
+</script>

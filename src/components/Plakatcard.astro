@@ -1,5 +1,5 @@
 ---
-const { aarstal, filmTitle, varrighed, genre, imgSrc, type } = Astro.props;
+const { aarstal, filmTitle, varighed, genre, imgSrc, point } = Astro.props;
 import Play from "../components/ikoner/play.astro";
 import Heart from "../components/ikoner/heart.astro";
 import Info from "../components/ikoner/info.astro";
@@ -7,7 +7,7 @@ import Info from "../components/ikoner/info.astro";
 
 <article class="relative w-fit h-full aspect-auto">
   <img
-    class="w-fit"
+    class="w-fit h-auto"
     src={imgSrc}
     alt="Everything everywhere all at once"
   />
@@ -17,25 +17,21 @@ import Info from "../components/ikoner/info.astro";
   >
     <div>
       <div class="bg-black blurShadow blur-[10px]"></div>
-      <div class="bg-black w-full h-fit z-10 flex flex-col gap-2 px-10 py-5">
-        <h2>Everything everywhere all at once{filmTitle}</h2>
+      <div class="bg-black w-full h-fit z-10 flex flex-col gap-2 px-8 py-5">
+        <h2 class="font-display text-sm">{filmTitle}</h2>
         <div class="infoBar text-white flex gap-2 align-middle body-sm">
-          <p class="varrighed body-xs">2t 44min{varrighed}</p>|<p
-            class="aarstal"
-          >
-            2020{aarstal}
+          <p class="varrighed body-sm">{varighed}</p>|<p class="aarstal">
+            {aarstal}
           </p>
-          |<p>Spillefilm {type}</p>
-          |<p class="genre">Drama{genre}</p>
+          |<p class="genre">{genre}</p>
+          |<p>{point} point</p>
         </div>
         <div class="ikoner flex gap-4">
-          <Play variant="medium" />
-          <Heart variant="medium" />
-          <Info variant="medium" />
+          <Play variant="small" />
+          <Heart variant="small" />
+          <Info variant="small" />
         </div>
       </div>
     </div>
   </div>
 </article>
-
-

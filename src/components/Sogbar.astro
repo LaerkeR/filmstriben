@@ -1,0 +1,20 @@
+---
+import Sog from "../components/ikoner/sog.astro";
+---
+
+<div class="sog"><Sog variant="small" /></div>
+
+<div class="bar hidden absolute w-screen bg-black left-0 top-20 h-16">
+  <div class="p-6 flex gap-4">
+    <p class="lightIcon">magnifying-glass</p>
+    <p class="body-sm">Søg efter serier eller film</p>
+  </div>
+</div>
+<script>
+  const sog = document.querySelector(".sog");
+  const bar = document.querySelector(".bar");
+
+  sog.addEventListener("click", () => {
+    bar.classList.toggle("hidden");
+  });
+</script>

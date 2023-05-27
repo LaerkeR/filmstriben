@@ -3,15 +3,17 @@ const { variant } = Astro.props;
 ---
 
 <button id="sog" data-variant={variant}>
-  <p class="lightIcon active:solidIcon hover:text-gold-500">magnifying-glass</p></button
+  <p class="lightIcon active:solidIcon hover:text-gold-500">
+    magnifying-glass
+  </p></button
 >
 
 <style>
   [data-variant="small"] {
-    font-size: 28px;
+    font-size: 20px;
   }
   [data-variant="medium"] {
-    font-size: 32px;
+    font-size: 28px;
   }
 </style>
 
