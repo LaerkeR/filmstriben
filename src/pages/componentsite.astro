@@ -30,10 +30,12 @@ import filmdatabase from "../filmdatabase.json";
 import Filtrering from "../components/Filtrering.astro";
 import Hero from "../components/Hero.astro";
 import Tema_karrusel from "../components/Tema_karrusel.astro";
+import Plakat_karrusel from "../components/Plakat_karrusel.astro";
 ---
 
 <Layout title="komponent udviklings side">
   <main>
+    <Plakat_karrusel />
     <Tema_karrusel temaTitel="Film om Mongoliet" />
     <Hero />
     <Filtrering />
