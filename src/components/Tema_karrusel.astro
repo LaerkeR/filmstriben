@@ -1,0 +1,86 @@
+---
+import filmdatabase from "../filmdatabase.json";
+import Temacard from "./Temacard.astro";
+
+const { temaTitel } = Astro.props;
+
+const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
+---
+
+<section class="w-full px-20">
+  <h2 class="text-xs font-robotoHeader tracking-wider text-grey-100 mb-4">
+    {temaTitel}
+  </h2>
+
+  <section class="relative h-fit overflow-hidden">
+    <div
+      class="next-button absolute flex h-full w-fit justify-end right-0 z-40"
+    >
+      <button class="bg-black opacity-75 w-20"
+        ><p class="lightIcon">angle-right</p>
+      </button>
+    </div>
+    <div class="prev-button absolute flex h-full w-fit justify-end left-0 z-40">
+      <button class="bg-black opacity-75 w-20"
+        ><p class="lightIcon">angle-left</p>
+      </button>
+    </div>
+    <div class="snap-start scroll-mx-6 shrink-0">
+      <div class="shrink-0 w-0"></div>
+    </div>
+    <div
+      class="carousel relative flex gap-4 snap-x snap-mandatory overflow-x-auto"
+    >
+      {
+        temaFiltret.map((film) => (
+          <div class="snap-start scroll-mx-6 shrink-0">
+            <Temacard
+              varighed={film.varighed}
+              genre={film.genre}
+              aarstal={film.aarstal}
+              filmTitle={film.filmTitel}
+              imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
+              slug={film.slug}
+              point={film.point}
+            />
+          </div>
+        ))
+      }
+      <div class="snap-start scroll-mx-6 shrink-0">
+        <div class="shrink-0 w-3 sm:w-96 h-40 sm:-ml-[2px]"></div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector(".carousel");
+    const prevButton = document.querySelector(".prev-button");
+    const nextButton = document.querySelector(".next-button");
+
+    const cardWidth = 300; // Bredden af hvert kort i pixels
+    let currentPosition = 0; // Den aktuelle position i karrusellen
+
+    // Opdater karrusellen baseret på den aktuelle position
+    function updateCarousel() {
+      carousel.style.transform = `translateX(${currentPosition}px)`;
+    }
+
+    // Flyt karrusellen til venstre
+    function slideNext() {
+      currentPosition -= cardWidth;
+      updateCarousel();
+    }
+
+    // Flyt karrusellen til højre
+    function slidePrev() {
+      currentPosition += cardWidth;
+      updateCarousel();
+    }
+
+    // Lyt efter klik på knapperne
+    nextButton.addEventListener("click", slideNext);
+    prevButton.addEventListener("click", slidePrev);
+  });
+</script>
