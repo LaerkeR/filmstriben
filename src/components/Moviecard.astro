@@ -11,7 +11,7 @@ const { aarstal, filmTitle, slug, varighed, genre, imgSrc, undergenre, point } =
     <div class="w-full bottom-0 relative h-full flex flex-col-reverse">
       <div class="bg-black info"><span></span></div>
       <div class="bg-black w-full absolute z-[1] flex flex-col gap-2 px-5 pb-3">
-        <p class="font-display text-xs">{filmTitle}</p>
+        <p class="titel font-display text-xs">{filmTitle}</p>
         <div class="infoBar text-grey-100 flex gap-2 items-center body-sm">
           <p class="varrighed body-xs">{varighed}</p>|<p
             class="aarstal body-xs"
@@ -23,6 +23,7 @@ const { aarstal, filmTitle, slug, varighed, genre, imgSrc, undergenre, point } =
         </div>
       </div>
     </div>
+    <div class="absolute top-0 bottom-0 left-0 right-0 w-full h-full hover:bg-black hover:opacity-25"></div>
   </article>
 </a>
 
@@ -45,4 +46,8 @@ const { aarstal, filmTitle, slug, varighed, genre, imgSrc, undergenre, point } =
     width: 150%;
     z-index: 0;
   }
+
+article:hover  .titel{
+  color: #CAAE68;
+}
 </style>
