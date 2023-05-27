@@ -33,7 +33,7 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
     >
       {
         temaFiltret.map((film) => (
-          <div class="snap-start scroll-mx-6 shrink-0">
+          <div class="snap-start scroll-mx-6 shrink-0 ">
             <Temacard
               varighed={film.varighed}
               genre={film.genre}
@@ -42,6 +42,7 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
               imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
               slug={film.slug}
               point={film.point}
+              kortResume={film.kortResume}
             />
           </div>
         ))
