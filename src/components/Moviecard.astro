@@ -1,8 +1,8 @@
 ---
 const { aarstal, filmTitle, slug, varighed, genre, imgSrc, undergenre, point } =
   Astro.props;
-  import Heart from "../components/ikoner/heart.astro";
-  import Info from "../components/ikoner/info.astro";
+import Heart from "../components/ikoner/heart.astro";
+import Info from "../components/ikoner/info.astro";
 ---
 
 <a href={`${slug}`}>
@@ -15,23 +15,26 @@ const { aarstal, filmTitle, slug, varighed, genre, imgSrc, undergenre, point } =
       <div class="bg-black w-full absolute z-[1] flex flex-col gap-2 px-5 pb-3">
         <p class="titel font-display text-xs">{filmTitle}</p>
         <div class="flex justify-between">
-        <div class="infoBar text-grey-100 flex gap-2 items-center body-sm">
-          <p class="varrighed body-xs">{varighed}</p>|<p
-            class="aarstal body-xs"
-          >
-            {aarstal}
-          </p>|<p class="genre body-xs">{genre}</p>|<p class="genre body-xs">
-            {point} point
-          </p>
-        </div>
-        <div class="gap-4 flex">
-          <Heart variant="small" />
-          <Info variant="small" />
-        </div>
+          <div class="infoBar text-grey-100 flex gap-2 items-center body-sm">
+            <p class="varrighed body-xs">{varighed}</p>|<p
+              class="aarstal body-xs"
+            >
+              {aarstal}
+            </p>|<p class="genre body-xs">{genre}</p>|<p class="genre body-xs">
+              {point} point
+            </p>
+          </div>
+          <div class="gap-4 flex">
+            <Heart variant="small" />
+            <Info variant="small" />
+          </div>
         </div>
       </div>
     </div>
-    <div class="absolute top-0 bottom-0 left-0 right-0 w-full h-full hover:bg-black hover:opacity-25"></div>
+    <div
+      class="absolute top-0 bottom-0 left-0 right-0 w-full h-full hover:bg-black hover:opacity-25"
+    >
+    </div>
   </article>
 </a>
 
@@ -55,7 +58,7 @@ const { aarstal, filmTitle, slug, varighed, genre, imgSrc, undergenre, point } =
     z-index: 0;
   }
 
-article:hover  .titel{
-  color: #CAAE68;
-}
+  article:hover .titel {
+    color: #caae68;
+  }
 </style>
