@@ -3,12 +3,14 @@ import Moviecard from "../components/Moviecard.astro";
 import Button from "../components/Button.astro";
 import filmdatabase from "../filmdatabase.json";
 import Layout from "../layouts/Layout.astro";
-import Play from "../components/ikoner/play.astro";
+import Kryds from "../components/ikoner/Kryds.astro";
 import Imdb from "../components/Imdb.astro";
 import Detaljertags from "../components/Detaljertags.astro";
 import Heart from "../components/ikoner/heart.astro";
 import Del from "../components/ikoner/del.astro";
 import Stjernerating from "../components/Stjernerating.astro";
+import PlayPopup from "../components/Play_popup.astro";
+import TemaSection from "../components/TemaSection.astro";
 
 export async function getStaticPaths() {
   return filmdatabase.map((film) => {
@@ -25,6 +27,12 @@ console.log(myData);
 ---
 
 <Layout title={`Filmstriben | ${myData.filmTitel}`}>
+  <aside
+    id="popup"
+    class="hidden bg-black bg-opacity-70 fixed justify-center items-center top-0 left-0 w-screen h-screen z-[400]"
+  >
+    <PlayPopup />
+  </aside>
   <div class="splash w-full h-[60vw] md:h-[40vw] overflow-hidden">
     <div
       class="bg-no-repeat bg-cover bg-top w-full h-full flex flex-col justify-end aspect-ratio"
@@ -37,6 +45,7 @@ console.log(myData);
           </h1>
           <div class="flex items-center gap-4">
             <Button
+              btnClass="openPopup"
               variant="primary"
               typeIcon="circle-play"
               tekst="Lån filmen"
@@ -58,7 +67,7 @@ console.log(myData);
     </div>
   </div>
   <main>
-    <section class="grid grid-cols-2 mt-8 px-10 gap-16">
+    <section class="grid grid-cols-2 my-8 px-10 gap-16">
       <div class="flex flex-col h-full gap-16 pt-4">
         <div class="infoBar text-white flex gap-2 items-center body-lg">
           <p class="text-white body-md">{myData.varighed}</p>|
@@ -162,8 +171,18 @@ console.log(myData);
         </div>
       </div>
     </section>
+    <TemaSection temaTitel="Senest tilføjet" />
   </main>
 </Layout>
+
+<script>
+  const openPopup = document.querySelector(".openPopup");
+  const popup = document.querySelector("#popup");
+  const luk = document.querySelector("#closeButton");
+  openPopup.addEventListener("click", () => (popup.style.display = "flex"));
+  popup.addEventListener("click", () => (popup.style.display = "none"));
+  luk.addEventListener("click", () => (popup.style.display = "none"));
+</script>
 
 <style>
   html body main {
@@ -173,5 +192,9 @@ console.log(myData);
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+  }
+  /* gammel opgave style af aside  */
+  #popup {
+    display: none;
   }
 </style>

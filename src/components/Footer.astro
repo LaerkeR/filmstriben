@@ -9,18 +9,22 @@ import Twitter from "../components/ikoner/twitter.astro";
   <section class="grid grid-cols-6">
     <div class="logo flex flex-col mx-8">
       <img class="logo" src="../logo.svg" alt="logo" />
-      <p class="text-grey-500 mt-8">© DBC Digital A/S</p>
+      <p class="text-grey-500 mt-8 body-sm">© DBC Digital A/S</p>
     </div>
 
     <div class="mx-8 flex flex-col gap-1">
-      <a class="text-xs text-gold-500 mb-1" href="">Information</a>
+      <a class="text-xs font-display uppercase text-gold-500 mb-1" href=""
+        >Information</a
+      >
       <a class="body-sm text-grey-200" href="">Om Filmstriben</a>
       <a class="body-sm text-grey-200" href="">Persondata</a>
       <a class="body-sm text-grey-200" href="">Tilgængelighedserklæring</a>
     </div>
 
     <div class="mx-8 flex flex-col gap-1">
-      <a class="text-xs text-gold-500 mb-1">Til brugerne</a>
+      <a class="text-xs font-display uppercase text-gold-500 mb-1"
+        >Til brugerne</a
+      >
       <a class="body-sm text-grey-200" href="">Om pointsystem</a>
       <a class="body-sm text-grey-200" href="">Hvordan ser jeg film</a>
       <a class="body-sm text-grey-200" href="">Se film på biblioteket</a>
@@ -29,8 +33,12 @@ import Twitter from "../components/ikoner/twitter.astro";
 
     <div class="mx-8 flex flex-col gap-4">
       <img class="w-1/2" src="../dbc_logo.svg" alt="dbc_logo" />
-      <p class="body-sm text-grey-400">Tempovej 7-11 2750 Ballerup</p>
-      <p class="body-sm text-grey-400">+45 44 86 77 77</p>
+      <address class="not-italic body-sm text-grey-400">
+        Tempovej 7-11 2750 Ballerup
+      </address>
+      <p class="body-sm text-grey-400">
+        <a href="tel:+4544867777">+45 44 86 77 77</a>
+      </p>
     </div>
 
     <div class="flex flex-col">
@@ -53,3 +61,9 @@ import Twitter from "../components/ikoner/twitter.astro";
     </div>
   </section>
 </footer>
+
+<style>
+  a:hover {
+    color: white;
+  }
+</style>
