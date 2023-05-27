@@ -54,11 +54,11 @@
   }
 
   .divider {
-    border-right: 1px solid #ffffff;
+    border-right: 0.75px solid #e6e6e6;
   }
 
   .dividerLeft {
-    border-left: 1px solid #ffffff;
+    border-left: 0.75px solid #e6e6e6;
   }
 
   .brandIcon {
