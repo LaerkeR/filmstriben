@@ -12,9 +12,14 @@ import Button from "./Button.astro";
   tekst="Filtrering"
   typeIcon="sliders"
 />
+
 <div
-  class="filtreringsMenu hidden absolute bg-black px-14 w-1/4 h-screen right-0 top-0 z-[200] overflow-scroll py-4 pb-28 scrollbar-hide"
+  class="absolute filtreringsMenu hidden bg-black px-14 w-1/4 h-screen right-0 top-0 z-[200] overflow-scroll py-4 pb-28 scrollbar-hide"
 >
+  <div
+    class="bgOverlay fixed bg-black bg-opacity-70 items-cente top-0 left-0 w-screen h-screen -z-40"
+  >
+  </div>
   <div class="lukFiltrering flex w-full justify-end"><Kryds /></div>
   <form class="flex flex-col gap-8" action="">
     <fieldset>
@@ -39,14 +44,16 @@ import Button from "./Button.astro";
         class="pb-2 mb-2 border-b-[1px] w-full text-white font-display text-sm flex gap-4"
         >Genre <p class="lightIcon text-[16px]">chevron-down</p>
       </legend>
-      <div class="filtreringsListe hidden">
+      <div class="filtreringsListe hidden overflow-scroll">
         {
           filmgenredata.map((genre) => (
             <div class="flex justify-between my-1">
-              <label for={genre}>{genre}</label>
+              <label for={genre} class="text-grey-200 ">
+                {genre}
+              </label>
               <input
-                class="text-gold-400 focus:ring-gold-400"
                 type="checkbox"
+                class="text-gold-400 focus:ring-gold-400"
                 id={genre}
                 name={genre}
               />
@@ -65,12 +72,7 @@ import Button from "./Button.astro";
           filmkategoridata.map((kategori) => (
             <div class="flex justify-between my-1">
               <label for={kategori}>{kategori}</label>
-              <input
-                class="text-gold-400 focus:ring-gold-400"
-                type="checkbox"
-                id={kategori}
-                name={kategori}
-              />
+              <input class="" type="checkbox" id={kategori} name={kategori} />
             </div>
           ))
         }
@@ -79,21 +81,10 @@ import Button from "./Button.astro";
   </form>
 </div>
 
-<style>
-  label {
-    color: #ccc;
-  }
-  label:checked {
-    color: white;
-  }
-
-  input[type="checkbox"]:target {
-    color: red;
-  }
-</style>
 <script>
   const knap = document.querySelector(".filtreringsKnap");
   const filtreringsMenu = document.querySelector(".filtreringsMenu");
+  const bgOverlay = document.querySelector(".bgOverlay");
   const luk = document.querySelector(".lukFiltrering");
   const filtreringsListe = document.querySelector(".filtreringsListe");
   const filtreringsPunkt = document.querySelector(".genre legend");
@@ -103,6 +94,9 @@ import Button from "./Button.astro";
     filtreringsMenu.classList.toggle("hidden");
   });
   luk.addEventListener("click", () => {
+    filtreringsMenu.classList.toggle("hidden");
+  });
+  bgOverlay.addEventListener("click", () => {
     filtreringsMenu.classList.toggle("hidden");
   });
 
