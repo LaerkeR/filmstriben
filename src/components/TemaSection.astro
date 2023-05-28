@@ -33,7 +33,7 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
     >
       {
         temaFiltret.map((film) => (
-          <div class="snap-start scroll-mx-6 shrink-0">
+          <div class=" snap-start scroll-mx-6 shrink-0">
             <MovieCard
               varighed={film.varighed}
               genre={film.genre}
@@ -46,41 +46,6 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
           </div>
         ))
       }
-      <div class="snap-start scroll-mx-6 shrink-0">
-        <div class="shrink-0 w-3 sm:w-96 h-40 sm:-ml-[2px]"></div>
-      </div>
     </div>
   </section>
 </section>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.querySelector(".carousel");
-    const prevButton = document.querySelector(".prev-button");
-    const nextButton = document.querySelector(".next-button");
-
-    const cardWidth = 300; // Bredden af hvert kort i pixels
-    let currentPosition = 0; // Den aktuelle position i karrusellen
-
-    // Opdater karrusellen baseret på den aktuelle position
-    function updateCarousel() {
-      carousel.style.transform = `translateX(${currentPosition}px)`;
-    }
-
-    // Flyt karrusellen til venstre
-    function slideNext() {
-      currentPosition -= cardWidth;
-      updateCarousel();
-    }
-
-    // Flyt karrusellen til højre
-    function slidePrev() {
-      currentPosition += cardWidth;
-      updateCarousel();
-    }
-
-    // Lyt efter klik på knapperne
-    nextButton.addEventListener("click", slideNext);
-    prevButton.addEventListener("click", slidePrev);
-  });
-</script>

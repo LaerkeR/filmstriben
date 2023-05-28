@@ -1,44 +1,54 @@
 ---
-const { aarstal, filmTitle, varighed, genre, imgSrc, point, kortResume, slug } =
-  Astro.props;
+const {
+  aarstal,
+  filmTitle,
+  varighed,
+  genre,
+  imgSrc,
+  point,
+  kortResume,
+  slug,
+  farve,
+} = Astro.props;
 import Play from "../components/ikoner/play.astro";
 import Heart from "../components/ikoner/heart.astro";
 import Info from "../components/ikoner/info.astro";
 ---
 
-<article class="bg-ashyGreen flex flex-row px-8 py-8 w-fit h-fit">
-  <a href={slug} class="relative w-1/5">
-    <img
-      class="aspect-auto w-fit h-fit bg-cover bg-no-repeat bg-center"
-      src={imgSrc}
-      alt=""
-    />
+<article
+  class={`bg-${farve} px-10 py-10 [50vh] md:h-[70vh] w-full flex gap-12 justify-center`}
+>
+  <a href={slug} class="w-2/4 relative">
     <div
-      class="absolute top-0 bottom-0 left-0 right-0 w-full h-full hover:bg-black hover:opacity-20"
+      class="aspect-auto w-full h-full bg-no-repeat bg-center bg-cover"
+      style={`background-image: url("${imgSrc}")`}
+    >
+    </div>
+
+    <div
+      class="absolute top-0 bottom-0 left-0 right-0 w-full h-full hover:bg-black hover:opacity-20 ease-in duration-300"
     >
     </div>
   </a>
 
-  <div class="">
-    <div class="z-10 flex flex-col gap-2 px-10 py-5">
-      <h2 class="text-lg">{filmTitle}</h2>
-      <div class="infoBar text-white flex gap-2 align-middle body-sm">
-        <p class="varrighed">{varighed}</p>|<p class="aarstal">
-          {aarstal}
-        </p>
-        |<p>{point} point</p>
-        |<p class="genre">{genre}</p>
-      </div>
-      <div>
-        <p class="kortResume max-w-[50ch]">
-          {kortResume}
-        </p>
-      </div>
-      <div class="ikoner ikoner flex gap-4">
-        <Play variant="small" />
-        <Heart variant="small" />
-        <Info variant="small" />
-      </div>
+  <div class="flex flex-col gap-2 self-end">
+    <h2 class="text-md font-dinHeader">{filmTitle}</h2>
+    <div class="infoBar text-white flex gap-2 align-middle body-sm">
+      <p class="varrighed">{varighed}</p>|<p class="aarstal">
+        {aarstal}
+      </p>
+      |<p>{point} point</p>
+      |<p class="genre">{genre}</p>
+    </div>
+    <div>
+      <p class="kortResume max-w-[50ch] text-grey-100">
+        {kortResume}
+      </p>
+    </div>
+    <div class="ikoner ikoner flex gap-4">
+      <Play variant="small" />
+      <Heart variant="small" />
+      <Info variant="small" />
     </div>
   </div>
 </article>

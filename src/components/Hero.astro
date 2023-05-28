@@ -3,7 +3,6 @@ import Button from "../components/Button.astro";
 import Heart from "../components/ikoner/heart.astro";
 import Info from "../components/ikoner/info.astro";
 var tal = 0;
-
 let vistFilm = herofilmdata.filter((film) => film.id === tal);
 
 import herofilmdata from "../hero.json";
@@ -61,29 +60,3 @@ import herofilmdata from "../hero.json";
     )
   }
 </section>
-
-<script>
-  let tal = 0;
-  // if (tal == 0) {
-  //   console.log("første billede");
-  //   setTimeout(nextPicture, 5000);
-  // }
-
-  // //Hvis der er tal tilbage, startes timeren som kalder funktionen udskrivTid() efter 1 sekund
-
-  // function nextPicture() {
-  //   console.log("nextPicture");
-  //   tal++;
-  //   console.log("tal: " + tal);
-
-  //   if (tal == 1) {
-  //     console.log("andet billede");
-  //     setTimeout(nextPicture, 5000);
-  //   }
-  //   if (tal > 1) {
-  //     console.log("trejde billede");
-  //     tal = 0;
-  //     // setTimeout(nextPicture, 5000);
-  //   }
-  // }
-</script>

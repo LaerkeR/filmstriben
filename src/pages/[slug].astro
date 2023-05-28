@@ -200,25 +200,3 @@ console.log(myData);
     display: none;
   }
 </style>
-
-<script>
-  window.addEventListener("load", (event) => {
-    console.log("page is fully loaded");
-    setTimeout(changeImage(), 5000);
-  });
-
-  function changeImage() {
-    document.getElementById(
-      "splashPic"
-    ).style = `'background-image: url("../../../img/${myData.imgTema}/${myData.imgTitel}/imgSingleview.webp")`;
-    console.log("hehehehe");
-    setTimeout(changeImageBack(), 5000);
-  }
-
-  function changeImageBack() {
-    console.log("hohoho");
-    document.getElementById("splashPic").style =
-      "background-image: url('../../../img/${myData.imgTema}/${myData.imgTitel}/imgSingleview.webp')";
-    // setTimeout(changeImage(), 5000);
-  }
-</script>

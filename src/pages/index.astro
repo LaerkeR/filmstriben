@@ -10,6 +10,7 @@ import Heart from "../components/ikoner/heart.astro";
 import Info from "../components/ikoner/info.astro";
 import Tema_karrusel from "../components/Tema_karrusel.astro";
 import Plakat_karrusel from "../components/Plakat_karrusel.astro";
+import Hero from "../components/Hero.astro";
 
 const { tema } = Astro.props;
 
@@ -17,7 +18,8 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === "Kærlighed");
 ---
 
 <Layout title="Filmstriben | Forside">
-  <div class="splash w-full h-[60vw] md:h-[40vw] overflow-hidden">
+  <Hero />
+  <!-- <div class="splash w-full h-[60vw] md:h-[40vw] overflow-hidden">
     <div
       class="bg-no-repeat bg-cover bg-top w-full h-full flex flex-col justify-end aspect-ratio"
       style="background-image: url('../img/love proof.webp')"
@@ -41,7 +43,7 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === "Kærlighed");
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <main class="flex flex-col gap-20 pt-12">
     <TemaSection temaTitel="Senest tilføjet" />
 
