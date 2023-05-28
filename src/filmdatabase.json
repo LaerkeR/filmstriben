@@ -344,6 +344,88 @@
     "imgTitel": "Quo vadis Aida"
   },
   {
+    "filmTitel": "Den Sidste Ulv",
+    "slug": "den-sidste-ulv",
+    "originalTitel": "Le dernier loup",
+    "aarstal": "2014",
+    "genre": "Drama",
+    "underGenre": ["Familie"],
+    "type": "Spillefilm",
+    "imgCard": "",
+    "imgSingleview": "",
+    "imgPlakat": "",
+    "varighed": "1 t 58 min",
+    "instruktor": ["Jean-Jacques Annaud"],
+    "manusforfatter": ["Alain Godard"],
+    "medvirkende": ["Shaofeng Feng", "Shaun Dou"],
+    "langResume": "I den anerkendte instruktør Jean-Jacques Annauds filmatisering af bestselleren 'Wolf Totem' sendes en ung studerende fra Beijing ud for at leve blandt nomade-kvægvogtere i det indre Mongoliet på grund af Mao Zedongs Kulturrevolution. Nomaderne er fanget mellem civilisationen fra syd og deres traditionelle fjender - de hærgende ulve - fra nord. Både mennesker og dyr, fastboende og indtrængende kæmper for at finde deres plads her i verden og bevare deres levevis.",
+    "kortResume": "I den anerkendte instruktør Jean-Jacques Annauds filmatisering af bestselleren 'Wolf Totem' sendes en ung studerende fra Beijing ud for at leve blandt nomade-kvægvogtere i det indre Mongoliet på grund af Mao Zedongs Kulturrevolution. ",
+    "sprog": ["Kinesisk"],
+    "land": ["Kina", "Frankrig"],
+    "undertekst": "Dansk",
+    "filmfotograf": ["Jean-Marie Dreujou"],
+    "produktionsselskab": ["China Film Co", "Repérage"],
+    "emneord": [
+      "ulve",
+      "studenter",
+      "Mongoliet",
+      "Kina",
+      "1960-1969",
+      "franske film",
+      "kinesiske film"
+    ],
+    "ratingFilmstriben": "5",
+    "ratingAntal": "16",
+    "ratingIMDb": "6.6",
+    "point": "4",
+    "alder": "15",
+    "tema": "Film om Mongoliet",
+    "imgTema": "mongoliet",
+    "imgTitel": "Le dernier loup",
+    "farve": "mossGreen"
+  },
+  {
+    "filmTitel": "Aligermaas eventyr",
+    "slug": "aligermaas-eventyr",
+    "originalTitel": "",
+    "aarstal": "1999",
+    "genre": "Drama",
+    "underGenre": ["Børn", "Eventyr"],
+    "type": "Dokumentar",
+
+    "varighed": "1 t 4 min",
+    "instruktor": ["Andra Lasmanis"],
+    "manusforfatter": ["Staffan Julén"],
+    "medvirkende": [""],
+    "langResume": "Aligermaa på otte år sidder på en hest, som er hun født på den. Hun bor sammen med far og mor, store- og lillebror i Mongoliet. På de store stepper, hvor vinden suser, og hvor himlen er et uendeligt, farverigt panorama, lever familien i overensstemmelse med den barske og storslåede natur. Men én drøm har Aligermaa til fælles med mange andre jævnaldrende piger i verden. Drømmen om en hest. I Aligermaas verden betyder heste meget, og derfor ser alle frem til det store, årlige hestevæddeløb, hvor alle børnene deltager. ",
+    "kortResume": "Aligermaa på otte år sidder på en hest, som er hun født på den. Hun bor sammen med far og mor, store- og lillebror i Mongoliet. På de store stepper, hvor vinden suser, og hvor himlen er et uendeligt, farverigt panorama, lever familien i overensstemmelse med den barske og storslåede natur. Men én drøm har Aligermaa til fælles med mange andre jævnaldrende piger i verden. Drømmen om en hest. ",
+    "sprog": ["Dansk"],
+    "land": ["Danmark"],
+    "undertekst": "Dansk",
+    "filmfotograf": ["Andra Lasmanis"],
+    "produktionsselskab": [
+      "Manden med Cameraet",
+      "Migma Film",
+      "Det Danske Filminstitut"
+    ],
+    "emneord": [
+      "dokumentarfilm",
+      "børn",
+      "opvækstvilkår",
+      "Mongoliet",
+      "for større børn"
+    ],
+    "ratingFilmstriben": "4",
+    "ratingAntal": "4",
+    "ratingIMDb": "5.3",
+    "point": "3",
+    "alder": "a",
+    "tema": "Film om Mongoliet",
+    "imgTema": "mongoliet",
+    "imgTitel": "Aligermaas eventyr",
+    "farve": "ashyGreen"
+  },
+  {
     "filmTitel": "Ørnejægerens søn",
     "slug": "oernejaegerens-soen",
     "originalTitel": "Die Stimme des Adlers ",
@@ -371,7 +453,8 @@
     "alder": "a",
     "tema": "Film om Mongoliet",
     "imgTema": "mongoliet",
-    "imgTitel": "Oernejaegerens soen"
+    "imgTitel": "Oernejaegerens soen",
+    "farve": "deepOcean"
   },
   {
     "filmTitel": "Migas rejse",
@@ -401,7 +484,8 @@
     "tema": "Film om Mongoliet",
     "medvirkende": "Benjamin Windfelt",
     "imgTema": "mongoliet",
-    "imgTitel": "Migas rejse"
+    "imgTitel": "Migas rejse",
+    "farve": "lavender"
   },
   {
     "filmTitel": "Den gyldne jord",
@@ -448,88 +532,10 @@
     "alder": "7",
     "tema": "Film om Mongoliet",
     "imgTema": "mongoliet",
-    "imgTitel": "Den gyldne jord"
+    "imgTitel": "Den gyldne jord",
+    "farve": "prettyBlue"
   },
-  {
-    "filmTitel": "Den Sidste Ulv",
-    "slug": "den-sidste-ulv",
-    "originalTitel": "Le dernier loup",
-    "aarstal": "2014",
-    "genre": "Drama",
-    "underGenre": ["Familie"],
-    "type": "Spillefilm",
-    "imgCard": "",
-    "imgSingleview": "",
-    "imgPlakat": "",
-    "varighed": "1 t 58 min",
-    "instruktor": ["Jean-Jacques Annaud"],
-    "manusforfatter": ["Alain Godard"],
-    "medvirkende": ["Shaofeng Feng", "Shaun Dou"],
-    "langResume": "I den anerkendte instruktør Jean-Jacques Annauds filmatisering af bestselleren 'Wolf Totem' sendes en ung studerende fra Beijing ud for at leve blandt nomade-kvægvogtere i det indre Mongoliet på grund af Mao Zedongs Kulturrevolution. Nomaderne er fanget mellem civilisationen fra syd og deres traditionelle fjender - de hærgende ulve - fra nord. Både mennesker og dyr, fastboende og indtrængende kæmper for at finde deres plads her i verden og bevare deres levevis.",
-    "kortResume": "I den anerkendte instruktør Jean-Jacques Annauds filmatisering af bestselleren 'Wolf Totem' sendes en ung studerende fra Beijing ud for at leve blandt nomade-kvægvogtere i det indre Mongoliet på grund af Mao Zedongs Kulturrevolution. Nomaderne er fanget mellem civilisationen fra syd og deres traditionelle fjender - de hærgende ulve - fra nord. Både mennesker og dyr, fastboende og indtrængende kæmper for at finde deres plads her i verden og bevare deres levevis.",
-    "sprog": ["Kinesisk"],
-    "land": ["Kina", "Frankrig"],
-    "undertekst": "Dansk",
-    "filmfotograf": ["Jean-Marie Dreujou"],
-    "produktionsselskab": ["China Film Co", "Repérage"],
-    "emneord": [
-      "ulve",
-      "studenter",
-      "Mongoliet",
-      "Kina",
-      "1960-1969",
-      "franske film",
-      "kinesiske film"
-    ],
-    "ratingFilmstriben": "5",
-    "ratingAntal": "16",
-    "ratingIMDb": "6.6",
-    "point": "4",
-    "alder": "15",
-    "tema": "Film om Mongoliet",
-    "imgTema": "mongoliet",
-    "imgTitel": "Le dernier loup"
-  },
-  {
-    "filmTitel": "Aligermaas eventyr",
-    "slug": "aligermaas-eventyr",
-    "originalTitel": "",
-    "aarstal": "1999",
-    "genre": "Drama",
-    "underGenre": ["Børn", "Eventyr"],
-    "type": "Dokumentar",
 
-    "varighed": "1 t 4 min",
-    "instruktor": ["Andra Lasmanis"],
-    "manusforfatter": ["Staffan Julén"],
-    "medvirkende": [""],
-    "langResume": "Aligermaa på otte år sidder på en hest, som er hun født på den. Hun bor sammen med far og mor, store- og lillebror i Mongoliet. På de store stepper, hvor vinden suser, og hvor himlen er et uendeligt, farverigt panorama, lever familien i overensstemmelse med den barske og storslåede natur. Men én drøm har Aligermaa til fælles med mange andre jævnaldrende piger i verden. Drømmen om en hest. I Aligermaas verden betyder heste meget, og derfor ser alle frem til det store, årlige hestevæddeløb, hvor alle børnene deltager. ",
-    "kortResume": "Aligermaa på otte år sidder på en hest, som er hun født på den. Hun bor sammen med far og mor, store- og lillebror i Mongoliet. På de store stepper, hvor vinden suser, og hvor himlen er et uendeligt, farverigt panorama, lever familien i overensstemmelse med den barske og storslåede natur. Men én drøm har Aligermaa til fælles med mange andre jævnaldrende piger i verden. Drømmen om en hest. I Aligermaas verden betyder heste meget, og derfor ser alle frem til det store, årlige hestevæddeløb, hvor alle børnene deltager. ",
-    "sprog": ["Dansk"],
-    "land": ["Danmark"],
-    "undertekst": "Dansk",
-    "filmfotograf": ["Andra Lasmanis"],
-    "produktionsselskab": [
-      "Manden med Cameraet",
-      "Migma Film",
-      "Det Danske Filminstitut"
-    ],
-    "emneord": [
-      "dokumentarfilm",
-      "børn",
-      "opvækstvilkår",
-      "Mongoliet",
-      "for større børn"
-    ],
-    "ratingFilmstriben": "4",
-    "ratingAntal": "4",
-    "ratingIMDb": "5.3",
-    "point": "3",
-    "alder": "a",
-    "tema": "Film om Mongoliet",
-    "imgTema": "mongoliet",
-    "imgTitel": "Aligermaas eventyr"
-  },
   {
     "filmTitel": "Fædre & sønner",
     "slug": "faedre-og-soenner",
@@ -573,7 +579,8 @@
     "alder": "15",
     "tema": "Film om Mongoliet",
     "imgTema": "mongoliet",
-    "imgTitel": "Faedre soenner"
+    "imgTitel": "Faedre soenner",
+    "farve": "greyIsh"
   },
 
   {

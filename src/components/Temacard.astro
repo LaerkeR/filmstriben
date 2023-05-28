@@ -16,7 +16,7 @@ import Info from "../components/ikoner/info.astro";
 ---
 
 <article
-  class={`bg-${farve} px-10 py-10 [50vh] md:h-[70vh] w-full flex gap-12 justify-center`}
+  class={`${farve} px-10 py-10 [50vh] md:h-[70vh] w-full flex gap-12 justify-center`}
 >
   <a href={slug} class="w-2/4 relative">
     <div
@@ -33,7 +33,7 @@ import Info from "../components/ikoner/info.astro";
 
   <div class="flex flex-col gap-2 self-end">
     <h2 class="text-md font-dinHeader">{filmTitle}</h2>
-    <div class="infoBar text-white flex gap-2 align-middle body-sm">
+    <div class="infoBar text-white flex gap-2 body-lg">
       <p class="varrighed">{varighed}</p>|<p class="aarstal">
         {aarstal}
       </p>
@@ -41,7 +41,7 @@ import Info from "../components/ikoner/info.astro";
       |<p class="genre">{genre}</p>
     </div>
     <div>
-      <p class="kortResume max-w-[50ch] text-grey-100">
+      <p class="kortResume max-w-[50ch] text-grey-50">
         {kortResume}
       </p>
     </div>
@@ -52,3 +52,30 @@ import Info from "../components/ikoner/info.astro";
     </div>
   </div>
 </article>
+
+<style>
+  .infoBar p {
+    font-size: 14px;
+  }
+  .ashyGreen {
+    background-color: #839697;
+  }
+  .greyIsh {
+    background-color: #8e8e8e;
+  }
+  .mossGreen {
+    background-color: #656b61;
+  }
+  .deepOcean {
+    background-color: #7195c1;
+  }
+  .blueSky {
+    background-color: #698aa9;
+  }
+  .lavender {
+    background-color: #5966a1;
+  }
+  .prettyBlue {
+    background-color: #8ea5bf;
+  }
+</style>
