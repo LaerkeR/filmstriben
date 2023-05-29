@@ -54,31 +54,8 @@ const { navpunkt } = Astro.props;
 </script>
 
 <style>
-  .kategori:first-child {
-    color: goldenrod;
-  }
-
   /*Det er denne class der går at undermenuerne i naven bliver vist*/
   .active .undermenu {
     display: block;
   }
-
-  /* a::after,
-  .navpunkt::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: goldenrod;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-  a:hover::after,
-  .navpunkt:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  } */
 </style>

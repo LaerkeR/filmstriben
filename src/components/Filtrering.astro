@@ -17,7 +17,7 @@ import Button from "./Button.astro";
   class="absolute filtreringsMenu hidden bg-black px-14 w-1/4 h-screen right-0 top-0 z-[200] overflow-scroll py-4 pb-28 scrollbar-hide"
 >
   <div
-    class="bgOverlay fixed bg-black bg-opacity-70 items-cente top-0 left-0 w-screen h-screen -z-40"
+    class="filtreringsOverlay fixed bg-black bg-opacity-70 items-cente top-0 left-0 w-screen h-screen -z-40"
   >
   </div>
   <div class="lukFiltrering flex w-full justify-end"><Kryds /></div>
@@ -47,13 +47,13 @@ import Button from "./Button.astro";
       <div class="filtreringsListe hidden overflow-scroll">
         {
           filmgenredata.map((genre) => (
-            <div class="flex justify-between my-1">
-              <label for={genre} class="text-grey-200 ">
+            <div class="flex justify-between my-1 ">
+              <label for={genre} class="text-grey-300 peer-checked:text-white ">
                 {genre}
               </label>
               <input
                 type="checkbox"
-                class="text-gold-400 focus:ring-gold-400"
+                class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2  rounded-sm "
                 id={genre}
                 name={genre}
               />
@@ -84,7 +84,7 @@ import Button from "./Button.astro";
 <script>
   const knap = document.querySelector(".filtreringsKnap");
   const filtreringsMenu = document.querySelector(".filtreringsMenu");
-  const bgOverlay = document.querySelector(".bgOverlay");
+  const filtreringsOverlay = document.querySelector(".filtreringsOverlay");
   const luk = document.querySelector(".lukFiltrering");
   const filtreringsListe = document.querySelector(".filtreringsListe");
   const filtreringsPunkt = document.querySelector(".genre legend");
@@ -96,7 +96,7 @@ import Button from "./Button.astro";
   luk.addEventListener("click", () => {
     filtreringsMenu.classList.toggle("hidden");
   });
-  bgOverlay.addEventListener("click", () => {
+  filtreringsOverlay.addEventListener("click", () => {
     filtreringsMenu.classList.toggle("hidden");
   });
 

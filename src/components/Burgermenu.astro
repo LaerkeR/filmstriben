@@ -8,6 +8,10 @@ import Kryds from "../components/ikoner/Kryds.astro";
   <div
     class="undermenuBurger hidden absolute left-0 mt-4 h-screen py-4 pb-28 px-8 bg-black flex-col gap-4 overflow-scroll scrollbar-hide"
   >
+    <div
+      class="bgOverlay fixed bg-black bg-opacity-70 items-cente top-0 left-0 w-screen h-screen -z-40"
+    >
+    </div>
     <div class="lukBurger flex w-full justify-end"><Kryds /></div>
     <ul class="flex flex-col pb-8 gap-6">
       <li class="w-full pb-2 border-b-[1px] font-display text-sm uppercase">
@@ -74,11 +78,15 @@ import Kryds from "../components/ikoner/Kryds.astro";
   const burgermenu = document.querySelector(".burger");
   const undermenu = document.querySelector(".undermenuBurger");
   const luk = document.querySelector(".lukBurger");
+  const bgOverlay = document.querySelector(".bgOverlay");
 
   burgermenu.addEventListener("click", () => {
     undermenu.classList.toggle("hidden");
   });
   luk.addEventListener("click", () => {
+    undermenu.classList.toggle("hidden");
+  });
+  bgOverlay.addEventListener("click", () => {
     undermenu.classList.toggle("hidden");
   });
 </script>
