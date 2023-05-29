@@ -5,7 +5,6 @@ import MovieCard from "../components/Moviecard.astro";
 import Layout from "../layouts/Layout.astro";
 import UndersideLayout from "../layouts/UndersideLayout.astro";
 
-
 // const genre = filmdatabase.filter((film) => film.genre === {genre});
 
 export async function getStaticPaths() {
@@ -23,11 +22,10 @@ const { kategoriData } = Astro.props;
 const filtretGenre = filmdatabase.filter(
   (film) => film.type === kategoriData || film.genre.includes(kategoriData)
 );
-console.log(filmdatabase.length),
+console.log(filmdatabase.length);
 ---
 
 <Layout title={kategoriData}>
-
   <UndersideLayout
     undersideTitel={kategoriData}
     antaltTitler={filtretGenre.length}
