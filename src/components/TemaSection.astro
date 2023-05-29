@@ -29,7 +29,7 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
       <div class="shrink-0 w-0"></div>
     </div>
     <div
-      class="carousel relative flex gap-4 snap-x snap-mandatory w-fit overflow-hidden ease-linear duration-500"
+      class="carousel relative flex gap-4 overflow-x-scroll ease-linear duration-500"
     >
       {
         temaFiltret.map((film) => (

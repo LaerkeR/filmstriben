@@ -8,9 +8,18 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
 ---
 
 <section class="w-full px-20">
-  <h2 class="text-xs font-robotoHeader tracking-wider text-grey-100 mb-4">
-    {temaTitel}
-  </h2>
+  <div class="align-bottom mb-4">
+    <h2 class="text-xs font-robotoHeader tracking-wider text-grey-100">
+      {temaTitel}
+    </h2>
+    <div class="progress_bar flex justify-end gap-2">
+      <div class="w-5 h-1 bg-grey-200"></div>
+      <div class="w-5 h-1 bg-grey-500"></div>
+      <div class="w-5 h-1 bg-grey-500"></div>
+      <div class="w-5 h-1 bg-grey-500"></div>
+      <div class="w-5 h-1 bg-grey-500"></div>
+    </div>
+  </div>
 
   <section class="relative h-fit overflow-hidden">
     <div
@@ -46,38 +55,4 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
       }
     </div>
   </section>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const carousel = document.querySelector(
-        ".carousel"
-      ) as HTMLElement | null;
-      const prevButton = document.querySelector(".prev-button");
-      const nextButton = document.querySelector(".next-button");
-
-      const cardWidth = 300; // Bredden af hvert kort i pixels
-      let currentPosition = 0; // Den aktuelle position i karrusellen
-
-      // Opdater karrusellen baseret på den aktuelle position
-      function updateCarousel() {
-        carousel.style.transform = `translateX(${currentPosition}px)`;
-      }
-
-      // Flyt karrusellen til venstre
-      function slideNext() {
-        currentPosition -= cardWidth;
-        updateCarousel();
-      }
-
-      // Flyt karrusellen til højre
-      function slidePrev() {
-        currentPosition += cardWidth;
-        updateCarousel();
-      }
-
-      // Lyt efter klik på knapperne
-      nextButton.addEventListener("click", slideNext);
-      prevButton.addEventListener("click", slidePrev);
-    });
-  </script>
 </section>
