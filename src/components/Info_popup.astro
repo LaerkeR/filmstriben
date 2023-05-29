@@ -4,34 +4,44 @@ import Info from "../components/ikoner/info.astro";
 const { filmTitle, beskrivelse, medvikende } = Astro.props;
 ---
 
-<div id="ikon"><Info variant="medium" /></div>
+<div id="ikon" class="relative">
+  <Info variant="medium" />
+  <article id="info " class="absolute z-40 left-9">
+    <div class="bg-black absolute">
+      <div class="bg-black w-96 p-10">
+        <h2 class="font-display text-sm mb-2">Mulig titel{filmTitle}</h2>
+        <div class="w-12"><img src="../alder/a.webp" alt="" /></div>
+        <p class="mt-2">
+          Karl Skov er den succesfulde ejer af en stor elektronikfabrik, han er
+          gift med Eva og har fem børn. De lever det gode, privilegerede
+          overklasseliv på Strandvejen nord for København, da nazisterne
+          besætter Danmark i april 1940. {beskrivelse}
+        </p>
 
-<article id="info" class="absolute hidden left-9">
-  <div class="bg-black absolute">
-    <div class="bg-black w-96 p-10">
-      <h2 class="font-display text-sm mb-2">Mulig titel{filmTitle}</h2>
-      <div class="w-12"><img src="../alder/a.webp" alt="" /></div>
-      <p class="mt-2">
-        Karl Skov er den succesfulde ejer af en stor elektronikfabrik, han er
-        gift med Eva og har fem børn. De lever det gode, privilegerede
-        overklasseliv på Strandvejen nord for København, da nazisterne besætter
-        Danmark i april 1940. {beskrivelse}
-      </p>
-
-      <p class="text-grey-200 mt-4 body-sm">
-        <span class="text-white">Medvirkende:</span>
-        Mulige medvirkedene, Jesper Christensen, Bodil Jørgensen, Mads Reuther
-        <a href="../pages/Singleview.astro">Læs mere {medvikende}</a>
-      </p>
+        <p class="text-grey-200 mt-4 body-sm">
+          <span class="text-white">Medvirkende:</span>
+          Mulige medvirkedene, Jesper Christensen, Bodil Jørgensen, Mads Reuther
+          <a href="../pages/Singleview.astro">Læs mere {medvikende}</a>
+        </p>
+      </div>
     </div>
-  </div>
-</article>
+  </article>
+</div>
 
-<script>
+<!-- <script>
   const sog = document.querySelector("#ikon");
   const bar = document.querySelector("#info");
 
-  sog.addEventListener("click", () => {
+  sog.addEventListener("mouseover", () => {
     bar.classList.toggle("hidden");
   });
-</script>
+</script> -->
+
+<style>
+  #ikon #info {
+    display: none;
+  }
+  #ikon:hover #info {
+    display: block;
+  }
+</style>
