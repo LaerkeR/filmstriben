@@ -9,7 +9,8 @@ import Heart from "../components/ikoner/heart.astro";
 import Del from "../components/ikoner/del.astro";
 import Stjernerating from "../components/Stjernerating.astro";
 import PlayPopup from "../components/Play_popup.astro";
-import TemaSection from "../components/TemaSection.astro";
+import Primarycard_karrusel from "../components/Primarycard_karrusel.astro";
+import Procesbar from "../components/procesbar.astro";
 
 export async function getStaticPaths() {
   return filmdatabase.map((film) => {
@@ -26,6 +27,7 @@ console.log(myData);
 ---
 
 <Layout title={`Filmstriben | ${myData.filmTitel}`}>
+  <Procesbar />
   <aside
     id="popup"
     class="hidden bg-black bg-opacity-70 fixed justify-center items-center top-0 left-0 w-screen h-screen z-[400]"
@@ -173,7 +175,7 @@ console.log(myData);
         </div>
       </div>
     </section>
-    <TemaSection temaTitel="Senest tilføjet" />
+    <Primarycard_karrusel temaTitel="Senest tilføjet" />
   </main>
 </Layout>
 

@@ -4,6 +4,7 @@ import filmdatabase from "../filmdatabase.json";
 import MovieCard from "../components/Moviecard.astro";
 import Layout from "../layouts/Layout.astro";
 import UndersideLayout from "../layouts/UndersideLayout.astro";
+import Procesbar from "../components/procesbar.astro";
 
 // const genre = filmdatabase.filter((film) => film.genre === {genre});
 
@@ -25,6 +26,7 @@ const filtretGenre = filmdatabase.filter(
 ---
 
 <Layout title={genreData}>
+  <Procesbar />
   <UndersideLayout
     undersideTitel={genreData}
     antaltTitler={filtretGenre.length}

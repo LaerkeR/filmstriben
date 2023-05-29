@@ -4,13 +4,14 @@ import MovieCard from "../components/Moviecard.astro";
 import filmdatabase from "../filmdatabase.json";
 import maanedensfilm from "../maanedensfilm.json";
 import Maanedscard from "../components/Maanedscard.astro";
-import TemaSection from "../components/TemaSection.astro";
+import Primarycard_karrusel from "../components/Primarycard_karrusel.astro";
 import Button from "../components/Button.astro";
 import Heart from "../components/ikoner/heart.astro";
 import Info from "../components/ikoner/info.astro";
 import Tema_karrusel from "../components/Tema_karrusel.astro";
 import Plakat_karrusel from "../components/Plakat_karrusel.astro";
 import Hero from "../components/Hero.astro";
+import Procesbar from "../components/procesbar.astro";
 
 export interface Props {
   title: string;
@@ -22,6 +23,7 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === "Kærlighed");
 ---
 
 <Layout title="Filmstriben | Forside">
+  <Procesbar />
   <Hero />
   <!-- <div class="splash w-full h-[60vw] md:h-[40vw] overflow-hidden">
     <div
@@ -49,7 +51,7 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === "Kærlighed");
     </div>
   </div> -->
   <main class="flex flex-col gap-20 pt-12">
-    <TemaSection temaTitel="Senest tilføjet" />
+    <Primarycard_karrusel temaTitel="Senest tilføjet" />
 
     <section class="flex flex-row px-20 justify-between text-center">
       <div class="flex flex-col justify-items-center gap-5">
@@ -89,14 +91,14 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === "Kærlighed");
     </section>
     <Plakat_karrusel temaTitel="Oscar-film | vindere og nominerede" />
 
-    <TemaSection temaTitel="Senest tilføjet" />
+    <Primarycard_karrusel temaTitel="Senest tilføjet" />
     <section>
       <Maanedscard />
     </section>
-    <TemaSection temaTitel="Kærlighed" />
+    <Primarycard_karrusel temaTitel="Kærlighed" />
     <Tema_karrusel temaTitel="Film om Mongoliet" />
 
-    <TemaSection temaTitel="Far tema" />
+    <Primarycard_karrusel temaTitel="Far tema" />
   </main>
 </Layout>
 
