@@ -4,10 +4,13 @@ import Info from "../components/ikoner/info.astro";
 const { filmTitle, beskrivelse, medvikende } = Astro.props;
 ---
 
-<div id="ikon" class="relative">
+<div id="ikon" class="relative w-fit h-fit">
   <Info variant="medium" />
-  <article id="info " class="absolute z-40 left-9">
-    <div class="bg-black absolute">
+  <article
+    id="info "
+    class="absolute z-[800] origin-bottom-left -translate-y-6"
+  >
+    <div class="bg-black">
       <div class="bg-black w-96 p-10">
         <h2 class="font-display text-sm mb-2">Mulig titel{filmTitle}</h2>
         <div class="w-12"><img src="../alder/a.webp" alt="" /></div>
@@ -28,20 +31,11 @@ const { filmTitle, beskrivelse, medvikende } = Astro.props;
   </article>
 </div>
 
-<!-- <script>
-  const sog = document.querySelector("#ikon");
-  const bar = document.querySelector("#info");
-
-  sog.addEventListener("mouseover", () => {
-    bar.classList.toggle("hidden");
-  });
-</script> -->
-
 <style>
-  #ikon #info {
+  #ikon article {
     display: none;
   }
-  #ikon:hover #info {
+  #ikon:hover article {
     display: block;
   }
 </style>

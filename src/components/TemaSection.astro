@@ -29,11 +29,11 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
       <div class="shrink-0 w-0"></div>
     </div>
     <div
-      class="carousel relative flex gap-4 snap-x snap-mandatory overflow-x-auto"
+      class="carousel relative flex gap-4 snap-x snap-mandatory w-fit overflow-hidden ease-linear duration-500"
     >
       {
         temaFiltret.map((film) => (
-          <div class=" snap-start scroll-mx-6 shrink-0">
+          <div class=" snap-start scroll-mx-6 shrink-0 ">
             <MovieCard
               varighed={film.varighed}
               genre={film.genre}
