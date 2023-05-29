@@ -1,15 +1,12 @@
 ---
-export interface Props {
-  title: string;
-}
+/* Import af Motion One bibliotek */
 ---
 
 <div
-  class="progress-bar h-4 fixed w-full bg-rose-900 left-0 origin-top-left top-0 right-0"
+  class="progress-bar h-1 fixed w-full bg-gold-400 z-50 left-0 origin-top-left top-0 right-0"
 >
 </div>
-<!-- 
-<div class="progress_bar flex justify-end mr-8 gap-2">
+<!-- <div class="progress_bar flex justify-end mr-8 gap-2">
   <div class="w-5 h-1 bg-grey-200"></div>
   <div class="w-5 h-1 bg-grey-500"></div>
   <div class="w-5 h-1 bg-grey-500"></div>
@@ -18,5 +15,6 @@ export interface Props {
 </div> -->
 
 <script>
+  import { animate, stagger, inView, scroll, timeline } from "motion";
   scroll(animate(".progress-bar", { scaleX: [0, 1] }));
 </script>
