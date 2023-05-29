@@ -2,7 +2,7 @@
 import Button from "../components/Button.astro";
 import Heart from "../components/ikoner/heart.astro";
 import Info from "../components/ikoner/info.astro";
-var tal = 0;
+let tal = 0;
 let vistFilm = herofilmdata.filter((film) => film.id === tal);
 
 import herofilmdata from "../hero.json";
@@ -10,19 +10,20 @@ import herofilmdata from "../hero.json";
 
 <section
   id="slider"
-  class="splash w-screen h-[60vw] md:h-[40vw] overflow-hidden"
+  class="splash relative w-screen h-[60vh] md:h-[80vh] overflow-hidden grid"
 >
   {
-    vistFilm.map(
+    herofilmdata.map(
       (splashFilm) => (
         console.log(herofilmdata.length),
         (
           <a
+            id={`slide${splashFilm.id}`}
             href={splashFilm.slug}
-            class=" w-full h-full flex flex-col justify-end overflow-hidden"
+            class="slide w-full absolute h-full flex  flex-shrink-0 flex-col justify-end overflow-hidden ease-linear duration-500"
           >
             <div
-              class="bg-no-repeat bg-cover flex flex-col justify-end bg-top aspect-ratio"
+              class="bg-no-repeat bg-top w-screen bg-cover flex flex-col justify-end  aspect-ratio"
               style={`background-image: url("../img/${splashFilm.imgTema}/${splashFilm.imgTitel}/imgSingleview.webp")`}
             >
               <div class="bottom-5 px-10 py-6 w-full  justify-between flex items-end">
@@ -59,4 +60,63 @@ import herofilmdata from "../hero.json";
       )
     )
   }
+  <button class="btn btn-next"
+    ><p class="lightIcon text-grey-200 hover:text-white">angle-right</p></button
+  >
+  <button class="btn btn-prev"
+    ><p class="lightIcon text-grey-200 hover:text-white">angle-left</p></button
+  >
 </section>
+
+<style>
+  .btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+
+    z-index: 10px;
+    cursor: pointer;
+
+    font-size: 24px;
+  }
+  .btn-prev {
+    top: 45%;
+    left: 2%;
+  }
+
+  .btn-next {
+    top: 45%;
+    right: 2%;
+  }
+</style>
+
+<script>
+  // Select all slides
+  const slides = document.querySelectorAll(".slide");
+
+  // current slide counter
+  let curSlide = 0;
+
+  // select next slide button
+  const nextSlide = document.querySelector(".btn-next");
+
+  // maximum number of slides
+  let maxSlide = slides.length - 1;
+
+  // add event listener and navigation functionality
+  nextSlide.addEventListener("click", function () {
+    // check if current slide is the last and reset current slide
+    if (curSlide === maxSlide) {
+      curSlide = 0;
+    } else {
+      curSlide++;
+    }
+
+    //   move slide by -100%
+    slides.forEach((slide, indx) => {
+      slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+    });
+  });
+</script>
