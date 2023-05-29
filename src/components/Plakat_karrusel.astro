@@ -10,9 +10,18 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
 ---
 
 <section class="w-full px-20">
-  <h2 class="text-xs font-robotoHeader tracking-wider text-grey-100 mb-4">
-    {temaTitel}
-  </h2>
+  <div class="align-bottom mb-4">
+    <h2 class="text-xs font-robotoHeader tracking-wider text-grey-100">
+      {temaTitel}
+    </h2>
+    <div class="carousel-indicators flex justify-end gap-2">
+      <div class="indicator active w-5 h-1 bg-grey-200"></div>
+      <div class="indicator w-5 h-1 bg-grey-500"></div>
+      <div class="indicator w-5 h-1 bg-grey-500"></div>
+      <div class="indicator w-5 h-1 bg-grey-500"></div>
+      <div class="indicator w-5 h-1 bg-grey-500"></div>
+    </div>
+  </div>
 
   <section class="relative h-fit overflow-hidden">
     <div
@@ -31,7 +40,7 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
       <div class="shrink-0 w-0"></div>
     </div>
     <div
-      class="carousel relative flex gap-4 snap-x snap-mandatory overflow-x-auto"
+      class="scroll carousel carousel relative flex gap-4 snap-x snap-mandatory overflow-x-auto"
     >
       {
         temaFiltret.map((film) => (
@@ -49,14 +58,41 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
           </div>
         ))
       }
-      <div class="snap-start scroll-mx-6 shrink-0">
-        <div class="shrink-0 w-3 sm:w-96 h-40 sm:-ml-[2px]"></div>
-      </div>
     </div>
   </section>
 </section>
 
 <script>
+  // Hent pagineringsindikatorerne
+  const indicators = document.querySelectorAll(".indicator");
+
+  // Lyt efter scroll-begivenheder i karrusellen
+  document
+    .querySelector(".scroll.carousel")
+    .addEventListener("scroll", function () {
+      // Beregn den aktuelle side baseret på scrollpositionen
+      const scrollPosition = this.scrollLeft;
+      const carouselWidth = this.offsetWidth;
+      const currentPage = Math.floor(scrollPosition / carouselWidth);
+
+      // Opdater farverne på pagineringsindikatorerne
+      indicators.forEach((indicator, index) => {
+        if (index === currentPage) {
+          indicator.style.backgroundColor = "var(--active-color)";
+        } else {
+          indicator.style.backgroundColor = "var(--inactive-color)";
+        }
+      });
+    });
+</script>
+<style>
+  :root {
+    --active-color: #cccccc; /* Aktiv farve */
+    --inactive-color: #666666; /* Inaktiv farve */
+  }
+</style>
+
+<!-- <script>
   document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.querySelector(".carousel");
     const prevButton = document.querySelector(".prev-button");
@@ -86,4 +122,4 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
     nextButton.addEventListener("click", slideNext);
     prevButton.addEventListener("click", slidePrev);
   });
-</script>
+</script> -->

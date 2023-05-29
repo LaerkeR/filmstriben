@@ -1,13 +1,13 @@
 ---
+import MovieCard from "../components/Moviecard.astro";
 import filmdatabase from "../filmdatabase.json";
-import Temacard from "./Temacard.astro";
 
 const { temaTitel } = Astro.props;
 
 const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
 ---
 
-<section class="w-full px-20">
+<section class="relative z-0 w-full px-20">
   <div class="align-bottom mb-4">
     <h2 class="text-xs font-robotoHeader tracking-wider text-grey-100">
       {temaTitel}
@@ -20,8 +20,7 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
       <div class="indicator w-5 h-1 bg-grey-500"></div>
     </div>
   </div>
-
-  <section class="scroll.carousel relative h-fit overflow-hidden">
+  <section class="relative h-fit overflow-hidden">
     <div
       class="next-button absolute flex h-full w-fit justify-end right-0 z-40"
     >
@@ -34,12 +33,16 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
         ><p class="lightIcon">angle-left</p>
       </button>
     </div>
-
-    <div class="scroll carousel relative flex gap-8 overflow-x-scroll">
+    <div class="snap-start scroll-mx-6 shrink-0">
+      <div class="shrink-0 w-0"></div>
+    </div>
+    <div
+      class="scroll carousel carousel relative flex gap-4 overflow-x-scroll ease-linear duration-500"
+    >
       {
         temaFiltret.map((film) => (
-          <div class="shrink-0 w-full">
-            <Temacard
+          <div class=" snap-start scroll-mx-6 shrink-0 ">
+            <MovieCard
               varighed={film.varighed}
               genre={film.genre}
               aarstal={film.aarstal}
@@ -47,8 +50,6 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
               imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
               slug={film.slug}
               point={film.point}
-              kortResume={film.kortResume}
-              farve={film.farve}
             />
           </div>
         ))
@@ -56,7 +57,6 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
     </div>
   </section>
 </section>
-
 <script>
   // Hent pagineringsindikatorerne
   const indicators = document.querySelectorAll(".indicator");
