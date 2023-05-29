@@ -7,6 +7,9 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+
+/* Import af Motion One bibliotek */
+import { animate, stagger, inView, scroll, timeline } from "motion";
 ---
 
 <!DOCTYPE html>
@@ -15,9 +18,12 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content="Filmstriben er bibliotekernes digitale film bibliotek.
-    Filmstriben har et bredt og alsidigt udvalg af spillefilm, kortfilm og dokumentarfilm i forskellige film genre. " />
-    <meta name="keywords" content="film genre, danske film, dokumentarfilm">
+    <meta
+      name="description"
+      content="Filmstriben er bibliotekernes digitale film bibliotek.
+    Filmstriben har et bredt og alsidigt udvalg af spillefilm, kortfilm og dokumentarfilm i forskellige film genre. "
+    />
+    <meta name="keywords" content="film genre, danske film, dokumentarfilm" />
     <meta name="robots" content="noindex" />
     <link rel="stylesheet" href="https://use.typekit.net/fio0bms.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
