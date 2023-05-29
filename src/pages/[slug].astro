@@ -31,39 +31,47 @@ console.log(myData);
   >
     <PlayPopup />
   </aside>
-  <div class="splash w-full h-[60vw] md:h-[40vw] overflow-hidden">
-    <div
-      id="splashPic"
-      class="bg-no-repeat bg-cover bg-top w-full h-full flex flex-col justify-end aspect-ratio"
-      style={`background-image: url("../../../img/${myData.imgTema}/${myData.imgTitel}/imgSingleview.webp")`}
-    >
-      <div class="bottom-5 px-10 py-6 w-full justify-between flex items-end">
-        <div>
-          <h1 class="text-2xl font-display uppercase mb-2 max-w-[20ch]">
-            {myData.filmTitel}
-          </h1>
-          <div class="flex items-center gap-4">
-            <Button
-              btnClass="openPopup"
-              variant="primary"
-              typeIcon="circle-play"
-              tekst="Lån filmen"
-            />
-            <Button variant="secondary-uden-icon" tekst="Se forsmag" />
+  <div class="splash relative w-full h-[60vw] md:h-[40vw] overflow-hidden flex">
+    <div id="silder" class="absolute -z-20 flex overflow-hidden">
+      <div
+        id="splashSilde1"
+        class="slide bg-no-repeat absolute bg-cover bg-top w-screen h-[40vw] flex flex-col justify-end aspect-ratio ease-in-out duration-700"
+        style={`background-image: url("../../../img/${myData.imgTema}/${myData.imgTitel}/imgSingleview.webp")`}
+      >
+      </div>
+      <div
+        id="splashSilde2"
+        class="slide bg-no-repeat bg-cover bg-top w-screen h-[40vw] flex flex-col justify-end aspect-ratio ease-in-out duration-700"
+        style={`background-image: url("../../../img/${myData.imgTema}/${myData.imgTitel}/imgSingleview2.webp")`}
+      >
+      </div>
+    </div>
+    <div class="bottom-5 px-10 py-6 w-full justify-between flex items-end">
+      <div>
+        <h1 class="text-2xl font-display uppercase mb-2 max-w-[20ch]">
+          {myData.filmTitel}
+        </h1>
+        <div class="flex items-center gap-4">
+          <Button
+            btnClass="openPopup"
+            variant="primary"
+            typeIcon="circle-play"
+            tekst="Lån filmen"
+          />
+          <Button variant="secondary-uden-icon" tekst="Se forsmag" />
 
-            <div class="flex gap-4">
-              <p class="text-white hover:text-gold-500">
-                Føj til favoritter <Heart />
-              </p>
-              <div class="flex gap-2">
-                <p class="text-white hover:text-gold-500">Del</p><Del />
-              </div>
+          <div class="flex gap-4">
+            <p class="text-white hover:text-gold-500">
+              Føj til favoritter <Heart />
+            </p>
+            <div class="flex gap-2">
+              <p class="text-white hover:text-gold-500">Del</p><Del />
             </div>
           </div>
         </div>
-        <div class="w-20">
-          <img src={`../alder/${myData.alder}.webp`} alt="" />
-        </div>
+      </div>
+      <div class="w-20">
+        <img src={`../alder/${myData.alder}.webp`} alt="" />
       </div>
     </div>
   </div>
@@ -183,6 +191,34 @@ console.log(myData);
   openPopup.addEventListener("click", () => (popup.style.display = "flex"));
   popup.addEventListener("click", () => (popup.style.display = "none"));
   luk.addEventListener("click", () => (popup.style.display = "none"));
+
+  /*automatisk ændring af splashbillede */
+
+  // Select all slides
+  const slides = document.querySelectorAll(".slide") as NodeListOf<HTMLElement>;
+
+  // current slide counter
+  let curSlide = 0;
+
+  // maximum number of slides
+  let maxSlide = slides.length - 1;
+
+  function nextSlideAuto() {
+    // check if current slide is the last and reset current slide
+    if (curSlide === maxSlide) {
+      curSlide = 0;
+    } else {
+      curSlide++;
+    }
+
+    //   move slide by -100%
+    slides.forEach((slide, indx) => {
+      slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+    });
+
+    setTimeout(nextSlideAuto, 6000);
+  }
+  setTimeout(nextSlideAuto, 5000);
 </script>
 
 <style>

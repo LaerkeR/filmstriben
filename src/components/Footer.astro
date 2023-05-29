@@ -5,33 +5,33 @@ import Instagram from "../components/ikoner/Instagram.astro";
 import Twitter from "../components/ikoner/twitter.astro";
 ---
 
-<footer class="bg-black mt-14 px-12 pt-10 pb-8 bottom-0">
-  <section class="grid grid-cols-6">
-    <div class="logo flex flex-col mx-8">
+<footer class="bg-black mt-14 px-20 pt-10 pb-8 bottom-0">
+  <section class="flex justify-between">
+    <div class="logo flex flex-col">
       <img class="logo" src="../logo.svg" alt="logo" />
       <p class="text-grey-500 mt-8 body-sm">© DBC Digital A/S</p>
     </div>
 
-    <div class="mx-8 flex flex-col gap-1">
-      <a class="text-xs font-display uppercase text-gold-500 mb-1" href=""
-        >Information</a
-      >
+    <div class="flex flex-col gap-1">
+      <p class="text-xs font-display uppercase text-gold-500 mb-1">
+        Information
+      </p>
       <a class="body-sm text-grey-200" href="">Om Filmstriben</a>
       <a class="body-sm text-grey-200" href="">Persondata</a>
       <a class="body-sm text-grey-200" href="">Tilgængelighedserklæring</a>
     </div>
 
-    <div class="mx-8 flex flex-col gap-1">
-      <a class="text-xs font-display uppercase text-gold-500 mb-1"
-        >Til brugerne</a
-      >
+    <div class="flex flex-col gap-1">
+      <p class="text-xs font-display uppercase text-gold-500 mb-1">
+        Til brugerne
+      </p>
       <a class="body-sm text-grey-200" href="">Om pointsystem</a>
       <a class="body-sm text-grey-200" href="">Hvordan ser jeg film</a>
       <a class="body-sm text-grey-200" href="">Se film på biblioteket</a>
       <a class="body-sm text-grey-200" href="">Kontakt kundeservice</a>
     </div>
 
-    <div class="mx-8 flex flex-col gap-4">
+    <div class="flex flex-col gap-4">
       <img class="w-1/2" src="../dbc_logo.svg" alt="dbc_logo" />
       <address class="not-italic body-sm text-grey-400">
         Tempovej 7-11 2750 Ballerup
@@ -41,11 +41,11 @@ import Twitter from "../components/ikoner/twitter.astro";
       </p>
     </div>
 
-    <div class="flex flex-col">
-      <div class="flex gap-3">
-        <div>
+    <div class="flex flex-col justify-between">
+      <div class="flex w-full gap-3">
+        <div class="w-full">
           <p class="body-sm text-grey-400">Email</p>
-          <hr class="text-white w-44" />
+          <hr class="text-white w-full" />
         </div>
         <Button variant="secondary-uden-icon" tekst="Tilmeld nyhedsbrev" />
       </div>

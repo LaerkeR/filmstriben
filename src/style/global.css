@@ -103,6 +103,23 @@
     font-size: 12px;
     line-height: 150%;
   }
+
+  .infoBar p {
+    color: #e6e6e6;
+  }
+  .info {
+    content: "";
+    filter: blur(20px);
+    height: 42%;
+    left: -50px;
+    position: absolute;
+    width: 150%;
+    z-index: 0;
+  }
+
+  article.card:hover .titel {
+    color: #caae68;
+  }
 }
 
 @layer utilities {

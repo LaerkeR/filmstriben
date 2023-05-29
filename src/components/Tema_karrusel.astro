@@ -35,7 +35,7 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
       </button>
     </div>
 
-    <div class="scroll carousel relative flex gap-8 overflow-x-scroll">
+    <div class="noScrollbar carousel relative flex gap-8 overflow-x-scroll">
       {
         temaFiltret.map((film) => (
           <div class="shrink-0 w-full">
@@ -59,26 +59,26 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
 
 <script>
   // Hent pagineringsindikatorerne
-  const indicators = document.querySelectorAll(".indicator");
+  const indicators = document.querySelectorAll(
+    ".indicator"
+  ) as NodeListOf<HTMLElement>;
 
   // Lyt efter scroll-begivenheder i karrusellen
-  document
-    .querySelector(".scroll.carousel")
-    .addEventListener("scroll", function () {
-      // Beregn den aktuelle side baseret på scrollpositionen
-      const scrollPosition = this.scrollLeft;
-      const carouselWidth = this.offsetWidth;
-      const currentPage = Math.floor(scrollPosition / carouselWidth);
+  document.querySelector(".carousel").addEventListener("scroll", function () {
+    // Beregn den aktuelle side baseret på scrollpositionen
+    const scrollPosition = this.scrollLeft;
+    const carouselWidth = this.offsetWidth;
+    const currentPage = Math.floor(scrollPosition / carouselWidth);
 
-      // Opdater farverne på pagineringsindikatorerne
-      indicators.forEach((indicator, index) => {
-        if (index === currentPage) {
-          indicator.style.backgroundColor = "var(--active-color)";
-        } else {
-          indicator.style.backgroundColor = "var(--inactive-color)";
-        }
-      });
+    // Opdater farverne på pagineringsindikatorerne
+    indicators.forEach((indicator, index) => {
+      if (index === currentPage) {
+        indicator.style.backgroundColor = "var(--active-color)";
+      } else {
+        indicator.style.backgroundColor = "var(--inactive-color)";
+      }
     });
+  });
 </script>
 <style>
   :root {

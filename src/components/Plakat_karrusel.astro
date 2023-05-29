@@ -40,7 +40,7 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
       <div class="shrink-0 w-0"></div>
     </div>
     <div
-      class="scroll carousel carousel relative flex gap-4 snap-x snap-mandatory overflow-x-auto"
+      class="noScrollbar carousel carousel relative flex gap-4 snap-x snap-mandatory overflow-x-auto"
     >
       {
         temaFiltret.map((film) => (
@@ -54,6 +54,7 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
               slug={film.slug}
               point={film.point}
               kortResume={film.kortResume}
+              slug={film.slug}
             />
           </div>
         ))

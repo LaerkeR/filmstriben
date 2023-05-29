@@ -4,17 +4,32 @@ import Sog from "../components/ikoner/sog.astro";
 
 <div class="sog"><Sog variant="small" /></div>
 
-<div class="bar hidden absolute w-screen bg-black left-0 top-[72px] h-16">
-  <div class="p-6 flex gap-4">
-    <p class="lightIcon">magnifying-glass</p>
-    <p class="body-sm">Søg efter serier eller film</p>
+<div
+  class="bar hidden absolute w-screen bg-black left-0 top-[72px] h-16 px-8 pb-8 pt-4"
+>
+  <div
+    class="bgSogOverlay fixed bg-black bg-opacity-70 items-cente top-0 left-0 w-screen h-screen -z-40"
+  >
+  </div>
+  <div class="flex gap-4 w-full">
+    <p class="lightIcon noBreak">magnifying-glass</p>
+
+    <p
+      class="body-sm text-grey-200 border-b-[0.50px] border-solid border-gold-400 w-full"
+    >
+      Søg efter serier eller film
+    </p>
   </div>
 </div>
 <script>
   const sog = document.querySelector(".sog");
   const bar = document.querySelector(".bar");
+  const bgSogOverlay = document.querySelector(".bgSogOverlay");
 
   sog.addEventListener("click", () => {
+    bar.classList.toggle("hidden");
+  });
+  bgSogOverlay.addEventListener("click", () => {
     bar.classList.toggle("hidden");
   });
 </script>

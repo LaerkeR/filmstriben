@@ -33,15 +33,12 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
         ><p class="lightIcon">angle-left</p>
       </button>
     </div>
-    <div class="snap-start scroll-mx-6 shrink-0">
-      <div class="shrink-0 w-0"></div>
-    </div>
     <div
-      class="scroll carousel carousel relative flex gap-4 overflow-x-scroll ease-linear duration-500"
+      class="scroll noScrollbar carousel carousel relative flex gap-4 overflow-x-scroll ease-linear duration-500"
     >
       {
         temaFiltret.map((film) => (
-          <div class=" snap-start scroll-mx-6 shrink-0 ">
+          <div class=" snap-start shrink-0 ">
             <MovieCard
               varighed={film.varighed}
               genre={film.genre}
@@ -59,7 +56,9 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
 </section>
 <script>
   // Hent pagineringsindikatorerne
-  const indicators = document.querySelectorAll(".indicator");
+  const indicators = document.querySelectorAll(
+    ".indicator"
+  ) as NodeListOf<HTMLElement>;
 
   // Lyt efter scroll-begivenheder i karrusellen
   document

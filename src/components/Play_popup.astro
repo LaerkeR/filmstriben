@@ -10,17 +10,21 @@ import Kryds from "../components/ikoner/Kryds.astro";
   <div id="closeButton" class="luk flex w-full justify-end">
     <Kryds variant="medium" />
   </div>
-  <div class="grid justify-items-center gap-4">
+  <div class="flex flex-col items-center gap-4">
     <h2 class="text-lg font-display">Love proof</h2>
-    <p class="body-lg text-grey-200">
-      Hver film du låner har du til rådighed i 48 timer.
-    </p>
-    <img src="../hjul.svg" alt="" />
-    <p>Herefter har du 8 point tilbage denne måned</p>
-    <p class="text-grey-200">Læs mere om point <a href=""></a>her</p>
-    <Button variant="primary" tekst="Lån film" />
+    <div class="flex flex-col gap-1 items-center">
+      <p class="body-lg text-grey-200">
+        Hver film du låner har du til rådighed i 48 timer.
+      </p>
+      <img src="../hjul.svg" alt="" class="w-3/5 mt-2" />
+      <p class="mt-2">Herefter har du 8 point tilbage denne måned</p>
+      <p class="text-grey-200">
+        Læs mere om point <a href="/" class="underline">her</a>
+      </p>
+    </div>
+    <Button variant="primary" tekst="Lån film" btnClass="fuldKnap" />
   </div>
-  <div class="ml-14">
+  <div class="w-full mt-4">
     <p class="body-sm">Dit biblotek</p>
     <p class="font-bold">Københavns biblioteker</p>
   </div>

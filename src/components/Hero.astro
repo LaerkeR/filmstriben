@@ -23,10 +23,10 @@ import herofilmdata from "../hero.json";
             class="slide w-full absolute h-full flex flex-shrink-0 flex-col justify-end overflow-hidden ease-linear duration-500"
           >
             <div
-              class="bg-no-repeat bg-top w-screen bg-cover flex flex-col justify-end  aspect-ratio"
+              class="bg-no-repeat bg-top w-screen h-[80vh] bg-cover flex flex-col justify-end  aspect-ratio"
               style={`background-image: url("../img/${splashFilm.imgTema}/${splashFilm.imgTitel}/imgSingleview.webp")`}
             >
-              <div class="bottom-5 px-10 py-6 w-full  justify-between flex items-end">
+              <div class="bottom-5 px-20 py-6 w-full  justify-between flex items-end">
                 <div>
                   <h1 class="text-2xl font-display uppercase ">
                     {splashFilm.filmTitel}
@@ -76,7 +76,7 @@ import herofilmdata from "../hero.json";
     padding: 10px;
     border: none;
 
-    z-index: 10px;
+    z-index: 10;
     cursor: pointer;
 
     font-size: 24px;
@@ -94,13 +94,14 @@ import herofilmdata from "../hero.json";
 
 <script>
   // Select all slides
-  const slides = document.querySelectorAll(".slide");
+  const slides = document.querySelectorAll(".slide") as NodeListOf<HTMLElement>;
 
   // current slide counter
-  let curSlide = 0;
+  let curSlide = 2;
 
   // select next slide button
   const nextSlide = document.querySelector(".btn-next");
+  const prevSlide = document.querySelector(".btn-prev");
 
   // maximum number of slides
   let maxSlide = slides.length - 1;
@@ -118,5 +119,35 @@ import herofilmdata from "../hero.json";
     slides.forEach((slide, indx) => {
       slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
     });
+  }); // add event listener and navigation functionality
+  prevSlide.addEventListener("click", function () {
+    // check if current slide is the last and reset current slide
+    if (curSlide === 0) {
+      curSlide = maxSlide;
+    } else {
+      curSlide--;
+    }
+
+    //   move slide by -100%
+    slides.forEach((slide, indx) => {
+      slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+    });
   });
+
+  function nextSlideAuto() {
+    // check if current slide is the last and reset current slide
+    if (curSlide === maxSlide) {
+      curSlide = 0;
+    } else {
+      curSlide++;
+    }
+
+    //   move slide by -100%
+    slides.forEach((slide, indx) => {
+      slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+    });
+
+    setTimeout(nextSlideAuto, 9000);
+  }
+  setTimeout(nextSlideAuto, 7000);
 </script>
