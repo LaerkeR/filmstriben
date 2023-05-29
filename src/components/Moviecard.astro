@@ -3,6 +3,7 @@ const { aarstal, filmTitle, slug, varighed, genre, imgSrc, undergenre, point } =
   Astro.props;
 import Heart from "../components/ikoner/heart.astro";
 import Info from "../components/ikoner/info.astro";
+import InfoPopup from "./Info_popup.astro";
 ---
 
 <a href={`${slug}`}>
@@ -26,7 +27,7 @@ import Info from "../components/ikoner/info.astro";
           </div>
           <div class="gap-4 flex">
             <Heart variant="small" />
-            <Info variant="small" />
+            <InfoPopup />
           </div>
         </div>
       </div>
