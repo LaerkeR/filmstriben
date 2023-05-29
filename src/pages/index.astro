@@ -17,13 +17,10 @@ export interface Props {
   title: string;
 }
 
-const { tema } = Astro.props;
-
 const temaFiltret = filmdatabase.filter((film) => film.tema === "Kærlighed");
 ---
 
 <Layout title="Filmstriben | Forside">
-  <Procesbar />
   <Hero />
   <!-- <div class="splash w-full h-[60vw] md:h-[40vw] overflow-hidden">
     <div

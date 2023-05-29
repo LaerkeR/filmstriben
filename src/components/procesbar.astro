@@ -3,11 +3,11 @@
 ---
 
 <div
-  class="progress-bar h-1 fixed w-full bg-gold-400 z-50 left-0 origin-top-left top-0 right-0"
+  class="progress-bar w-1 fixed h-full bg-gold-400 z-30 origin-top-left top-0 bottom-0 right-0"
 >
 </div>
 
 <script>
   import { animate, stagger, inView, scroll, timeline } from "motion";
-  scroll(animate(".progress-bar", { scaleX: [0, 1] }));
+  scroll(animate(".progress-bar", { scaleY: [0, 1] }));
 </script>

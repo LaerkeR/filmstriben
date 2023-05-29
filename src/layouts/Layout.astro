@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import Procesbar from "../components/procesbar.astro";
 import "../style/global.css";
 export interface Props {
   title: string;
@@ -62,6 +63,7 @@ import { animate, stagger, inView, scroll, timeline } from "motion";
   </head>
   <Header />
   <body class="bg-black">
+    <Procesbar />
     <slot />
   </body>
   <Footer />
