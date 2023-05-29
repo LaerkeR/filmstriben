@@ -12,16 +12,16 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
     <h2 class="text-xs font-robotoHeader tracking-wider text-grey-100">
       {temaTitel}
     </h2>
-    <div class="progress_bar flex justify-end gap-2">
-      <div class="w-5 h-1 bg-grey-200"></div>
-      <div class="w-5 h-1 bg-grey-500"></div>
-      <div class="w-5 h-1 bg-grey-500"></div>
-      <div class="w-5 h-1 bg-grey-500"></div>
-      <div class="w-5 h-1 bg-grey-500"></div>
+    <div class="carousel-indicators flex justify-end gap-2">
+      <div class="indicator active w-5 h-1 bg-grey-200"></div>
+      <div class="indicator w-5 h-1 bg-grey-500"></div>
+      <div class="indicator w-5 h-1 bg-grey-500"></div>
+      <div class="indicator w-5 h-1 bg-grey-500"></div>
+      <div class="indicator w-5 h-1 bg-grey-500"></div>
     </div>
   </div>
 
-  <section class="relative h-fit overflow-hidden">
+  <section class="scroll.carousel relative h-fit overflow-hidden">
     <div
       class="next-button absolute flex h-full w-fit justify-end right-0 z-40"
     >
@@ -35,7 +35,7 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
       </button>
     </div>
 
-    <div class="carousel relative flex gap-8 overflow-x-scroll">
+    <div class="scroll carousel relative flex gap-8 overflow-x-scroll">
       {
         temaFiltret.map((film) => (
           <div class="shrink-0 w-full">
@@ -56,3 +56,33 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
     </div>
   </section>
 </section>
+
+<script>
+  // Hent pagineringsindikatorerne
+  const indicators = document.querySelectorAll(".indicator");
+
+  // Lyt efter scroll-begivenheder i karrusellen
+  document
+    .querySelector(".scroll.carousel")
+    .addEventListener("scroll", function () {
+      // Beregn den aktuelle side baseret på scrollpositionen
+      const scrollPosition = this.scrollLeft;
+      const carouselWidth = this.offsetWidth;
+      const currentPage = Math.floor(scrollPosition / carouselWidth);
+
+      // Opdater farverne på pagineringsindikatorerne
+      indicators.forEach((indicator, index) => {
+        if (index === currentPage) {
+          indicator.style.backgroundColor = "var(--active-color)";
+        } else {
+          indicator.style.backgroundColor = "var(--inactive-color)";
+        }
+      });
+    });
+</script>
+<style>
+  :root {
+    --active-color: #cccccc; /* Aktiv farve */
+    --inactive-color: #666666; /* Inaktiv farve */
+  }
+</style>
