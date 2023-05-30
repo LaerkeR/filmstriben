@@ -123,6 +123,9 @@
 }
 
 @layer utilities {
+  html body {
+    background: #141414;
+  }
   html,
   .noScrollbar {
     scrollbar-width: none;

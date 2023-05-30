@@ -2,6 +2,7 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Procesbar from "../components/procesbar.astro";
+
 import "../style/global.css";
 export interface Props {
   title: string;
@@ -61,10 +62,54 @@ import { animate, stagger, inView, scroll, timeline } from "motion";
 
     <title>{title}</title>
   </head>
+  <div
+    class="z-[900] w-screen h-screen bg-black fixed px-16 py-40 flex flex-col justify-between place-content-center gap-6 md:hidden"
+  >
+    <div
+      class="absolute top-0 left-0 bg-grey-50 w-screen flex justify-between px-4 py-6"
+    >
+      <div class="flex gap-4 items-center">
+        <img class="w-fit" src="../appikon.svg" alt="" />
+        <div>
+          <p class="body-lg font-light text-grey-900 leading-none">
+            Filmstriben
+          </p>
+          <p class="body-xs font-light text-grey-700">
+            Dit lokale filmbibliotek
+          </p>
+        </div>
+      </div>
+      <img class="w-fit" src="../appknap.svg" alt="" />
+    </div>
+    <h1 class="font-display uppercase text-md">
+      Få den mest optimale <span class="text-gold-400">biografoplevelse</span> med
+      filmstribens app!
+    </h1>
+    <p class="text-grey-200">
+      For at få den bedste oplevelse henviser vi dig til at benytte vores appen.
+    </p>
+    <p class="text-grey-200">
+      Download Filmstribens app der hvor du downloader apps og få adgang til et
+      væld af forskellige film genre.
+    </p>
+    <div class="flex w-full justify-between">
+      <img
+        src="../appstore.svg"
+        alt="Billede af Appstore icon der linker til Filmstribens app"
+      />
+      <img
+        src="../googleplay.svg"
+        alt="Billede af Appstore icon der linker til Filmstribens app"
+      />
+    </div>
+    <img class="w-fit mt-8" src="../logo.svg" alt="" />
+  </div>
   <Header />
   <body class="bg-black">
     <Procesbar />
     <slot />
   </body>
   <Footer />
+
+
 </html>
