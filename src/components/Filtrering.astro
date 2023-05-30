@@ -14,14 +14,17 @@ import Button from "./Button.astro";
 />
 
 <div
-  class="absolute filtreringsMenu hidden bg-black px-14 w-1/4 h-screen right-0 top-0 z-[200] overflow-scroll py-4 pb-28 scrollbar-hide"
+  class="absolute filtreringsMenu hidden bg-black px-14 w-1/4 h-screen justify-between flex flex-col right-0 top-0 z-[200] overflow-scroll py-4 pb-28"
 >
   <div
     class="filtreringsOverlay fixed bg-black bg-opacity-70 items-cente top-0 left-0 w-screen h-screen -z-40"
   >
   </div>
   <div class="lukFiltrering flex w-full justify-end"><Kryds /></div>
-  <form class="flex flex-col gap-8" action="">
+  <form
+    class="flex flex-col h-4/5 justify-between overflow-scroll gap-8"
+    action=""
+  >
     <fieldset class="relevans">
       <legend
         class="pb-2 mb-2 border-b-[1px] w-full text-white font-display text-sm"
@@ -329,6 +332,7 @@ import Button from "./Button.astro";
       </div>
     </fieldset>
   </form>
+  <Button variant="secondary" typeIcon="sliders" tekst="Anvend filtre" />
 </div>
 
 <script>
