@@ -1572,7 +1572,7 @@
     "ratingIMDb": "8.6",
     "point": "4",
     "alder": "a",
-    "tema": ["Animation", "Mine Farvoritter"],
+    "tema": ["Animation", "Mine favoritter"],
     "imgTema": "animation",
     "imgTitel": "chihiro-og-heksene"
   },
@@ -1669,7 +1669,7 @@
     "ratingIMDb": "6.6",
     "point": "4",
     "alder": "15",
-    "tema": ["andet", "Mine Farvoritter"],
+    "tema": ["andet", "Mine favoritter"],
     "imgTema": "andet",
     "imgTitel": "underverden"
   },
@@ -1902,7 +1902,7 @@
     "ratingIMDb": "",
     "point": "2",
     "alder": "15",
-    "tema": ["Danske kortfilm", "Mine Farvoritter"],
+    "tema": ["Danske kortfilm", "Mine favoritter"],
     "imgTema": "Danske kortfilm",
     "imgTitel": "Angel",
     "alt": ""
