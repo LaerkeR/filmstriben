@@ -464,10 +464,10 @@
     "genre": "Kortfilm",
     "underGenre": ["Børn"],
     "type": "Dokumentar",
-
     "varighed": "29 min",
     "instruktor": ["René Hansen"],
     "manusforfatter": ["René Hansen"],
+    "medvirkende": ["Benjamin Windfelt"],
     "langResume": "Sammen med sin søster lever den ti-årige Miga et sorgløs liv på Mongoliets uendelige stepper. Familiens 200 heste er hans et og alt. Men da vinteren kommer, med kulde ned til minus 50 grader, dør alle familiens dyr. Sulten og kulden bliver for meget, og Miga's søster stikker af hjemmefra. Miga savner sin søster og sniger sig ombord på nattoget til hovedstaden for at lede efter hende. Her oplever han for første gang storbyen og dermed gadebørnenes verden. De forsøger at hjælpe ham, men politiet jager dem over alt. Den første nat sover Miga samme med sine nye venner under jorden i byens kloak og varmerørskanaler. Udenfor er kulden, politiet og de uendelige gader, men hvor er hans søster?",
     "kortResume": "Sammen med sin søster lever den ti-årige Miga et sorgløs liv på Mongoliets uendelige stepper. Familiens 200 heste er hans et og alt. Men da vinteren kommer, med kulde ned til minus 50 grader, dør alle familiens dyr. Sulten og kulden bliver for meget, og Miga's søster stikker af hjemmefra. Miga savner sin søster og sniger sig ombord på nattoget til hovedstaden for at lede efter hende.",
     "sprog": ["Dansk", "Mongolsk"],
@@ -482,7 +482,7 @@
     "point": "2",
     "alder": "7",
     "tema": "Film om Mongoliet",
-    "medvirkende": "Benjamin Windfelt",
+
     "imgTema": "mongoliet",
     "imgTitel": "Migas rejse",
     "farve": "lavender"
@@ -2016,7 +2016,7 @@
     "alder": "15",
     "tema": "Danske kortfilm",
     "imgTema": "Danske kortfilm",
-    "imgTitel": "Bjorn på Langeland",
+    "imgTitel": "Bjorn på Langeland",
     "alt": ""
   },
   {
