@@ -3,10 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import MovieCard from "../components/Moviecard.astro";
 import filmdatabase from "../filmdatabase.json";
 import UndersideLayout from "../layouts/UndersideLayout.astro";
+
+const antalfilm = filmdatabase.length;
 ---
 
 <Layout title="Alle film">
-  <UndersideLayout undersideTitel="Alle film">
+  <UndersideLayout undersideTitel="Alle film" antaltTitler={antalfilm}>
     {
       filmdatabase.map((film) => (
         <MovieCard

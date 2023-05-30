@@ -3,18 +3,29 @@ import maanedensfilm from "../maanedensfilm.json";
 
 import Heart from "../components/ikoner/heart.astro";
 import Imdb from "./Imdb.astro";
+import Button from "../components/Button.astro";
 ---
 
 {
   maanedensfilm.map((filmData) => (
     <article class="bg-blueSky flex flex-row py-16 px-36 justify-start gap-16">
-      <a href={filmData.slug} class="relative w-1/3">
+      <a
+        href={filmData.slug}
+        class="wrapper relative w-1/3 flex justify-center items-center"
+      >
         <img
           class="aspect-auto w-fit h-fit bg-cover bg-no-repeat bg-center"
           src={`././img/${filmData.imgTema}/imgPlakat.jpg`}
-          alt={filmData.alt}
+          alt=""
         />
         <div class="absolute top-0 bottom-0 left-0 right-0 w-full h-full hover:bg-black hover:opacity-25 ease-in-out duration-300" />
+        <div class="mereinfoknap absolute">
+          <Button
+            variant="secondary"
+            typeIcon="circle-play"
+            tekst="Mere info"
+          />
+        </div>
       </a>
 
       <div class="flex flex-col justify-between">
@@ -54,3 +65,12 @@ import Imdb from "./Imdb.astro";
     </article>
   ))
 }
+
+<style>
+  .wrapper .mereinfoknap {
+    display: none;
+  }
+  .wrapper:hover .mereinfoknap {
+    display: block;
+  }
+</style>
