@@ -22,32 +22,102 @@ import Button from "./Button.astro";
   </div>
   <div class="lukFiltrering flex w-full justify-end"><Kryds /></div>
   <form class="flex flex-col gap-8" action="">
-    <fieldset>
+    <fieldset class="relevans">
       <legend
-        class="pb-2 mb-2 border-b-[1px] w-full text-white font-display text-sm flex gap-4"
+        class="pb-2 mb-2 border-b-[1px] w-full text-white font-display text-sm"
         >Sortere efter <p class="lightIcon text-[16px]">chevron-down</p>
       </legend>
-      <!-- <div>
-        <div class="flex justify-between my-1">
-          <label for=""></label>
+      <div class="filtreringsListe flex flex-col gap-2 overflow-scroll">
+        <div class="checkboxWrapper">
+          <label for="mest-relevante">Mest relevante</label>
           <input
-            class="text-gold-400 focus:ring-gold-400"
             type="checkbox"
-            id=""
-            name=""
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="mest-relevante"
+            name="mest-relevante"
           />
         </div>
-      </div> -->
+        <div class="checkboxWrapper">
+          <label for="spilletid-longest"
+            >Spilletid <span class="body-lg font-light">|</span> længest først</label
+          >
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="spilletid-longest"
+            name="spilletid-longest"
+          />
+        </div>
+        <div class="checkboxWrapper">
+          <label for="spilletid-shortest"
+            >Spilletid <span class="body-lg font-light">|</span> kortes først</label
+          >
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="spilletid-shortest"
+            name="spilletid-shortest"
+          />
+        </div>
+        <div class="checkboxWrapper">
+          <label for="titel aToz"
+            >Titel A <span class="lightIcon text-[10px]">arrow-right-long</span>
+            Å</label
+          >
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="titel aToz"
+            name="titel aToz"
+          />
+        </div>
+
+        <div class="checkboxWrapper align-middle">
+          <label for="titel zToa"
+            >Titel Å <span class="lightIcon text-[10px]">arrow-right-long</span>
+            A</label
+          >
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="titel zToa"
+            name="titel zToa"
+          />
+        </div>
+        <div class="checkboxWrapper">
+          <label for="year-newest"
+            >Årstal <span class="body-lg font-light">|</span> nyeste først</label
+          >
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="year-newest"
+            name="year-newest"
+          />
+        </div>
+        <div class="checkboxWrapper">
+          <label for="year-eldest"
+            >Årstal <span class="body-lg font-light">|</span> ældste først</label
+          >
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="year-eldest"
+            name="year-eldest"
+          />
+        </div>
+      </div>
     </fieldset>
+
     <fieldset class="genre">
       <legend
-        class="pb-2 mb-2 border-b-[1px] w-full text-white font-display text-sm flex gap-4"
+        class="pb-2 mb-2 border-b-[1px] w-full text-white font-display text-sm"
         >Genre <p class="lightIcon text-[16px]">chevron-down</p>
       </legend>
       <div class="filtreringsListe hidden overflow-scroll">
         {
           filmgenredata.map((genre) => (
-            <div class="flex justify-between my-1 ">
+            <div class="checkboxWrapper ">
               <label for={genre} class="text-grey-300 peer-checked:text-white ">
                 {genre}
               </label>
@@ -70,12 +140,192 @@ import Button from "./Button.astro";
       <div class="filtreringsListe hidden">
         {
           filmkategoridata.map((kategori) => (
-            <div class="flex justify-between my-1">
+            <div class="checkboxWrapper">
               <label for={kategori}>{kategori}</label>
               <input class="" type="checkbox" id={kategori} name={kategori} />
             </div>
           ))
         }
+      </div>
+    </fieldset>
+    <fieldset class="point">
+      <legend
+        class="pb-2 mb-2 border-b-[1px] w-full text-white font-display text-sm"
+        >Antal point <p class="lightIcon text-[16px]">chevron-down</p>
+      </legend>
+      <div class="filtreringsListe flex flex-col gap-2 overflow-scroll">
+        <div class="checkboxWrapper">
+          <label for="0">0 point</label>
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="0"
+            name="0"
+          />
+        </div>
+        <div class="checkboxWrapper">
+          <label for="1">1 point</label>
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="1"
+            name="1"
+          />
+        </div>
+        <div class="checkboxWrapper">
+          <label for="2">2 point</label>
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="2"
+            name="2"
+          />
+        </div>
+        <div class="checkboxWrapper">
+          <label for="3">3 point</label>
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="3"
+            name="3"
+          />
+        </div>
+
+        <div class="checkboxWrapper align-middle">
+          <label for="4">4 point</label>
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="4"
+            name="4"
+          />
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="varighed">
+      <legend
+        class="pb-2 mb-2 border-b-[1px] w-full text-white font-display text-sm"
+        >Varighed <p class="lightIcon text-[16px]">chevron-down</p>
+      </legend>
+      <div class="filtreringsListe flex flex-col gap-2 overflow-scroll">
+        <div class="checkboxWrapper">
+          <label for="<30m">under 30 minutter</label>
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="<30m"
+            name="<30m"
+          />
+        </div>
+        <div class="checkboxWrapper">
+          <label for="30m-1t">30 minutter - 1 time</label>
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="30m-1t"
+            name="30m-1t"
+          />
+        </div>
+        <div class="checkboxWrapper">
+          <label for="1t-2t">1 time - 2 timer</label>
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="1t-2t"
+            name="1t-2t"
+          />
+        </div>
+        <div class="checkboxWrapper">
+          <label for="2t-3t">2 timer - 3 timer</label>
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="2t-3t"
+            name="2t-3t"
+          />
+        </div>
+
+        <div class="checkboxWrapper align-middle">
+          <label for="+3t">+3 timer</label>
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="+3t"
+            name="+3t"
+          />
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="varighed">
+      <legend
+        class="pb-2 mb-2 border-b-[1px] w-full text-white font-display text-sm"
+        >Sprog <p class="lightIcon text-[16px]">chevron-down</p>
+      </legend>
+      <div class="filtreringsListe flex flex-col gap-2 overflow-scroll">
+        <div class="checkboxWrapper">
+          <label for="dansk">Dansk</label>
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="dansk"
+            name="dansk"
+          />
+        </div>
+        <div class="checkboxWrapper">
+          <label for="engelsk">Engelsk</label>
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="engelsk"
+            name="engelsk"
+          />
+        </div>
+        <div class="checkboxWrapper">
+          <label for="fransk">Fransk</label>
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="fransk"
+            name="fransk"
+          />
+        </div>
+        <div class="checkboxWrapper">
+          <label for="japansk">Japansk</label>
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="japansk"
+            name="japansk"
+          />
+        </div>
+
+        <div class="checkboxWrapper align-middle">
+          <label for="norsk">Norsk</label>
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="norsk"
+            name="norsk"
+          />
+        </div>
+        <div class="checkboxWrapper align-middle">
+          <label for="svensk">Svensk</label>
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="svensk"
+            name="svensk"
+          />
+        </div>
+        <div class="checkboxWrapper align-middle">
+          <label for="Spansk">Spansk</label>
+          <input
+            type="checkbox"
+            class="text-gold-400 bg-grey-200 focus:ring-gold-400 focus:ring-2 rounded-sm"
+            id="spansk"
+            name="spansk"
+          />
+        </div>
       </div>
     </fieldset>
   </form>
@@ -111,3 +361,24 @@ import Button from "./Button.astro";
     }
   });
 </script>
+
+<style>
+  label {
+    color: #e6e6e6;
+  }
+
+  label:checked {
+    color: white;
+  }
+
+  .checkboxWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 4px;
+  }
+
+  legend {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>

@@ -13,12 +13,16 @@ const {
 import Play from "../components/ikoner/play.astro";
 import Heart from "../components/ikoner/heart.astro";
 import Info from "../components/ikoner/info.astro";
+import Button from "./Button.astro";
 ---
 
 <article
   class={`${farve} px-10 py-10 [50vh] md:h-[70vh] w-full flex gap-12 justify-center`}
 >
-  <a href={slug} class="w-2/3 relative">
+  <a
+    href={slug}
+    class="wrapper w-2/3 relative flex justify-center items-center"
+  >
     <div
       class="aspect-auto w-full h-full bg-no-repeat bg-center bg-cover"
       style={`background-image: url("${imgSrc}")`}
@@ -28,6 +32,9 @@ import Info from "../components/ikoner/info.astro";
     <div
       class="absolute top-0 bottom-0 left-0 right-0 w-full h-full hover:bg-black hover:opacity-20 ease-in duration-300"
     >
+    </div>
+    <div class="mereinfoknap absolute">
+      <Button variant="secondary" typeIcon="circle-play" tekst="Mere info" />
     </div>
   </a>
 
@@ -76,5 +83,12 @@ import Info from "../components/ikoner/info.astro";
   }
   .prettyBlue {
     background-color: #8ea5bf;
+  }
+
+  .wrapper .mereinfoknap {
+    display: none;
+  }
+  .wrapper:hover .mereinfoknap {
+    display: block;
   }
 </style>

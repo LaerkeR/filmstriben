@@ -138,4 +138,22 @@
   .noBreak {
     white-space: nowrap;
   }
+
+  .carousel-indicators {
+    opacity: 0;
+  }
+
+  .carouselwrapper:hover .carousel-indicators {
+    opacity: 100;
+  }
+
+  .next-button,
+  .prev-button {
+    display: none;
+  }
+
+  .carouselwrapper:hover .next-button,
+  .carouselwrapper:hover .prev-button {
+    display: flex;
+  }
 }

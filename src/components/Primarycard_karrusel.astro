@@ -7,7 +7,7 @@ const { temaTitel } = Astro.props;
 const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
 ---
 
-<section class="relative z-0 w-full px-20">
+<section class="carouselwrapper relative z-0 w-full px-20">
   <div class="align-bottom mb-4">
     <h2 class="text-xs font-robotoHeader tracking-wider text-grey-100">
       {temaTitel}
@@ -21,20 +21,18 @@ const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
     </div>
   </div>
   <section class="relative h-fit overflow-hidden">
-    <div
-      class="next-button absolute flex h-full w-fit justify-end right-0 z-40"
-    >
+    <div class="next-button absolute h-full w-fit justify-end right-0 z-40">
       <button class="bg-black opacity-75 w-20"
         ><p class="lightIcon">angle-right</p>
       </button>
     </div>
-    <div class="prev-button absolute flex h-full w-fit justify-end left-0 z-40">
+    <div class="prev-button absolute h-full w-fit justify-end left-0 z-40">
       <button class="bg-black opacity-75 w-20"
         ><p class="lightIcon">angle-left</p>
       </button>
     </div>
     <div
-      class="scroll noScrollbar carousel carousel relative flex gap-4 overflow-x-scroll ease-linear duration-500"
+      class="scroll noScrollbar carousel relative flex gap-4 overflow-x-scroll ease-linear duration-500"
     >
       {
         temaFiltret.map((film) => (
