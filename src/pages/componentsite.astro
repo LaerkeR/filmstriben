@@ -31,11 +31,16 @@ import Tema_karrusel from "../components/Tema_karrusel.astro";
 import Plakat_karrusel from "../components/Plakat_karrusel.astro";
 import Sogbar from "../components/Sogbar.astro";
 import Procesbar from "../components/procesbar.astro";
+import Header_heart from "../components/ikoner/Header_heart.astro";
+import Header_user from "../components/ikoner/Header_user.astro";
 ---
 
 <Layout title="komponent udviklings side">
   <Hero />
   <main>
+    <Header_heart variant="large" />
+    <Header_user />
+
     <Procesbar />
     <Sogbar />
     <Plakat_karrusel temaTitel="Oscar-film | vindere og nominerede" />

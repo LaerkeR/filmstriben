@@ -6,6 +6,8 @@ import Del from "./ikoner/del.astro";
 import Heart from "./ikoner/heart.astro";
 import Sogbar from "../components/Sogbar.astro";
 import User from "./ikoner/user.astro";
+import Header_heart from "../components/ikoner/Header_heart.astro";
+import Header_user from "../components/ikoner/Header_user.astro";
 
 const { navpunkt, specialClass } = Astro.props;
 ---
@@ -37,8 +39,8 @@ const { navpunkt, specialClass } = Astro.props;
 
     <div class="text-[20px] flex flex-row gap-4 pl-[92px]">
       <Sogbar />
-      <Heart />
-      <User />
+      <Header_heart />
+      <Header_user />
     </div>
   </div>
 </header>

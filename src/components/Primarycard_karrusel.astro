@@ -4,7 +4,9 @@ import filmdatabase from "../filmdatabase.json";
 
 const { temaTitel } = Astro.props;
 
-const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
+const temaFiltret = filmdatabase.filter(
+  (film) => film.tema === temaTitel || film.tema.includes(temaTitel)
+);
 ---
 
 <section class="carouselwrapper relative z-0 w-full px-20">

@@ -1,0 +1,16 @@
+---
+const { variant } = Astro.props;
+---
+
+<button data-variant={variant}>
+  <p class="solidIcon text-white">user</p></button
+>
+
+<style>
+  [data-variant="small"] {
+    font-size: 24px;
+  }
+  [data-variant="medium"] {
+    font-size: 28px;
+  }
+</style>
