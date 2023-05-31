@@ -35,7 +35,7 @@
     "tema": "Oscar-film | vindere og nominerede",
     "imgTema": "oscar film",
     "imgTitel": "Everything everywhere all at once",
-    "alt": "Billede fra Everything everywhere all at once"
+    "alt": "Oscar spillefilm fra Everything everywhere all at once"
   },
   {
     "filmTitel": "To Leslie",
@@ -84,7 +84,7 @@
     "tema": "Oscar-film | vindere og nominerede",
     "imgTema": "oscar film",
     "imgTitel": "To Leslie",
-    "alt": "billede fra To Leslie"
+    "alt": "oscar spillefilm fra To Leslie"
   },
   {
     "filmTitel": "Licorice pizza",
@@ -131,7 +131,7 @@
     "tema": "Oscar-film | vindere og nominerede",
     "imgTema": "oscar film",
     "imgTitel": "Licorice pizza",
-    "alt": "billede fra Licorice pizza "
+    "alt": "Oscar film fra Licorice pizza "
   },
   {
     "filmTitel": "Verdens værste menneske",
@@ -162,7 +162,7 @@
     "tema": "Oscar-film | vindere og nominerede",
     "imgTema": "oscar film",
     "imgTitel": "Verdens verste menneske",
-    "alt": "billede fra Verdens verste menneske"
+    "alt": "oscar film fra Verdens verste menneske"
   },
   {
     "filmTitel": "Drive my car",
@@ -202,7 +202,7 @@
     "tema": "Oscar-film | vindere og nominerede",
     "imgTema": "oscar film",
     "imgTitel": "Drive my car",
-    "alt": "billede fra Drive my car "
+    "alt": "oscar film fra Drive my car "
   },
   {
     "filmTitel": "The lost daughter",
@@ -251,7 +251,7 @@
     "tema": "Oscar-film | vindere og nominerede",
     "imgTema": "oscar film",
     "imgTitel": "The lost daughter",
-    "alt": "billede fra The lost daughter"
+    "alt": "oscar film fra The lost daughter"
   },
   {
     "filmTitel": "The father",
@@ -296,7 +296,8 @@
     "alder": "15",
     "tema": "Oscar-film | vindere og nominerede",
     "imgTema": "oscar film",
-    "imgTitel": "The father"
+    "imgTitel": "The father",
+    "alt": "Oscar film The father"
   },
   {
     "filmTitel": "Quo vadis, Aida?",
@@ -341,7 +342,8 @@
     "alder": "15",
     "tema": "Oscar-film | vindere og nominerede",
     "imgTema": "oscar film",
-    "imgTitel": "Quo vadis Aida"
+    "imgTitel": "Quo vadis Aida",
+    "alt": "Oscar film Quo vadis Aida"
   },
   {
     "filmTitel": "Den Sidste Ulv",
@@ -382,7 +384,8 @@
     "tema": "Film om Mongoliet",
     "imgTema": "mongoliet",
     "imgTitel": "Le dernier loup",
-    "farve": "mossGreen"
+    "farve": "mossGreen",
+    "alt": "Film om mongoliet Le dernier loup"
   },
   {
     "filmTitel": "Aligermaas eventyr",
@@ -423,7 +426,8 @@
     "tema": "Film om Mongoliet",
     "imgTema": "mongoliet",
     "imgTitel": "Aligermaas eventyr",
-    "farve": "ashyGreen"
+    "farve": "ashyGreen",
+    "alt": "film om mongoliet aligermaas eventyr"
   },
   {
     "filmTitel": "Ørnejægerens søn",
@@ -454,7 +458,8 @@
     "tema": "Film om Mongoliet",
     "imgTema": "mongoliet",
     "imgTitel": "Oernejaegerens soen",
-    "farve": "deepOcean"
+    "farve": "deepOcean",
+    "alt": "film om mongoliet ørnejargens søn"
   },
   {
     "filmTitel": "Migas rejse",
@@ -485,7 +490,8 @@
 
     "imgTema": "mongoliet",
     "imgTitel": "Migas rejse",
-    "farve": "lavender"
+    "farve": "lavender",
+    "alt": "film om mongoliet lavender"
   },
   {
     "filmTitel": "Den gyldne jord",
@@ -533,7 +539,8 @@
     "tema": "Film om Mongoliet",
     "imgTema": "mongoliet",
     "imgTitel": "Den gyldne jord",
-    "farve": "prettyBlue"
+    "farve": "prettyBlue",
+    "alt": "film om mongoliet Den gyldne jord"
   },
 
   {
@@ -580,7 +587,8 @@
     "tema": "Film om Mongoliet",
     "imgTema": "mongoliet",
     "imgTitel": "Faedre soenner",
-    "farve": "greyIsh"
+    "farve": "greyIsh",
+    "alt": "Dansk film greyish"
   },
 
   {
@@ -620,7 +628,8 @@
     "alder": "11",
     "tema": "Far tema",
     "imgTema": "far tema",
-    "imgTitel": "Lulu"
+    "imgTitel": "Lulu",
+    "alt": "Månedens kortfolm Lulu"
   },
 
   {
@@ -655,7 +664,8 @@
     "alder": "15",
     "tema": "Far tema",
     "imgTema": "far tema",
-    "imgTitel": "Gensyn med Yorkshire"
+    "imgTitel": "Gensyn med Yorkshire",
+    "alt": "Tema film Gensyn med Yorkshire"
   },
   {
     "filmTitel": "Paris of the North",
@@ -691,7 +701,8 @@
     "alder": "15",
     "tema": "Far tema",
     "imgTema": "far tema",
-    "imgTitel": "Paris of the North"
+    "imgTitel": "Paris of the North",
+    "alt": "Tema film Paris of the North"
   },
   {
     "filmTitel": "Gaven",
@@ -732,7 +743,8 @@
     "alder": "11",
     "tema": "Far tema",
     "imgTema": "far tema",
-    "imgTitel": "Gaven"
+    "imgTitel": "Gaven",
+    "alt": "Tema film Gaven"
   },
   {
     "filmTitel": "Omvejen",
@@ -766,7 +778,8 @@
     "alder": "a",
     "tema": "Far tema",
     "imgTema": "far tema",
-    "imgTitel": "Omveje"
+    "imgTitel": "Omveje",
+    "alt": "Tema film omveje"
   },
   {
     "filmTitel": "Mesterkokken",
@@ -806,7 +819,8 @@
     "alder": "15",
     "tema": "Far tema",
     "imgTema": "far tema",
-    "imgTitel": "Mesterkokken"
+    "imgTitel": "Mesterkokken",
+    "alt": "Tema film mesterkokken"
   },
   {
     "filmTitel": "Min sommer i Provence",
@@ -850,7 +864,8 @@
     "alder": "7",
     "tema": "Senest tilføjet",
     "imgTema": "senest tilfoejet",
-    "imgTitel": "min sommer i Provence"
+    "imgTitel": "min sommer i Provence",
+    "alt": "Film min sommer i provence"
   },
   {
     "filmTitel": "Jeg elsker også dig",
@@ -891,7 +906,8 @@
     "alder": "11",
     "tema": "Senest tilføjet",
     "imgTema": "senest tilfoejet",
-    "imgTitel": "jeg elsker ogsaa dig"
+    "imgTitel": "jeg elsker ogsaa dig",
+    "alt": "romantisk film Jeg elsker også dig"
   },
   {
     "filmTitel": "The super 8 years",
@@ -927,7 +943,8 @@
     "alder": "11",
     "tema": "Senest tilføjet",
     "imgTema": "senest tilfoejet",
-    "imgTitel": "the super 8 years"
+    "imgTitel": "the super 8 years",
+    "alt": "dokumentar the super 8 years"
   },
   {
     "filmTitel": "Free Cjol Soo Lee",
@@ -969,7 +986,8 @@
     "alder": "11",
     "tema": "Senest tilføjet",
     "imgTema": "senest tilfoejet",
-    "imgTitel": "free Cjol Soo Lee"
+    "imgTitel": "free Cjol Soo Lee",
+    "alt": "Dokumentar free cjol soo lee"
   },
 
   {
@@ -1024,7 +1042,8 @@
     "alder": "15",
     "tema": "Senest tilføjet",
     "imgTema": "senest tilfoejet",
-    "imgTitel": "songs my brothers taught me"
+    "imgTitel": "songs my brothers taught me",
+    "alt": "film songs my brothers taught me"
   },
   {
     "filmTitel": "Nattens skov",
@@ -1074,7 +1093,8 @@
     "alder": "7",
     "tema": "Senest tilføjet",
     "imgTema": "senest tilfoejet",
-    "imgTitel": "nattens skov"
+    "imgTitel": "nattens skov",
+    "alt": "Film nattens skov"
   },
   {
     "filmTitel": "Spun",
@@ -1111,7 +1131,8 @@
     "alder": "15",
     "tema": "Senest tilføjet",
     "imgTema": "senest tilfoejet",
-    "imgTitel": "spun"
+    "imgTitel": "spun",
+    "alt": "Film spun"
   },
   {
     "filmTitel": "Hej verden!",
@@ -1159,7 +1180,8 @@
     "alder": "a",
     "tema": "Senest tilføjet",
     "imgTema": "senest tilfoejet",
-    "imgTitel": "hej verden"
+    "imgTitel": "hej verden",
+    "alt": "Animations film Hej verden"
   },
   {
     "filmTitel": "Jeg elsker også dig",
@@ -1200,7 +1222,8 @@
     "alder": "11",
     "tema": "Kærlighed",
     "imgTema": "kaerlighed",
-    "imgTitel": "Jeg elsker ogsaa dig"
+    "imgTitel": "Jeg elsker ogsaa dig",
+    "alt": "romantisk film Jeg elsker også dig"
   },
   {
     "filmTitel": "Ali & Ava",
@@ -1236,7 +1259,8 @@
     "alder": "7",
     "tema": "Kærlighed",
     "imgTema": "kaerlighed",
-    "imgTitel": "Ali Ava"
+    "imgTitel": "Ali Ava",
+    "alt": "romantisk film Ali & Ava"
   },
   {
     "filmTitel": "Jeg hedder Ernesto",
@@ -1282,7 +1306,8 @@
     "alder": "11",
     "tema": "Kærlighed",
     "imgTema": "kaerlighed",
-    "imgTitel": "Jeg hedder Ernesto"
+    "imgTitel": "Jeg hedder Ernesto",
+    "alt": "romantisk film Jeg hedder ernesto"
   },
   {
     "filmTitel": "Peter von Kant",
@@ -1327,7 +1352,8 @@
     "alder": "7",
     "tema": "Kærlighed",
     "imgTema": "kaerlighed",
-    "imgTitel": "Peter von Kant"
+    "imgTitel": "Peter von Kant",
+    "alt": "romantisk film Peter von kant"
   },
   {
     "filmTitel": "Waiting for Bojangles",
@@ -1369,7 +1395,8 @@
     "alder": "11",
     "tema": "Kærlighed",
     "imgTema": "kaerlighed",
-    "imgTitel": "Waiting for Bojangles"
+    "imgTitel": "Waiting for Bojangles",
+    "alt": "romantisk film Waiting for Bojangles"
   },
   {
     "filmTitel": "Moderen og luderen",
@@ -1416,7 +1443,8 @@
     "alder": "15",
     "tema": "Kærlighed",
     "imgTema": "kaerlighed",
-    "imgTitel": "Moderen og luderen"
+    "imgTitel": "Moderen og luderen",
+    "alt": "film moderen og luderen"
   },
   {
     "filmTitel": "Barbara",
@@ -1450,7 +1478,8 @@
     "alder": "15",
     "tema": "Kærlighed",
     "imgTema": "kaerlighed",
-    "imgTitel": "Barbara"
+    "imgTitel": "Barbara",
+    "alt": "film Barbara"
   },
   {
     "filmTitel": "Cyrano",
@@ -1497,7 +1526,8 @@
     "alder": "11",
     "tema": "Kærlighed",
     "imgTema": "kaerlighed",
-    "imgTitel": "Cyrano"
+    "imgTitel": "Cyrano",
+    "alt": "film cyrano"
   },
 
   {
@@ -1534,7 +1564,8 @@
     "alder": "15",
     "tema": "månedens dokumentar",
     "imgTema": "maanedens dokumentar",
-    "imgTitel": "de-fem-aar"
+    "imgTitel": "de-fem-aar",
+    "alt": "dokumentar de fem år"
   },
   {
     "filmTitel": "Chihiro og heksene",
@@ -1574,7 +1605,8 @@
     "alder": "a",
     "tema": ["Animation", "Mine favoritter"],
     "imgTema": "animation",
-    "imgTitel": "chihiro-og-heksene"
+    "imgTitel": "chihiro-og-heksene",
+    "alt": "film Chihiro og heksene"
   },
   {
     "filmTitel": "Mysteriet om Hr. Link",
@@ -1624,7 +1656,8 @@
     "alder": "7",
     "tema": "Animation",
     "imgTema": "animation",
-    "imgTitel": "mysteriet-om-hr-link"
+    "imgTitel": "mysteriet-om-hr-link",
+    "alt": "film genre Animation Mysteriet om Hr. Link "
   },
   {
     "filmTitel": "Underverden",
@@ -1671,7 +1704,8 @@
     "alder": "15",
     "tema": ["andet", "Mine favoritter"],
     "imgTema": "andet",
-    "imgTitel": "underverden"
+    "imgTitel": "underverden",
+    "alt": "Bedste danske film Underverden"
   },
   {
     "filmTitel": "Robocop",
@@ -1714,7 +1748,8 @@
     "alder": "15",
     "tema": "andet",
     "imgTema": "andet",
-    "imgTitel": "robocop"
+    "imgTitel": "robocop",
+    "alt": "Film robocop"
   },
 
   {
@@ -1751,7 +1786,8 @@
     "alder": "15",
     "tema": "andet",
     "imgTema": "andet",
-    "imgTitel": "the-guest"
+    "imgTitel": "the-guest",
+    "alt": "Film The guest"
   },
   {
     "id": 0,
@@ -1781,7 +1817,8 @@
     "alder": "11",
     "tema": "splash",
     "imgTema": "splash",
-    "imgTitel": "Love Proof"
+    "imgTitel": "Love Proof",
+    "alt": "Film love proof "
   },
   {
     "filmTitel": "Bare en cappuccino",
@@ -1825,7 +1862,7 @@
     "tema": "Danske kortfilm",
     "imgTema": "Danske kortfilm",
     "imgTitel": "Bare en cappuccino",
-    "alt": ""
+    "alt": "Dansk kortfilm Bare en cappuccino"
   },
   {
     "filmTitel": "Drengevenner",
@@ -1863,7 +1900,7 @@
     "tema": "Danske kortfilm",
     "imgTema": "Danske kortfilm",
     "imgTitel": "Drengevenner",
-    "alt": ""
+    "alt": "dansk kortfilm Drengevenner"
   },
   {
     "filmTitel": "Angel",
@@ -1905,7 +1942,7 @@
     "tema": ["Danske kortfilm", "Mine favoritter"],
     "imgTema": "Danske kortfilm",
     "imgTitel": "Angel",
-    "alt": ""
+    "alt": "dansk kortfilm Angel"
   },
   {
     "filmTitel": "Uden barn",
@@ -1942,7 +1979,7 @@
     "tema": "Danske kortfilm",
     "imgTema": "Danske kortfilm",
     "imgTitel": "Uden barn",
-    "alt": ""
+    "alt": "Dansk kortfilm uden barn"
   },
   {
     "filmTitel": "Dark angel",
@@ -1972,7 +2009,7 @@
     "tema": "Danske kortfilm",
     "imgTema": "Danske kortfilm",
     "imgTitel": "Dark angel",
-    "alt": ""
+    "alt": "Dansk kortfilm Dark angel"
   },
   {
     "filmTitel": "Bjørn på Langeland",
@@ -2017,7 +2054,7 @@
     "tema": "Danske kortfilm",
     "imgTema": "Danske kortfilm",
     "imgTitel": "Bjorn på Langeland",
-    "alt": ""
+    "alt": "dansk kortfilm Bjorn på Langeland"
   },
   {
     "filmTitel": "Én svale gør ingen sommer",
@@ -2053,7 +2090,7 @@
     "tema": "Danske kortfilm",
     "imgTema": "Danske kortfilm",
     "imgTitel": "En svale gor ingen sommer",
-    "alt": ""
+    "alt": "Dansk kortfilm En svale gor ingen sommer"
   },
   {
     "filmTitel": "Palle alene i verden",
@@ -2083,6 +2120,6 @@
     "tema": "Danske kortfilm",
     "imgTema": "Danske kortfilm",
     "imgTitel": "Palle alene i verden",
-    "alt": ""
+    "alt": "Dansk kortfilm Palle alene i verden"
   }
 ]
