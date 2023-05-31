@@ -46,11 +46,19 @@ console.log(myData);
       >
       </div>
     </div>
+    <a
+      class="text-white absolute m-12"
+      href="#"
+      onclick="history.go(-1); return false;"
+    >
+      <span class="lightIcon">arrow-left</span> Tilbage</a
+    >
     <div class="bottom-5 px-10 py-6 w-full justify-between flex items-end">
       <div>
         <h1 class="text-2xl font-display uppercase mb-2 max-w-[20ch]">
           {myData.filmTitel}
         </h1>
+
         <div class="flex items-center gap-4">
           <Button
             btnClass="openPopup"
