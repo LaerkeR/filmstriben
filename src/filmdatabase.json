@@ -32,7 +32,7 @@
     "ratingIMDb": "7.9",
     "point": "4",
     "alder": "15",
-    "tema": "Oscar-film | vindere og nominerede",
+    "tema": ["Oscar-film | vindere og nominerede", "Film i samme genre"],
     "imgTema": "oscar film",
     "imgTitel": "Everything everywhere all at once",
     "alt": "Oscar spillefilm fra Everything everywhere all at once"
@@ -128,7 +128,7 @@
     "ratingIMDb": "7.2",
     "point": "4",
     "alder": "7",
-    "tema": "Oscar-film | vindere og nominerede",
+    "tema": ["Oscar-film | vindere og nominerede", "Film i samme genre"],
     "imgTema": "oscar film",
     "imgTitel": "Licorice pizza",
     "alt": "Oscar film fra Licorice pizza "
@@ -159,7 +159,7 @@
     "ratingIMDb": "7.8",
     "point": "4",
     "alder": "11",
-    "tema": "Oscar-film | vindere og nominerede",
+    "tema": ["Oscar-film | vindere og nominerede", "Populære"],
     "imgTema": "oscar film",
     "imgTitel": "Verdens verste menneske",
     "alt": "oscar film fra Verdens verste menneske"
@@ -199,7 +199,7 @@
     "ratingIMDb": "7.6",
     "point": "4",
     "alder": "a",
-    "tema": "Oscar-film | vindere og nominerede",
+    "tema": ["Oscar-film | vindere og nominerede", "Film i samme genre"],
     "imgTema": "oscar film",
     "imgTitel": "Drive my car",
     "alt": "oscar film fra Drive my car "
@@ -294,7 +294,8 @@
     "ratingIMDb": "8.2",
     "point": "4",
     "alder": "15",
-    "tema": "Oscar-film | vindere og nominerede",
+    "tema": ["Oscar-film | vindere og nominerede", "Populære"],
+
     "imgTema": "oscar film",
     "imgTitel": "The father",
     "alt": "Oscar film The father"
@@ -585,7 +586,7 @@
     "point": "3",
     "alder": "15",
     "tema": "Film om Mongoliet",
-    "imgTema": "mongoliet",
+    "imgTema": ["mongoliet", "Film i samme genre"],
     "imgTitel": "Faedre soenner",
     "farve": "greyIsh",
     "alt": "Dansk film greyish"
@@ -699,7 +700,7 @@
     "ratingIMDb": "6,3",
     "point": "4",
     "alder": "15",
-    "tema": "Far tema",
+    "tema": ["Far tema", "Populære"],
     "imgTema": "far tema",
     "imgTitel": "Paris of the North",
     "alt": "Tema film Paris of the North"
@@ -742,7 +743,7 @@
     "point": "4",
     "alder": "11",
     "tema": "Far tema",
-    "imgTema": "far tema",
+    "imgTema": ["far tema", "Populære"],
     "imgTitel": "Gaven",
     "alt": "Tema film Gaven"
   },
@@ -862,7 +863,7 @@
     "ratingIMDb": "6,4",
     "point": "4",
     "alder": "7",
-    "tema": "Senest tilføjet",
+    "tema": ["Senest tilføjet", "Film i samme genre"],
     "imgTema": "senest tilfoejet",
     "imgTitel": "min sommer i Provence",
     "alt": "Film min sommer i provence"
@@ -1091,7 +1092,7 @@
     "ratingIMDb": "6.6",
     "point": "4",
     "alder": "7",
-    "tema": "Senest tilføjet",
+    "tema": ["Senest tilføjet", "Populære"],
     "imgTema": "senest tilfoejet",
     "imgTitel": "nattens skov",
     "alt": "Film nattens skov"
@@ -1702,7 +1703,7 @@
     "ratingIMDb": "6.6",
     "point": "4",
     "alder": "15",
-    "tema": ["andet", "Mine favoritter"],
+    "tema": ["andet", "Mine favoritter", "Populære"],
     "imgTema": "andet",
     "imgTitel": "underverden",
     "alt": "Bedste danske film Underverden"
@@ -1746,7 +1747,7 @@
     "ratingIMDb": "6.1",
     "point": "4",
     "alder": "15",
-    "tema": "andet",
+    "tema": ["andet", "Populære"],
     "imgTema": "andet",
     "imgTitel": "robocop",
     "alt": "Film robocop"
@@ -1815,7 +1816,7 @@
     "ratingIMDb": "5,2",
     "point": "4",
     "alder": "11",
-    "tema": "splash",
+    "tema": ["splash", "Film i samme genre"],
     "imgTema": "splash",
     "imgTitel": "Love Proof",
     "alt": "Film love proof "
@@ -1939,7 +1940,7 @@
     "ratingIMDb": "",
     "point": "2",
     "alder": "15",
-    "tema": ["Danske kortfilm", "Mine favoritter"],
+    "tema": ["Danske kortfilm", "Mine favoritter", "Film i samme genre"],
     "imgTema": "Danske kortfilm",
     "imgTitel": "Angel",
     "alt": "dansk kortfilm Angel"
@@ -2006,7 +2007,7 @@
     "ratingIMDb": "",
     "point": "1",
     "alder": "15",
-    "tema": "Danske kortfilm",
+    "tema": ["Danske kortfilm", "Populære"],
     "imgTema": "Danske kortfilm",
     "imgTitel": "Dark angel",
     "alt": "Dansk kortfilm Dark angel"
@@ -2087,7 +2088,7 @@
     "ratingIMDb": "",
     "point": "2",
     "alder": "15",
-    "tema": "Danske kortfilm",
+    "tema": ["Danske kortfilm", "Populære"],
     "imgTema": "Danske kortfilm",
     "imgTitel": "En svale gor ingen sommer",
     "alt": "Dansk kortfilm En svale gor ingen sommer"
