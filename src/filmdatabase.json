@@ -585,8 +585,8 @@
     "ratingIMDb": "7.1",
     "point": "3",
     "alder": "15",
-    "tema": "Film om Mongoliet",
-    "imgTema": ["mongoliet", "Film i samme genre"],
+    "tema": ["Film om Mongoliet", "Film i samme genre"],
+    "imgTema": "mongoliet",
     "imgTitel": "Faedre soenner",
     "farve": "greyIsh",
     "alt": "Dansk film greyish"
@@ -742,8 +742,8 @@
     "ratingIMDb": "6,2",
     "point": "4",
     "alder": "11",
-    "tema": "Far tema",
-    "imgTema": ["far tema", "Populære"],
+    "tema": ["Far tema", "Populære"],
+    "imgTema": "far tema",
     "imgTitel": "Gaven",
     "alt": "Tema film Gaven"
   },
