@@ -30,7 +30,7 @@ import Button from "./Button.astro";
         class="pb-2 mb-2 border-b-[1px] w-full text-white font-display text-sm"
         >Sortere efter <p class="lightIcon text-[16px]">chevron-down</p>
       </legend>
-      <div class="filtreringsListe flex flex-col gap-2 overflow-scroll">
+      <div class="filtreringsListe hidden overflow-scroll">
         <div class="checkboxWrapper">
           <label for="mest-relevante">Mest relevante</label>
           <input
@@ -156,7 +156,7 @@ import Button from "./Button.astro";
         class="pb-2 mb-2 border-b-[1px] w-full text-white font-display text-sm"
         >Antal point <p class="lightIcon text-[16px]">chevron-down</p>
       </legend>
-      <div class="filtreringsListe flex flex-col gap-2 overflow-scroll">
+      <div class="filtreringsListe hidden overflow-scroll">
         <div class="checkboxWrapper">
           <label for="0">0 point</label>
           <input
@@ -210,7 +210,7 @@ import Button from "./Button.astro";
         class="pb-2 mb-2 border-b-[1px] w-full text-white font-display text-sm"
         >Varighed <p class="lightIcon text-[16px]">chevron-down</p>
       </legend>
-      <div class="filtreringsListe flex flex-col gap-2 overflow-scroll">
+      <div class="filtreringsListe hidden overflow-scroll">
         <div class="checkboxWrapper">
           <label for="<30m">under 30 minutter</label>
           <input
@@ -264,7 +264,7 @@ import Button from "./Button.astro";
         class="pb-2 mb-2 border-b-[1px] w-full text-white font-display text-sm"
         >Sprog <p class="lightIcon text-[16px]">chevron-down</p>
       </legend>
-      <div class="filtreringsListe flex flex-col gap-2 overflow-scroll">
+      <div class="filtreringsListe hidden flex-col overflow-scroll">
         <div class="checkboxWrapper">
           <label for="dansk">Dansk</label>
           <input
@@ -336,13 +336,15 @@ import Button from "./Button.astro";
 </div>
 
 <script>
+  import { isRenderTemplateResult } from "astro/dist/runtime/server/render/astro";
+
   const knap = document.querySelector(".filtreringsKnap");
   const filtreringsMenu = document.querySelector(".filtreringsMenu");
   const filtreringsOverlay = document.querySelector(".filtreringsOverlay");
   const luk = document.querySelector(".lukFiltrering");
   const filtreringsListe = document.querySelector(".filtreringsListe");
-  const filtreringsPunkt = document.querySelector(".genre legend");
-  const pil = document.querySelector(".genre legend p");
+  const filtreringsPunkt = document.querySelector("legend");
+  const pil = document.querySelector("legend p");
 
   knap.addEventListener("click", () => {
     filtreringsMenu.classList.toggle("hidden");
@@ -354,15 +356,23 @@ import Button from "./Button.astro";
     filtreringsMenu.classList.toggle("hidden");
   });
 
-  filtreringsPunkt.addEventListener("click", () => {
-    filtreringsListe.classList.toggle("hidden");
-    if (filtreringsListe.classList.contains("hidden")) {
-      console.log("den er lukket");
-      pil.textContent = "chevron-down";
-    } else {
-      console.log("den er open");
-      pil.textContent = "chevron-up";
-    }
+  const filtreringsPunkter = document.querySelectorAll("fieldset");
+  filtreringsPunkter.forEach((punkt) => {
+    punkt.addEventListener("click", () => {
+      filtreringsPunkter.forEach((item) => {
+        if (item !== punkt) {
+          item.classList.remove("active");
+          pil.textContent = "chevron-down";
+        }
+      });
+      punkt.classList.toggle("active");
+
+      filtreringsPunkter.forEach((item) => {
+        if (item.classList.contains("active")) {
+          pil.textContent = "chevron-up";
+        }
+      });
+    });
   });
 </script>
 
@@ -384,5 +394,12 @@ import Button from "./Button.astro";
   legend {
     display: flex;
     justify-content: space-between;
+  }
+
+  .active .filtreringsListe {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    gap: 8px;
   }
 </style>
