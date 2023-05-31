@@ -6,7 +6,8 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://filmstriben.netlify.app",
   integrations: [tailwind(), sitemap()],
   output: "server",
-  adapter: netlify()
+  adapter: netlify(),
 });
