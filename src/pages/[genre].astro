@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 
 const { genre } = Astro.params;
 const { genreData } = Astro.props;
-console.log(genreData.length);
+
 const filtretGenre = filmdatabase.filter(
   (film) => film.genre === genreData || film.underGenre.includes(genreData)
 );
@@ -30,22 +30,17 @@ const filtretGenre = filmdatabase.filter(
     antaltTitler={filtretGenre.length}
   >
     {
-      filtretGenre.map(
-        (film) => (
-          console.log(film),
-          (
-            <MovieCard
-              varighed={film.varighed}
-              genre={film.genre}
-              aarstal={film.aarstal}
-              filmTitle={film.filmTitel}
-              imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
-              slug={film.slug}
-              point={film.point}
-            />
-          )
-        )
-      )
+      filtretGenre.map((film) => (
+        <MovieCard
+          varighed={film.varighed}
+          genre={film.genre}
+          aarstal={film.aarstal}
+          filmTitle={film.filmTitel}
+          imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
+          slug={film.slug}
+          point={film.point}
+        />
+      ))
     }
   </UndersideLayout>
 </Layout>

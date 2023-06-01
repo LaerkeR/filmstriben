@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 
 const { aldersGruppe } = Astro.params;
 const { valgtGruppe } = Astro.props;
-console.log(valgtGruppe.kategori);
+
 const filtretFilm = filmdatabase.filter(
   (film) =>
     film.alder === valgtGruppe.aldersGruppe ||
@@ -33,22 +33,17 @@ const filtretFilm = filmdatabase.filter(
     antaltTitler={filtretFilm.length}
   >
     {
-      filtretFilm.map(
-        (film) => (
-          console.log(filtretFilm.length),
-          (
-            <MovieCard
-              varighed={film.varighed}
-              genre={film.genre}
-              aarstal={film.aarstal}
-              filmTitle={film.filmTitel}
-              imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
-              slug={film.slug}
-              point={film.point}
-            />
-          )
-        )
-      )
+      filtretFilm.map((film) => (
+        <MovieCard
+          varighed={film.varighed}
+          genre={film.genre}
+          aarstal={film.aarstal}
+          filmTitle={film.filmTitel}
+          imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
+          slug={film.slug}
+          point={film.point}
+        />
+      ))
     }
   </UndersideLayout>
 </Layout>

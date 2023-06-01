@@ -22,7 +22,6 @@ const { kategoriData } = Astro.props;
 const filtretGenre = filmdatabase.filter(
   (film) => film.type === kategoriData || film.genre.includes(kategoriData)
 );
-console.log(filmdatabase.length);
 ---
 
 <Layout title={kategoriData}>

@@ -21,7 +21,6 @@ export async function getStaticPaths() {
 
 // const { slug } = Astro.params;
 const { myData } = Astro.props;
-console.log(myData);
 ---
 
 <Layout title={`Filmstriben | ${myData.filmTitel}`}>
