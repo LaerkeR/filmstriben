@@ -8,7 +8,7 @@ import Undermenu from "../layouts/Undermenu.astro";
     {
       filmgenredatabase.map((genre) => (
         <li class=" py-1 px-1 align-middle">
-          <a class="Underline" href={genre}>
+          <a class="Underline" href={`/${genre}`}>
             {genre}
           </a>
         </li>
