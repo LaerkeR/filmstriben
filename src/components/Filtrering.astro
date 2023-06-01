@@ -332,7 +332,7 @@ import Button from "./Button.astro";
       </div>
     </fieldset>
   </form>
-  <div class="lukFiltrering">
+  <div id="Anvend_filtre">
     <Button variant="secondary" typeIcon="sliders" tekst="Anvend filtre" />
   </div>
 </div>
@@ -344,6 +344,7 @@ import Button from "./Button.astro";
   const filtreringsMenu = document.querySelector(".filtreringsMenu");
   const filtreringsOverlay = document.querySelector(".filtreringsOverlay");
   const luk = document.querySelector(".lukFiltrering");
+  const Anvend_filtre = document.querySelector("#Anvend_filtre");
   const filtreringsListe = document.querySelector(".filtreringsListe");
   const filtreringsPunkt = document.querySelector("legend");
   const pil = document.querySelector("legend p");
@@ -352,6 +353,9 @@ import Button from "./Button.astro";
     filtreringsMenu.classList.toggle("hidden");
   });
   luk.addEventListener("click", () => {
+    filtreringsMenu.classList.toggle("hidden");
+  });
+  Anvend_filtre.addEventListener("click", () => {
     filtreringsMenu.classList.toggle("hidden");
   });
   filtreringsOverlay.addEventListener("click", () => {
