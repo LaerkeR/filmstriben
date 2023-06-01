@@ -14,7 +14,7 @@ import Button from "./Button.astro";
 />
 
 <div
-  class="absolute filtreringsMenu hidden bg-black px-14 w-1/4 h-screen justify-between flex flex-col right-0 top-0 z-[200] overflow-scroll py-4 pb-28"
+  class="absolute noScrollbar filtreringsMenu hidden bg-black px-14 w-1/4 h-screen justify-between flex flex-col right-0 top-0 z-[200] overflow-scroll py-4 pb-28"
 >
   <div
     class="filtreringsOverlay fixed bg-black bg-opacity-70 items-cente top-0 left-0 w-screen h-screen -z-40"
@@ -22,7 +22,7 @@ import Button from "./Button.astro";
   </div>
   <div class="lukFiltrering flex w-full justify-end"><Kryds /></div>
   <form
-    class="flex flex-col h-4/5 justify-between overflow-scroll gap-8"
+    class="noScrollbar flex flex-col h-4/5 justify-between overflow-scroll gap-8"
     action=""
   >
     <fieldset class="relevans">
@@ -332,7 +332,9 @@ import Button from "./Button.astro";
       </div>
     </fieldset>
   </form>
-  <Button variant="secondary" typeIcon="sliders" tekst="Anvend filtre" />
+  <div id="Anvend_filtre">
+    <Button variant="secondary" typeIcon="sliders" tekst="Anvend filtre" />
+  </div>
 </div>
 
 <script>
@@ -342,6 +344,7 @@ import Button from "./Button.astro";
   const filtreringsMenu = document.querySelector(".filtreringsMenu");
   const filtreringsOverlay = document.querySelector(".filtreringsOverlay");
   const luk = document.querySelector(".lukFiltrering");
+  const Anvend_filtre = document.querySelector("#Anvend_filtre");
   const filtreringsListe = document.querySelector(".filtreringsListe");
   const filtreringsPunkt = document.querySelector("legend");
   const pil = document.querySelector("legend p");
@@ -350,6 +353,9 @@ import Button from "./Button.astro";
     filtreringsMenu.classList.toggle("hidden");
   });
   luk.addEventListener("click", () => {
+    filtreringsMenu.classList.toggle("hidden");
+  });
+  Anvend_filtre.addEventListener("click", () => {
     filtreringsMenu.classList.toggle("hidden");
   });
   filtreringsOverlay.addEventListener("click", () => {
