@@ -40,7 +40,7 @@ const filtretFilm = filmdatabase.filter(
           aarstal={film.aarstal}
           filmTitle={film.filmTitel}
           imgSrc={`../img/${film.imgTema}/${film.imgTitel}/imgCard.webp`}
-          slug={film.slug}
+          slug={`/${film.slug}`}
           point={film.point}
         />
       ))
