@@ -6,7 +6,9 @@ import Temacard from "./Temacard.astro";
 
 const { temaTitel } = Astro.props;
 
-const temaFiltret = filmdatabase.filter((film) => film.tema === temaTitel);
+const temaFiltret = filmdatabase.filter(
+  (film) => film.tema === temaTitel || film.tema.includes(temaTitel)
+);
 ---
 
 <section class="carouselwrapper w-full px-20">
